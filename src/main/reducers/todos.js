@@ -1,4 +1,4 @@
-import {List,fromJS} from 'immutable'
+import {List, fromJS} from 'immutable'
 
 const todos = (state = new List, action) => {
   switch (action.type) {
@@ -10,7 +10,7 @@ const todos = (state = new List, action) => {
       }))
     case 'TOGGLE_TODO':
       return state.update(
-        state.findIndex(item => item.get('id') === action.id), 
+        state.findIndex(item => item.get('id') === action.id),
         item => item.set('completed', !item.get('completed'))
       )
     default:

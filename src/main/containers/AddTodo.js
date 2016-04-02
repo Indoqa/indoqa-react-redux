@@ -1,10 +1,10 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import {connect} from 'react-redux'
+import {addTodo} from '../actions'
 
-let AddTodo = ({ dispatch }) => {
+let AddTodo = ({dispatch}) => { // eslint-disable-line react/prop-types
   let input
-  
+
   return (
     <div>
       <form onSubmit={e => {
@@ -14,10 +14,12 @@ let AddTodo = ({ dispatch }) => {
         }
         dispatch(addTodo(input.value))
         input.value = ''
-      }}>
+      }}
+      >
         <input ref={node => {
           input = node
-        }} />
+        }}
+        />
         <button type="submit">
           Add Todo
         </button>
@@ -25,6 +27,7 @@ let AddTodo = ({ dispatch }) => {
     </div>
   )
 }
+
 AddTodo = connect()(AddTodo)
 
 export default AddTodo
