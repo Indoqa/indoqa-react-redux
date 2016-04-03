@@ -46,7 +46,7 @@ npm run compile
 ```
 Run a full build including 'clean target', 'run tests' and 'build bundle':
 ```
-npm run pckage
+npm run package
 ```
 
 
