@@ -11,7 +11,7 @@ tried to develop a directory structure and build environment that looks familiar
 
 We invent nothing new, this archetype is just a composition of useful tools and plugins. In addition to vanilla react and redux, we set up the following:
 
-  * react-promise-middleware to support 'fetch' and other promises in actions
+  * react-promise-middleware to support 'fetch' and other async operations in actions
   * react-multi to optionally dispatch multiple actions at once
   * dependency injection to optionally access the current state and other environment information in actions
   * immutable.js to be used as state in reducers
@@ -20,7 +20,7 @@ We invent nothing new, this archetype is just a composition of useful tools and 
   * mocha and expect to unit test actions and reducers
   * dev tools for hot reloading and logging
 
-All configuration takes place in *index.js*, *store.js* and *routes.js* inside /src/main.
+All configuration takes place in *index.js*, *store.js* and *routes.js* inside /src/main. 
 
 ## Installation
 
