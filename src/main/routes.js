@@ -3,7 +3,7 @@ import {IndexRoute, Route} from 'react-router'
 import App from './app/App'
 
 // add additional pages and according routes here
-import TodoPage from './todos/pages/Todo'
+import TodoPage from './todos/routes/Todos'
 
 const createRoutes = () => (
   <Route component={App} path="/">

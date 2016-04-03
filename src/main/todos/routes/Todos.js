@@ -1,11 +1,11 @@
 import React from 'react'
-import Footer from '../components/Footer'
 import AddTodo from '../containers/AddTodo'
+import Footer from '../components/Footer'
 import VisibleTodoList from '../containers/VisibleTodoList'
 
-import './Todo.styl'
+import './Todos.styl'
 
-const Todo = () => (
+const TodoPage = () => (
   <div>
     <AddTodo />
     <VisibleTodoList />
@@ -13,4 +13,4 @@ const Todo = () => (
   </div>
 )
 
-export default Todo
+export default TodoPage
