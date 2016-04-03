@@ -11,6 +11,8 @@ tried to develop a directory structure and build environment that looks familiar
 
 ``
 git clone https://github.com/Indoqa/indoqa-react-redux.git
+``
+``
 npm install
 ``
 
