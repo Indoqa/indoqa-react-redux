@@ -39,15 +39,23 @@ npm install
   * ```npm run package``` Run a full build including 'clean target', 'run tests' and 'build bundle':
 
 ## Documentation
-### Types of action creators
+### Best practices
+#### Directory structure and where to put new features
+#### Types of action creators
 tbd.
-### Immutable objects in reducers
+#### Immutable objects in reducers
 tbd.
-### Where to **connect**
+#### Where to **connect**
 tbd.
-### Production setup
+### Production notes
+#### Production setup
 tbd.
-### Recommended resources for Java developers
+#### Api proxies
+tbd.
+### Resources
+#### Recommended resources
+tbd.
+#### Recommended resources for Java developers
 tbd.
 
 
