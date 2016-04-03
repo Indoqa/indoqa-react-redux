@@ -23,6 +23,10 @@ const renderAppWrappedInReduxAndRouter = () => {
   )
 }
 
-// application entry point ("main method")
-enableHotReloading()
-renderAppWrappedInReduxAndRouter()
+const main = () => {
+  enableHotReloading()
+  renderAppWrappedInReduxAndRouter()
+}
+
+// run main entry point
+main()

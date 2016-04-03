@@ -1,5 +1,5 @@
 import expect from 'expect'
-import * as actions from '../../main/actions'
+import * as actions from '../../../main/todos/actions'
 
 describe('todo actions', () => {
   it('addTodo should create ADD_TODO action', () => {
