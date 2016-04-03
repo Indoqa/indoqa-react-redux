@@ -15,9 +15,10 @@ We invent nothing new, this archetype is just a composition of useful tools and 
   * react-promise-middleware to support 'fetch' and other promises in actions
   * react-multi to optionally dispatch multiple actions at once
   * dependency injection to optionally access the current state and other environment information in actions
-  * immutable.js to be used als state in reducers
+  * immutable.js to be used as state in reducers
   * react-router to support multipe pages
   * stylus as our css framework of choice
+  * mocha and expect to unit test actions and reducers
   * dev tools for hot reloading and logging
 
 All configuration takes place in *index.js*, *store.js* and *routes.js* inside /src/main.
@@ -31,5 +32,21 @@ npm install
 
 ## Usage
 
+Run the app inside the node dev server including hot reloading:
+```
+npm run run-dev
+```
+Run the tests:
+```
+npm run test
+```
+Build production bundle using webpack:
+```
+npm run compile
+```
+Run a full build including 'clean target', 'run tests' and 'build bundle':
+```
+npm run pckage
+```
 
 
