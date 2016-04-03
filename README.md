@@ -38,10 +38,12 @@ npm install
   * ```npm run compile``` Build production bundle using webpack into './target
   * ```npm run package``` Run a full build including 'clean target', 'run tests' and 'build bundle':
 
-## Details
+## Documentation
 ### Types of action creators
 tbd.
 ### Immutable objects in reducers
+tbd.
+### Where to **connect**
 tbd.
 ### Production setup
 tbd.
