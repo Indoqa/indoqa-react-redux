@@ -1,11 +1,11 @@
-# Indoqa React/Redux archetype
+# Indoqa React/Redux Archetype
 
 This project is a ready-to-use setup for react/redux web applications we use at Indoqa. It is based on the 
 react todos example and inspired by a lot of good ideas from the este dev stack. The main focus is to create a
 consistant environment for client side web applications that are consuming business logic using REST services over HTTP. 
 
 As we went all the way from server-side Java web applications like Wicket to this nice and clean redux architecture, we 
-tried to develop a directory structure and build environment that looks familiar to Java developers. This may help to switch between these two worlds. As a benefit, it makes it easy to integrate the frontend inside a maven multi module build.
+tried to develop a directory structure and build environment that looks familiar to Java developers. This may help to switch between these two worlds, both mentally and technically. 
 
 ## Features
 
@@ -27,27 +27,16 @@ All configuration takes place in *index.js*, *store.js* and *routes.js* inside /
 
 ```
 git clone https://github.com/Indoqa/indoqa-react-redux.git
+cd indoqa-react-redux
 npm install
 ```
 
 ## Usage
 
-Run the app inside the node dev server including hot reloading:
-```
-npm run run-dev
-```
-Run the tests:
-```
-npm run test
-```
-Build production bundle using webpack:
-```
-npm run compile
-```
-Run a full build including 'clean target', 'run tests' and 'build bundle':
-```
-npm run package
-```
+  * ```npm run run-dev``` Run the app inside the node dev server including hot reloading
+  * ```npm run test``` Run the tests
+  * ```npm run compile``` Build production bundle using webpack into './target
+  * ```npm run package``` Run a full build including 'clean target', 'run tests' and 'build bundle':
 
 ## Details
 ### Types of action creators
