@@ -19,6 +19,7 @@ We invent nothing new, this archetype is just a composition of useful tools and 
   * stylus as our css framework of choice
   * mocha and expect to unit test actions and reducers
   * dev tools for hot reloading and logging
+  * eslint using eslint-config-indoqa for consistent and clean source code in all projects
 
 All configuration takes place in *index.js*, *store.js* and *routes.js* inside /src/main. 
 
