@@ -3,12 +3,11 @@
   "version": "0.0.0",
   "description": "Indoqa React/Redux Archetype",
   "scripts": {
-    "clean": "rm -rf ./target",
     "compile": "webpack",
-    "run-dev": "node ./src/dev/server.js",
+    "dev": "node ./src/dev/server.js",
     "test": "cross-env NODE_ENV=test mocha ./src/test --recursive --compilers js:babel-register --require ./src/test/setup.js",
     "test:watch": "npm test -- --watch",
-    "package": "npm run clean && npm run test && npm run compile"
+    "package": "npm run test && npm run compile"
   },
   "dependencies": {
     "babel-polyfill": "^6.3.14",

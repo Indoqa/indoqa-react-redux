@@ -21,7 +21,8 @@ We invent nothing new, this archetype is just a composition of useful tools and 
   * dev tools for [hot reloading](https://github.com/gaearon/react-hot-loader) and [logging](https://github.com/fcomb/redux-logger)
   * eslint using [eslint-config-indoqa](https://github.com/Indoqa/eslint-config-indoqa) based on the well documented [airbnb](https://github.com/airbnb/javascript) rules
 
-All configuration takes place in *index.js*, *store.js* and *routes.js* inside /src/main. 
+All redux configuration takes place in [store.js](https://github.com/Indoqa/indoqa-react-redux/blob/master/src/main/store.js), 
+routes are defined in [routes.js](https://github.com/Indoqa/indoqa-react-redux/blob/master/src/main/routes.js). The main entry point [index.js](https://github.com/Indoqa/indoqa-react-redux/blob/master/src/main/index.js) puts it all together. 
 
 ## Installation
 
@@ -33,14 +34,15 @@ npm install
 
 ## Usage
 
-  * ```npm run run-dev``` Run the app inside the node dev server including hot reloading
+  * ```npm run dev``` Run the app inside the node dev server including hot reloading
   * ```npm run test``` Run the tests
   * ```npm run compile``` Build production bundle using webpack into './target
-  * ```npm run package``` Run a full build including 'clean target', 'run tests' and 'build bundle':
+  * ```npm run package``` Run a full build including 'test' and 'compile'
 
 ## Documentation
 ### Best practices
 #### Directory structure and where to put new features
+tbd.
 #### Types of action creators
 tbd.
 #### Immutable objects in reducers
