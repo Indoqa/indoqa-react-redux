@@ -49,4 +49,15 @@ Run a full build including 'clean target', 'run tests' and 'build bundle':
 npm run package
 ```
 
+## Details
+### Types of action creators
+tbd.
+### Immutable objects in reducers
+tbd.
+### Production setup
+tbd.
+### Recommended resources for Java developers
+tbd.
+
+
 
