@@ -5,7 +5,7 @@ react todos example and inspired by a lot of good ideas from the este dev stack.
 consistant environment for client side web applications that are using business logic using REST services over HTTP. 
 
 As we went all the way from server-side Java web applications like Wicket to this nice and clean redux architecture, we 
-tried to develop a directory structure and build environment that looks familiar to Java developers. This should make it easier to switch between these two wordls. As a benefit, it makes it easy to integrate the frontend inside a maven multi module build.
+tried to develop a directory structure and build environment that looks familiar to Java developers. This may help to switch between these two worlds. As a benefit, it makes it easy to integrate the frontend inside a maven multi module build.
 
 ## Features
 
