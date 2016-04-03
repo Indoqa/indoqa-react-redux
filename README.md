@@ -5,16 +5,29 @@ react todos example and inspired by a lot of good ideas from the este dev stack.
 consistant environment for client side web applications that are using business logic using REST services over HTTP. 
 
 As we went all the way from server-side Java web applications like Wicket to this nice and clean redux architecture, we 
-tried to develop a directory structure and build environment that looks familiar to Java developers. 
+tried to develop a directory structure and build environment that looks familiar to Java developers. This makes it easy to 
+integrate the frontend inside a maven multi module build.
+
+## Features
+
+We invent nothing new, this archetype is just a composition of useful tools and plugins. In addition to vanilla react and redux, we set up the following:
+
+  * react-promise-middleware to support 'fetch' and other promises in actions
+  * react-multi to optionally dispatch multiple actions at once
+  * dependency injection to optionally access the current state and other environment information in actions
+  * immutable.js to be used als state in reducers
+  * react-router to support multipe pages
+  * stylus as our css framework of choice
+  * dev tools for hot reloading and logging
+
+All configuration takes place in *index.js*, *store.js* and *routes.js* inside /src/main.
 
 ## Installation
 
-``
+```
 git clone https://github.com/Indoqa/indoqa-react-redux.git
-``
-``
 npm install
-``
+```
 
 ## Usage
 
