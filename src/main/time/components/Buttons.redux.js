@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(fetchTime(-1000, -1000))
   },
   clear: () => {
-    dispatch(clearTime(-1000, -1000))
+    dispatch(clearTime())
   }
 })
 
