@@ -2,8 +2,7 @@ import React from 'react'
 import {IndexRoute, Route} from 'react-router'
 import App from './app/components/App.react'
 
-// add additional pages and according routes here
-import TodoPage from './todos/routes/Todos'
+import TodoPage from './todos/components/Page.react'
 import TimePage from './time/components/Page.react'
 
 const createRoutes = () => (

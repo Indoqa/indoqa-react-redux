@@ -1,5 +1,5 @@
 import {fromJS} from 'immutable'
-import {FETCH_TIME} from '../actions/time'
+import {FETCH_TIME, CLEAR_TIME} from '../actions/time'
 
 const initiatState = fromJS({
   result: null,
@@ -22,6 +22,11 @@ const todos = (state = initiatState, action) => {
       state = state.set('isLoading', false)
       state = state.set('result', null)
       state = state.set('error', action.payload.statusText)
+      return state
+
+    case CLEAR_TIME:
+      state = state.set('result', null)
+      state = state.set('error', null)
       return state
 
     default:

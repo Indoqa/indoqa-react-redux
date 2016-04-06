@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {fetchTime} from '../actions/time'
+import {fetchTime, clearTime} from '../actions/time'
 import Buttons from './Buttons.react'
 
 const mapStateToProps = () => ({
@@ -15,6 +15,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   loadInvalidLocation: () => {
     dispatch(fetchTime(-1000, -1000))
+  },
+  clear: () => {
+    dispatch(clearTime(-1000, -1000))
   }
 })
 

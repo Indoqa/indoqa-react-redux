@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react'
-import Todo from './Todo'
+import Todo from './Todo.react'
 
 const TodoList = ({todos, onTodoClick}) => (
   <ul>

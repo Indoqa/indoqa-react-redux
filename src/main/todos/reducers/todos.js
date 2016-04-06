@@ -1,6 +1,8 @@
 import {List, fromJS} from 'immutable'
 
-const todos = (state = new List, action) => {
+const initialState = new List
+
+const todos = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return state.push(fromJS({
