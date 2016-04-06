@@ -4,6 +4,8 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 const path = require('path')
 
 const app = new (require('express'))()
+const proxy = require('express-http-proxy')
+const url = require('url')
 
 const config = require('./../../webpack.config')
 const compiler = webpack(config)
@@ -16,7 +18,20 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler))
 
-app.get('/', (req, res) => {
+app.use('/geonames', proxy('http://api.geonames.org', {
+  forwardPath: (req) => {
+    // modify url path if needed
+    return url.parse(req.url).path
+  },
+  decorateRequest: (req) => {
+    // add Authorization if needed
+    // req.headers['Authorization'] = 'Basic 12345='
+    return req
+  }
+}))
+
+
+app.get('*', (req, res) => {
   res.sendFile(path.resolve(`${__dirname}./../main/index.html`))
 })
 

@@ -2,7 +2,7 @@ import {createStore, compose, applyMiddleware} from 'redux'
 import createPromiseMiddleware from 'redux-promise-middleware'
 import multiMiddleware from 'redux-multi'
 import createLoggerMiddleware from 'redux-logger'
-import reducers from './todos/reducers'
+import reducers from './app/reducers'
 
 const createInjectMiddleware = () => store => next => action => {
   const injectedDependencies = {
@@ -27,8 +27,8 @@ const createReduxStore = () => {
   )
 
   if (module.hot) {
-    module.hot.accept('./todos/reducers', () => {
-      const nextRootReducer = require('./todos/reducers/index')
+    module.hot.accept('./app/reducers', () => {
+      const nextRootReducer = require('./app/reducers/index')
       store.replaceReducer(nextRootReducer)
     })
   }
