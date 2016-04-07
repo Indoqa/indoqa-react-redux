@@ -34,3 +34,19 @@
 ```│   │   ├── index.js``` *main application entry point*   
 ```│   │   ├── routes.js``` *route configuration ("page mounting")*  
 ```│   │   └── store.js``` *all redux configuration*   
+
+### Steps to create a new feature/page
+
+* Create a new folder `src/main/my-feature` with subfolders for actions, components and pages.
+* Mount page components in`src/main/routes.js`.
+* Import reducers of my-feature in `src/main/app/reducers/index.js.
+
+That's it. Everything else is boilerplate code and should only be modified to do advanced stuff (eg. add more middlwares).
+
+### Remove demo pages
+
+Not every production app needs a todo list ;) To safely delete the demo pages, just do the opposite of the steps mentioned before:
+
+  * Remove the feature folders `src/main/time` and `src/main/todos`
+  * Remove the reducer imports in `src/main/app/reducers`
+  * Remove the pages in `src/main/routes.js`
