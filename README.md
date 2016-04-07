@@ -46,25 +46,15 @@ npm install
   * ```npm run package``` Run a full build including 'test' and 'compile'
 
 ## Documentation
+### Directory structure and where to put new features
+
+tbd.
+
 ### Best practices
-#### Directory structure and where to put new features
-tbd.
-#### Types of action creators
-tbd.
-#### Immutable objects in reducers
-tbd.
-#### Where to **connect**
-tbd.
-### Production notes
-#### Production setup
-tbd.
-#### Api proxies
-tbd.
-### Resources
-#### Recommended resources
-tbd.
-#### Recommended resources for Java developers
-tbd.
+In simple terms, there is nothing else to code apart from actions, reducers and view components. Different applications built on this pattern share a very consistant layout and are easy to read and understand once you've got an idea how these things work in general. As usual, details and coding styles may vary. To keep the details consistant as well, we provide some best practices guides:
 
-
+  * [Actions]('./src/doc/Actions.md')
+  * [Reducers]('./src/doc/Reducers.md')
+  * [Components]('./src/doc/Components.md')
+  * [Using REST APIs]('./src/doc/Fetch.md')
 
