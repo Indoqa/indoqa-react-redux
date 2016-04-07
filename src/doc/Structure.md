@@ -12,8 +12,14 @@
 ```│   │   │   ├── reducers```    
 ```│   │   │   │   └── index.js``` *root reducer that combines all feature reducers*   
 ```│   │   │   └── utils```   
-```│   │   ├── feature1``` *actions, components, reducers of feature1*     
-```│   │   ├── feature2``` *actions, components, reducers of feature2*         
+```│   │   ├── feature1```    
+```│   │   │   ├── actions``` *actions of feature1*    
+```│   │   │   ├── components```  *components of feature1*    
+```│   │   │   ├── reducers``` *reducers of feature1*  
+```│   │   ├── feature2```   
+```│   │   │   ├── actions``` *actions of feature2*    
+```│   │   │   ├── components```  *components of feature2*       
+```│   │   │   ├── reducers``` *reducers of feature2*     
 ```│   │   ├── index.html``` *basic html served by dev server*   
 ```│   │   ├── index.js``` *main application entry point*   
 ```│   │   ├── routes.js``` *route configuration ("page mounting")*  
