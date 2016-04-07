@@ -28,7 +28,7 @@ routes are defined in [routes.js](https://github.com/Indoqa/indoqa-react-redux/b
 
   * Watch the [video](https://facebook.github.io/flux/) about flux and react, then switch to the evolved [redux](http://redux.js.org/index.html) and watch the [videos](https://egghead.io/series/getting-started-with-redux) as well.
   * Learn about the new [es6 features](https://github.com/lukehoban/es6features#readme) and take a deep look at arrow functions, destructuring, defaults/spread and modules.
-  * Install [nodejs including npm](https://docs.npmjs.com/getting-started/installing-node)
+  * Install [nodejs including npm](https://docs.npmjs.com/getting-started/installing-node).
 
 ## Installation
 
@@ -40,7 +40,7 @@ npm install
 
 ## Usage
 
-  * ```npm run dev``` Run the app inside the node dev server including hot reloading
+  * ```npm run dev``` Run the app inside the dev node server including hot reloading
   * ```npm run test``` Run the tests
   * ```npm run compile``` Build the production bundle using webpack into `./target/app`
   * ```npm run package``` Run a full build including 'test' and 'compile'
