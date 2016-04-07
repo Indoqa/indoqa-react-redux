@@ -27,7 +27,7 @@ routes are defined in [routes.js](https://github.com/Indoqa/indoqa-react-redux/b
 ## Prerequisites
 
   * Watch the [video](https://facebook.github.io/flux/) about flux and react, then switch to the evolved [redux](http://redux.js.org/index.html) and watch the [videos](https://egghead.io/series/getting-started-with-redux) as well.
-  * Learn about the new [es6 features](https://github.com/lukehoban/es6features#readme) and take a deep look at arrow functions, destructuring, defaults/spread and modules.
+  * Learn about the new [es6 features](https://github.com/lukehoban/es6features#readme) and take a deep look at [arrow functions](http://exploringjs.com/es6/ch_arrow-functions.html), [destructuring](https://gist.github.com/mikaelbr/9900818), [defaults/spread](https://medium.com/ecmascript-2015/default-rest-spread-f3ab0d2e0a5e#.xn5wo78hb) and [modules](http://exploringjs.com/es6/ch_modules.html).
   * Install [nodejs including npm](https://docs.npmjs.com/getting-started/installing-node).
 
 ## Installation
