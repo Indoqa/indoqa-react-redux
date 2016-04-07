@@ -21,9 +21,14 @@ We invent nothing new, this archetype is just a composition of useful tools and 
   * dev tools for [hot reloading](https://github.com/gaearon/react-hot-loader) and [logging](https://github.com/fcomb/redux-logger)
   * eslint using [eslint-config-indoqa](https://github.com/Indoqa/eslint-config-indoqa) based on the well documented [airbnb](https://github.com/airbnb/javascript) rules
   * two demo pages, [one](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/time) with an example of fetching data from an external webservice ([geonames timezone](http://www.geonames.org/export/web-services.html#timezone)) and [another](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/todos) showing a local todo list
+  * a simple and clean application setup: All redux configuration takes place in [store.js](https://github.com/Indoqa/indoqa-react-redux/blob/master/src/main/store.js), 
+routes are defined in [routes.js](https://github.com/Indoqa/indoqa-react-redux/blob/master/src/main/routes.js). The main entry point [index.js](https://github.com/Indoqa/indoqa-react-redux/blob/master/src/main/index.js) puts it all together
 
-All redux configuration takes place in [store.js](https://github.com/Indoqa/indoqa-react-redux/blob/master/src/main/store.js), 
-routes are defined in [routes.js](https://github.com/Indoqa/indoqa-react-redux/blob/master/src/main/routes.js). The main entry point [index.js](https://github.com/Indoqa/indoqa-react-redux/blob/master/src/main/index.js) puts it all together. 
+## Prerequisites
+
+  * Watch the [video](https://facebook.github.io/flux/) about flux and react, then switch to the evolved [redux](http://redux.js.org/index.html) and watch the [videos](https://egghead.io/series/getting-started-with-redux) as well.
+  * Learn about the new [es6 features](https://github.com/lukehoban/es6features#readme) and take a deep look at arrow functions, destructuring, defaults/spread and modules.
+  * Install [nodejs including npm](https://docs.npmjs.com/getting-started/installing-node)
 
 ## Installation
 
