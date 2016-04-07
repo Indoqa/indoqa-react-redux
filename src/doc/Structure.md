@@ -1,5 +1,15 @@
 #Directory layout
-## Main layout
+### Main layout
+
+```├── src```    
+```│   ├── dev``` *dev server config*     
+```│   ├── doc``` *markup docs*      
+```│   ├── main``` *the application*     
+```│   └── test``` *unit tests*      
+```├── target```    
+```│   └── app``` *base dir of generated production files*    
+```├── package.json``` *dependency and build management*     
+```└── webpack.config.js``` *babel/stylus/hot reloading*     
 
 ### Application structure 
 
