@@ -53,8 +53,8 @@ tbd.
 ### Best practices
 In simple terms, there is nothing else to code apart from actions, reducers and view components. Different applications built on this pattern share a very consistant layout and are easy to read and understand once you've got an idea how these things work in general. As usual, details and coding styles may vary. To keep the details consistant as well, we provide some best practices guides:
 
-  * [Actions]('https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Actions.md')
-  * [Reducers]('https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Reducers.md')
-  * [Components]('https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Components.md')
-  * [Using REST APIs]('https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Fetch.md')
+  * [Actions](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Actions.md)
+  * [Reducers](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Reducers.md)
+  * [Components](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Components.md)
+  * [Using REST APIs](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Fetch.md)
 
