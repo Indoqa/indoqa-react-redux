@@ -7,7 +7,7 @@ const initiatState = fromJS({
   isLoading: false
 })
 
-const todos = (state = initiatState, action) => {
+const time = (state = initiatState, action) => {
   switch (action.type) {
     case `${FETCH_TIME}_START`:
       return state.set('isLoading', true)
@@ -34,4 +34,4 @@ const todos = (state = initiatState, action) => {
   }
 }
 
-export default todos
+export default time
