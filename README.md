@@ -48,7 +48,7 @@ npm install
 ## Documentation
 ### Directory structure and where to put new features
 
-tbd.
+The main design consideration of this project was to provide a layout that makes it easy to add new features/pages without touching a lot of boilerplate code. Getting rid of the demo pages shouldn't be a surgery either. Read more about our [directory structure](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Structure.md).
 
 ### Best practices
 In simple terms, there is nothing else to code apart from actions, reducers and view components. Different applications built on this pattern share a very consistant layout and are easy to read and understand once you've got an idea how these things work in general. As usual, details and coding styles may vary. To keep the details consistant as well, we provide some best practices guides:
