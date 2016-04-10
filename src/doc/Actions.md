@@ -1,4 +1,4 @@
-# Actions
+# Actions and action creators
 
 ## Assumed knowledge
  
