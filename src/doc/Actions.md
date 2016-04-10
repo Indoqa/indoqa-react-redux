@@ -116,20 +116,20 @@ export const DO_ACTION1 = 'DO_ACTION1'
 export const DO_ACTION2 = 'DO_ACTION2'
 export const DO_BOTH = 'DO_BOTH'
 
-export const doAction1 = (data1) = ({
+export const doAction1 = (data1) => ({
  type: DO_ACTION1,
  payload: data1
 })
 
-export const doAction2 = (data2) = ({
+export const doAction2 = (data2) => ({
  type: DO_ACTION2,
  payload: data2
 })
 
-export const doBoth = (data1, data2) = [
+export const doBoth = (data1, data2) => [
    doAction1(data1),
    doAction2(data2)
 ]
 ```
 
-```
+
