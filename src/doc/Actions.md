@@ -10,6 +10,7 @@
   * Use a `payload` property to store all information relevant for the reducer. This makes reducers look familiar as they always consume `action.payload`.
   * Use consistent naming for the action creator method and according action type. Convention is `VERB_PHRASE` respectively `verbPhrase()`.
   * Write action creator functions using the simplest possible es6 syntax.
+  * Always use promises for asynchronous stuff.
 
 ## Details
 
