@@ -9,7 +9,7 @@ We assume you are familiar with the basic concepts of [actions and action creato
   * Use consistent naming for the action creator method and according action type. Convention is `VERB_PHRASE` respectively `verbPhrase()`.
   * Write action creator functions using the simplest possible es6 syntax.
   * Always use promises for asynchronous stuff (redux-promise-middleware).
-  * Wrap the created action into a function to access the redux `store` object. (custom inject middleware)
+  * Wrap the created action into a function to access the redux `store` object (custom inject middleware).
   * Return arrays to execute multiple actions in one creator (redux-multi).
   * Don't use redux-thunk as it's just another way of doing asynchronous or multi actions. 
 
@@ -66,15 +66,14 @@ export const fetchData = (count) => ({
 
 The middleware then dispatches two actions:
   * `FETCH_DATA_START` with an empty `payload` before the promise is executed. A reducer may react on that set a 'loading' state.
-  * `FETCH_DATA_SUCCESS` after a successful execution. The `payload` then represents the result,
-  * OR `FETCH_DATA_ERROR` if an error occurs during promise execution. The `payload` then represents the error object.
+  * `FETCH_DATA_SUCCESS` after a successful execution. The `payload` then represents the result OR `FETCH_DATA_ERROR` if an error occurs during promise execution. The `payload` then represents the error object.
  
 Note: We configured the suffixes to _START, _SUCCESS and _ERROR in /src/main/store.js. 
   
   
 ### Accessing the current state in action creators
 
-Sometimes it's necessary to have read-only access to the current reducer states before returning an action. Given the example above, we can change fetchData() to look up the `count` property in the state instead of getting it as an argument. Using our inject middleware, the root redux `store` object may be accessed by wrapping the action result into a function that gets the dependecies as argument: 
+Sometimes it's necessary to have read-only access to the current reducer state before returning an action. Given the example above, we can change fetchData() to look up the `count` property in the state instead of getting it as an argument. Using our inject middleware, the root redux `store` object may be accessed by wrapping the action result into a function that gets the dependecies as argument: 
 
 ```javascript
 export const FETCH_DATA = 'FETCH_DATA'
