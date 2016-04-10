@@ -60,7 +60,7 @@ export const fetchData = (count) => ({
 
 The middleware then dispatches two actions:
   * `FETCH_DATA_START` with an empty `payload` before the promise is executed. A reducer may react on that set a 'loading' state.
-  * `FETCH_DATA_SUCCESS` after a successful execution. The `payload` then represents the promise result.
+  * `FETCH_DATA_SUCCESS` after a successful execution. The `payload` then represents the result,
   * OR `FETCH_DATA_ERROR` if an error occurs during promise execution. The `payload` then represents the error object.
  
 Note: We configured the suffixes to _START, _SUCCESS and _ERROR in /src/main/store.js. 
