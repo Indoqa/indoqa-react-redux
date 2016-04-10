@@ -1,8 +1,6 @@
 # Actions and action creators
 
-## Assumed knowledge
- 
- * Basic action documentation: http://redux.js.org/docs/basics/Actions.html
+We assume you are familiar with the basic concepts of actions and action creators described in the official [Redux documention](http://redux.js.org/docs/basics/Actions.html).
 
 ## Best practices
 
