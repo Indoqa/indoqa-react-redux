@@ -7,7 +7,7 @@ First, read the basic documentation of actions and action creators in [Redux](ht
   * Use consistent naming for the action creator method and according action type. Convention is `VERB_PHRASE` respectively `verbPhrase()`.
   * Write action creator functions using the simplest possible es6 syntax.
 
-## Supported action creator return types
+## Details
 
 Using our middleware setup, we add support for asynchronous actions, store access and multiple action dispatching. The suitable middlewares are activated depending on the return type of the action creator function:
 
