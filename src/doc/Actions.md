@@ -121,7 +121,7 @@ export const fetchData = () => ({store}) => {
 
 ### Dispatching multiple actions with one creator
 
-If you need to dispatch multiple actions, just return an array of actions. The [react-multi middleware](https://github.com/ashaffer/redux-multi) than dispatches them sequentially. 
+If you need to dispatch multiple actions in one creator, just return an array of actions. The [react-multi middleware](https://github.com/ashaffer/redux-multi) then dispatches them sequentially. 
 
 ```javascript
 export const DO_ACTION1 = 'DO_ACTION1'
