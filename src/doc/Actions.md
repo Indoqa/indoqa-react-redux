@@ -1,12 +1,15 @@
 # Actions
-todo. basic information ...
 
-  * Always use constants for the `type` property.
-  * Use a `payload` property to store all information relevant for the reducer.
+First, read the basic documentation of actions and action creators in [Redux](http://redux.js.org/docs/basics/Actions.html). Based on that we are suggesting the following best practices:
+
+  * Always use constants for the `type` property. See [why](http://redux.js.org/docs/recipes/ReducingBoilerplate.html).
+  * Use a `payload` property to store all information relevant for the reducer. This makes reducers look familiar as they always consume `action.payload`.
   * Use consistent naming for the action creator method and according action type. Convention is `VERB_PHRASE` respectively `verbPhrase()`.
   * Write action creator functions using the simplest possible es6 syntax.
 
 ## Supported action creator return types
+
+Using our middleware setup, we add support for asynchronous actions, store access and multiple action dispatching. The suitable middlewares are active depending on the return type of the action creator function:
 
 ### Plain objects as described in vanilla redux
 
@@ -37,7 +40,7 @@ export const addTodo = (text) => ({
 ```
 ### Using a promise as `payload` for asynchronous actions
 
-Using the react-promise-middleware, you can spacify
+If you return a promise as payload, the react-promise-middleware kicks in and resolves this promise before dispatching the result. The main usecase for this is to execute a fetch. 
 ```javascript
 export const FETCH_DATA = 'FETCH_DATA'
 
@@ -56,13 +59,16 @@ export const fetchData = (count) => ({
 ```
 
 The middleware then dispatches two actions:
-  * `FETCH_DATA_START` with an empty `payload` before the promise is executed.
+  * `FETCH_DATA_START` with an empty `payload` before the promise is executed. A reducer may react on that set a 'loading' state.
   * `FETCH_DATA_SUCCESS` after a successful execution. The `payload` then represents the promise result.
   * OR `FETCH_DATA_ERROR` if an error occurs during promise execution. The `payload` then represents the error object.
+ 
+Note: We configured the suffixes to _START, _SUCCESS and _ERROR in /src/main/store.js. 
+  
   
 ### Accessing the current state in action creators
 
-.....
+Sometimes it's necessary to have read-only access to the current reducer states before returning an action. Given the example above, we can change fetchData() to look up the `count` property in the state instead of getting it as an argument. Using our inject middleware, the root redux `store` object may be accessed by wrapping the action result into a function that gets the dependecies as argument: 
 
 ```javascript
 export const FETCH_DATA = 'FETCH_DATA'
@@ -110,6 +116,8 @@ export const fetchData = () => ({store}) => {
 ```
 
 ### Dispatching multiple actions with one creator
+
+If you need to dispatch multiple actions, just return an array of actions. The [react-multi middleware](https://github.com/ashaffer/redux-multi) than dispatches them sequentially. 
 
 ```javascript
 export const DO_ACTION1 = 'DO_ACTION1'
