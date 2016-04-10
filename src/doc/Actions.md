@@ -1,6 +1,10 @@
 # Actions
 
-First, read the basic documentation of actions and action creators in [Redux](http://redux.js.org/docs/basics/Actions.html). Based on that we are suggesting the following best practices:
+## Read first
+ 
+ * Basic action documentation: http://redux.js.org/docs/basics/Actions.html
+
+## Best practices
 
   * Always use constants for the `type` property. See [why](http://redux.js.org/docs/recipes/ReducingBoilerplate.html).
   * Use a `payload` property to store all information relevant for the reducer. This makes reducers look familiar as they always consume `action.payload`.
