@@ -9,7 +9,7 @@ First, read the basic documentation of actions and action creators in [Redux](ht
 
 ## Supported action creator return types
 
-Using our middleware setup, we add support for asynchronous actions, store access and multiple action dispatching. The suitable middlewares are active depending on the return type of the action creator function:
+Using our middleware setup, we add support for asynchronous actions, store access and multiple action dispatching. The suitable middlewares are activated depending on the return type of the action creator function:
 
 ### Plain objects as described in vanilla redux
 
