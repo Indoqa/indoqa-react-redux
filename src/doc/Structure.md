@@ -28,7 +28,7 @@
 ├── index.html           // basic html served by dev server
 ├── index.js             // main application entry point
 ├── routes.js            // route configuration ("page mounting")
-└── store.js             // all redux configuration*   
+└── store.js             // all redux configuration  
 ```   
 ### Steps to create a new feature/page
 
