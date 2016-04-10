@@ -26,7 +26,7 @@
 │   ├── components       // components of feature2       
 │   ├── reducers         // reducers of feature2
 ├── index.html           // basic html served by dev server
-├── index.js             // main application entry point*   
+├── index.js             // main application entry point
 ├── routes.js            // route configuration ("page mounting")
 └── store.js             // all redux configuration*   
 ```   
@@ -38,9 +38,9 @@
 
 That's it. Everything else is boilerplate code and should only be modified to do advanced stuff (eg. add more middlwares).
 
-### Remove demo pages
+### Steps to remove demo pages
 
-Not every production app needs a todo list ;) To safely delete the demo pages, just do the opposite of the steps mentioned before:
+Not every production app needs a todo list ;) To safely remove the demo pages, just do the opposite of the steps mentioned before:
 
   * Remove the feature folders `src/main/time` and `src/main/todos`
   * Remove the reducer imports in `src/main/app/reducers`
