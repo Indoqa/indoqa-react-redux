@@ -40,7 +40,7 @@ export const addTodo = (text) => ({
 ```
 ### Using a promise as `payload` for asynchronous actions
 
-If you return a promise as payload, the react-promise-middleware kicks in and resolves this promise before dispatching the result. The main usecase for this is to execute a fetch. 
+If you return a promise as payload, the [react-promise-middleware](https://github.com/pburtchaell/redux-promise-middleware) kicks in and resolves this promise before dispatching the result. The main usecase for this is to execute a fetch. 
 ```javascript
 export const FETCH_DATA = 'FETCH_DATA'
 
