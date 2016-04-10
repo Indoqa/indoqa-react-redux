@@ -1,6 +1,6 @@
 # Actions and action creators
 
-We assume you are familiar with the basic concepts of actions and action creators described in the official [Redux documention](http://redux.js.org/docs/basics/Actions.html).
+We assume you are familiar with the basic concepts of [actions and action creators](http://redux.js.org/docs/basics/Actions.html) and how [middlewares](http://redux.js.org/docs/advanced/Middleware.html) are working. Building on this, we express some guidlines of how we write actions and use a composition of multiple middlewares. 
 
 ## Best practices
 
@@ -8,7 +8,10 @@ We assume you are familiar with the basic concepts of actions and action creator
   * Use a `payload` property to store all information relevant for the reducer. This makes reducers look familiar as they always consume `action.payload`.
   * Use consistent naming for the action creator method and according action type. Convention is `VERB_PHRASE` respectively `verbPhrase()`.
   * Write action creator functions using the simplest possible es6 syntax.
-  * Always use promises for asynchronous stuff.
+  * Always use promises for asynchronous stuff (redux-promise-middleware).
+  * Wrap the created action into a function to access the redux `store` object. (custom inject middleware)
+  * Return arrays to execute multiple actions in one creator (redux-multi).
+  * Don't use redux-thunk as it's just another way of doing asynchronous or multi actions. 
 
 ## Details
 
