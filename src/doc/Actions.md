@@ -1,6 +1,6 @@
 # Actions
 
-## Read first
+## Assumed knowledge
  
  * Basic action documentation: http://redux.js.org/docs/basics/Actions.html
 
