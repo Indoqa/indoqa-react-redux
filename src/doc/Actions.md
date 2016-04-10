@@ -107,6 +107,7 @@ export const fetchData = () => ({store}) => {
     payload: fetch(`/api/v1/data?count=${count}`).then(result => result.json())
   }
 }
+```
 
 ### Dispatching multiple actions with one creator
 
