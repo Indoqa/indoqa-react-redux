@@ -1,6 +1,6 @@
 # Actions and action creators
 
-We assume you are familiar with the basic concepts of [actions and action creators](http://redux.js.org/docs/basics/Actions.html) and how [middlewares](http://redux.js.org/docs/advanced/Middleware.html) are working. Building on this, we express some guidlines of how we write actions and use a composition of multiple middlewares. 
+Assuming you are familiar with the basic concepts of [actions and action creators](http://redux.js.org/docs/basics/Actions.html) and how [middlewares](http://redux.js.org/docs/advanced/Middleware.html) are working, we express some guidlines of how we write actions and use a composition of multiple middlewares. 
 
 ## Best practices
 
