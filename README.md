@@ -58,4 +58,8 @@ In simple terms, there is nothing else to code apart from actions, reducers and 
   * [Reducers with immutable.js](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Reducers.md)
   * [Components and Containers](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Components.md)
   * [Using REST APIs](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Fetch.md)
+  
+### Build notes
+
+todo: describe versioning, shrinkwrap, ...
 
