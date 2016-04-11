@@ -12,6 +12,7 @@
   "dependencies": {
     "babel-polyfill": "^6.3.14",
     "babel-preset-stage-0": "^6.5.0",
+    "express-http-proxy": "^0.6.0",
     "immutable": "^3.7.6",
     "isomorphic-fetch": "^2.2.1",
     "react": "^0.14.7",
@@ -34,7 +35,7 @@
     "css-loader": "^0.23.1",
     "cross-env": "^1.0.7",
     "eslint": "^2.6.0",
-    "eslint-config-indoqa": "^1.0.9",
+    "eslint-config-indoqa": "^1.0.10",
     "expect": "^1.8.0",
     "express": "^4.13.3",
     "jsdom": "^5.6.1",

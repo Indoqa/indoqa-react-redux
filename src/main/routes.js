@@ -4,11 +4,11 @@ import App from './app/components/App.react'
 import TimePage from './time/components/Page.react'
 import TodoPage from './todos/components/Page.react'
 
-const createRoutes = () => (
+const routes = (
   <Route component={App} path="/">
     <IndexRoute component={TimePage} />
     <Route component={TodoPage} path="/todos" />
   </Route>
 )
 
-export default createRoutes()
+export default routes
