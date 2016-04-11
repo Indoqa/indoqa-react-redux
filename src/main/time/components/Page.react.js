@@ -16,5 +16,5 @@ class TimePage extends React.Component {
 
 export default TimePage
 
-// Note: top level route components NEED to be react classes and can't be written as functional components!!
+// Note: top level route components NEED to be react classes and can't be written as functional components!
 // Otherwise hot reloading won't work: https://github.com/gaearon/react-hot-loader/issues/212
