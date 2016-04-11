@@ -18,6 +18,7 @@ We invent nothing new, this archetype is just a composition of useful tools and 
   * [react-router](https://github.com/reactjs/react-router) to support multipe pages
   * [stylus](http://stylus-lang.com/) as our css framework of choice
   * mocha and expect to unit test actions and reducers
+  * [babel](https://babeljs.io/) to support es6 syntax ans language features
   * dev tools for [hot reloading](https://github.com/gaearon/react-hot-loader) and [logging](https://github.com/fcomb/redux-logger)
   * eslint using [eslint-config-indoqa](https://github.com/Indoqa/eslint-config-indoqa) based on the well documented [airbnb](https://github.com/airbnb/javascript) rules
   * two demo pages, [one](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/time) with an example of fetching data from an external webservice ([geonames timezone](http://www.geonames.org/export/web-services.html#timezone)) and [another](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/todos) showing a local todo list
