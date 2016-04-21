@@ -5,7 +5,7 @@ import './App.styl'
 class App extends React.Component {
 
   render() {
-    const {children} = this.propTypes
+    const {children} = this.props
 
     return (
       <div className="app">
