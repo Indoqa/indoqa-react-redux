@@ -19,7 +19,7 @@ const renderAppWrappedInReduxAndRouter = () => {
         {routes}
       </Router>
     </Provider>,
-    document.getElementById('root')
+    document.getElementById('app')
   )
 }
 
