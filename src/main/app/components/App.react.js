@@ -6,11 +6,10 @@ class App extends React.Component {
 
   render() {
     const {children} = this.props
-
     return (
       <div className="app">
-        <h2>Indoqa React/Redux Example</h2>
-        <Link to={'/'} activeClassName="active"> Geonames Timezone API Example</Link> |
+        <h2>Indoqa React/Redux Examples</h2>
+        <Link to={'/'} activeClassName="active">Geonames Timezone API Example</Link> |
         <Link to={'/todos'} > Todo Example</Link>
         <hr />
         <br />
@@ -18,7 +17,6 @@ class App extends React.Component {
       </div>
     )
   }
-
 }
 
 App.propTypes = {
@@ -26,7 +24,3 @@ App.propTypes = {
 }
 
 export default App
-
-// Note: top level route components NEED to be react classes and can't be written as functional components!
-// Otherwise hot reloading won't work: https://github.com/gaearon/react-hot-loader/issues/212
-

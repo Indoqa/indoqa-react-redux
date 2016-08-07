@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-fetch'
 import handleApiResponse from './handleApiResponse'
 
 const prefixUrl = (url, property, defaultPrefix) => {

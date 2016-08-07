@@ -9,14 +9,12 @@
   },
   "scripts": {
     "start": "node ./src/dev/server.js",
-    "package": "idq-webpack webpack-options.js",
+    "package": "indoqa-webpack indoqa-webpack-options.js",
     "test": "cross-env NODE_ENV=test mocha ./src/test --recursive --compilers js:babel-register --require ./src/test/setup.js",
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {
-    "babel-polyfill": "^6.3.14",
     "immutable": "^3.7.6",
-    "isomorphic-fetch": "^2.2.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-redux": "^4.1.2",
@@ -27,8 +25,10 @@
     "redux-promise-middleware": "^3.0.0"
   },
   "devDependencies": {
-    "cross-env": "^1.0.7",
-    "indoqa-webpack": "^0.6.1",
-    "mocha": "^2.2.5"
+    "cross-env": "^2.0.0",
+    "expect": "^1.20.2",
+    "indoqa-webpack": "^0.6.4",
+    "jsdom": "^9.4.1",
+    "mocha": "^3.0.1"
   }
 }

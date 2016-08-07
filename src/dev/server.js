@@ -1,5 +1,5 @@
 const url = require('url')
-const options = require('./../../webpack-options.js')
+const options = require('./../../indoqa-webpack-options.js')
 const runDevServer = require('indoqa-webpack').runDevServer
 
 const routesCallback = ({app, proxy}) => {

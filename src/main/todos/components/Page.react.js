@@ -18,7 +18,3 @@ class TodoPage extends React.Component {
 }
 
 export default TodoPage
-
-// Note: top level route components NEED to be react classes and can't be written as functional components!
-// Otherwise hot reloading won't work: https://github.com/gaearon/react-hot-loader/issues/212
-
