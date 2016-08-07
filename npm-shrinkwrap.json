@@ -862,6 +862,11 @@
       "from": "core-util-is@>=1.0.0 <1.1.0",
       "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz"
     },
+    "cross-env": {
+      "version": "1.0.8",
+      "from": "cross-env@>=1.0.7 <2.0.0",
+      "resolved": "https://nexus.dev.indoqa.com/content/groups/npm-all/cross-env/-/cross-env-1.0.8.tgz"
+    },
     "cross-spawn": {
       "version": "3.0.1",
       "from": "cross-spawn@>=3.0.1 <4.0.0",
@@ -1582,6 +1587,11 @@
       "from": "indexof@0.0.1",
       "resolved": "https://registry.npmjs.org/indexof/-/indexof-0.0.1.tgz"
     },
+    "indoqa-webpack": {
+      "version": "0.6.1",
+      "from": "indoqa-webpack@>=0.6.1 <0.7.0",
+      "resolved": "https://nexus.dev.indoqa.com/content/groups/npm-all/indoqa-webpack/-/indoqa-webpack-0.6.1.tgz"
+    },
     "inflight": {
       "version": "1.0.5",
       "from": "inflight@>=1.0.4 <2.0.0",
@@ -2045,6 +2055,43 @@
           "version": "0.0.8",
           "from": "minimist@0.0.8",
           "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz"
+        }
+      }
+    },
+    "mocha": {
+      "version": "2.5.3",
+      "from": "mocha@>=2.2.5 <3.0.0",
+      "resolved": "https://nexus.dev.indoqa.com/content/groups/npm-all/mocha/-/mocha-2.5.3.tgz",
+      "dependencies": {
+        "commander": {
+          "version": "2.3.0",
+          "from": "commander@2.3.0",
+          "resolved": "https://nexus.dev.indoqa.com/content/groups/npm-all/commander/-/commander-2.3.0.tgz"
+        },
+        "escape-string-regexp": {
+          "version": "1.0.2",
+          "from": "escape-string-regexp@1.0.2",
+          "resolved": "https://nexus.dev.indoqa.com/content/groups/npm-all/escape-string-regexp/-/escape-string-regexp-1.0.2.tgz"
+        },
+        "glob": {
+          "version": "3.2.11",
+          "from": "glob@3.2.11",
+          "resolved": "https://nexus.dev.indoqa.com/content/groups/npm-all/glob/-/glob-3.2.11.tgz"
+        },
+        "lru-cache": {
+          "version": "2.7.3",
+          "from": "lru-cache@>=2.0.0 <3.0.0",
+          "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-2.7.3.tgz"
+        },
+        "minimatch": {
+          "version": "0.3.0",
+          "from": "minimatch@>=0.3.0 <0.4.0",
+          "resolved": "https://nexus.dev.indoqa.com/content/groups/npm-all/minimatch/-/minimatch-0.3.0.tgz"
+        },
+        "supports-color": {
+          "version": "1.2.0",
+          "from": "supports-color@1.2.0",
+          "resolved": "https://nexus.dev.indoqa.com/content/groups/npm-all/supports-color/-/supports-color-1.2.0.tgz"
         }
       }
     },

@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "cross-env": "^1.0.7",
-    "indoqa-webpack": "^0.5.12",
+    "indoqa-webpack": "^0.6.1",
     "mocha": "^2.2.5"
   }
 }
