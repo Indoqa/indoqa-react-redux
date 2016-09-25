@@ -1,4 +1,4 @@
-import {fetchGeonames} from '../../app/utils/fetchApis'
+import {fetchGeonames} from '../../apis'
 
 export const FETCH_TIME = 'FETCH_TIME'
 export const CLEAR_TIME = 'CLEAR_TIME'
