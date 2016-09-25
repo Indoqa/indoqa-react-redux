@@ -18,6 +18,7 @@ We invent nothing new, this archetype is just a composition of useful tools and 
     * [babel](https://babeljs.io/) to support es6 syntax ans language features
     * [stylus](http://stylus-lang.com/) as our css framework of choice
     * eslint using [eslint-config-indoqa](https://github.com/Indoqa/eslint-config-indoqa) based on the well documented [airbnb](https://github.com/airbnb/javascript) rules
+  * [indoqa-react-restclient](https://github.com/Indoqa/indoqa-react-restclient) for API access
   * immutable.js to be used as state in reducers
   * mocha and expect to unit test actions and reducers
   * two demo pages, [one](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/time) with an example of fetching data from an external webservice ([geonames timezone](http://www.geonames.org/export/web-services.html#timezone)) and [another](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/todos) showing a local todo list
@@ -56,7 +57,3 @@ In simple terms, there is nothing else to code apart from actions, reducers and 
   * [Components and Containers](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Components.md)
   * [Using REST APIs](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/doc/Fetch.md)
   
-### Build notes
-
-todo: describe versioning, shrinkwrap, ...
-
