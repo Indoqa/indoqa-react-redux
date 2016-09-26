@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "immutable": "^3.7.6",
-    "indoqa-react-app": "^0.1.4",
+    "indoqa-react-app": "^0.1.6",
     "indoqa-react-restclient": "^0.1.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",

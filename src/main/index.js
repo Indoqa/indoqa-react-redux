@@ -4,12 +4,12 @@ import {render} from 'react-dom'
 import IndoqaApplication from 'indoqa-react-app'
 import routes from './routes'
 
-const reducerConfig = {
-  filePath: './reducers',
+const reduxConfig = {
+  reducerFilePath: './reducers',
   getReducers: () => require('./reducers').default
 }
 
 render(
-  <IndoqaApplication reducerConfig={reducerConfig} routes={routes} />,
+  <IndoqaApplication reduxConfig={reduxConfig} routerConfig={{routes}} />,
   document.getElementById('app')
 )
