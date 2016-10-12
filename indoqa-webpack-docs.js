@@ -1,9 +1,7 @@
 module.exports = {
   appName: 'indoqa-react-redux-docs',
-  mainJs: './src/main/index.js',
+  publicPath: '/indoqa-react-redux',
   outputPath: './docs',
   outputPublicPath: '/indoqa-react-redux',
-  createIndexHtml: true,
-  isReactLibrary: false,
-  externals: {}
+  createIndexHtml: true
 }
