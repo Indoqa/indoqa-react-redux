@@ -1,12 +1,12 @@
+import Rx from 'rxjs/Rx'
 import React from 'react'
 import {render} from 'react-dom'
-
 import IndoqaApplication from 'indoqa-react-app'
 import routes from './routes'
 
 const reduxConfig = {
-  reducerFilePath: './reducers',
-  getReducers: () => require('./reducers').default
+  epicFilePath: './epics',
+  lazyLoad: (path) => require(path).default
 }
 
 render(

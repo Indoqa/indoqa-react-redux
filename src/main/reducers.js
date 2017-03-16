@@ -1,7 +1,9 @@
-import timeReducers from './time/reducers'
-import todoReducers from './todos/reducers'
+import time from './time/store/time.reducer'
+import todos from './todos/store/todos.reducer'
+import visibilityFilter from './todos/store/visibilityFilter.reducer'
 
 export default {
-  ...timeReducers,
-  ...todoReducers
+  time,
+  todos,
+  visibilityFilter
 }

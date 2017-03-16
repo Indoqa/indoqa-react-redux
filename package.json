@@ -19,16 +19,15 @@
   },
   "dependencies": {
     "immutable": "^3.7.6",
-    "indoqa-react-app": "^0.1.6",
+    "indoqa-react-app": "^2.0.0",
     "indoqa-react-restclient": "^0.1.0",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-redux": "^5.0.1",
-    "react-router": "^3.0.0",
-    "redux": "^3.1.2",
-    "redux-logger": "^2.6.1",
-    "redux-multi": "^0.1.12",
-    "redux-promise-middleware": "^4.0.0"
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-redux": "^5.0.3",
+    "react-router": "^3.0.2",
+    "redux": "^3.6.0",
+    "redux-observable": "^0.13.0",
+    "rxjs": "^5.2.0"
   },
   "devDependencies": {
     "cross-env": "^3.1.3",

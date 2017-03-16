@@ -1,11 +1,10 @@
-import {fetchGeonames} from '../../apis'
-
 export const FETCH_TIME = 'FETCH_TIME'
+export const FETCH_TIME_SUCCESS = 'FETCH_TIME_SUCCESS'
+export const FETCH_TIME_ERROR = 'FETCH_TIME_ERROR'
 export const CLEAR_TIME = 'CLEAR_TIME'
 
 export const fetchTime = (lon, lat) => ({
-  type: FETCH_TIME,
-  payload: fetchGeonames(`/timezoneJSON?formatted=true&lng=${lon}&lat=${lat}&username=indoqa_react_redux&style=full`)
+  type: FETCH_TIME, lon, lat
 })
 
 export const clearTime = () => ({

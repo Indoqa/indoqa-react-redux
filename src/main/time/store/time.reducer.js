@@ -1,5 +1,5 @@
 import {fromJS} from 'immutable'
-import {FETCH_TIME, CLEAR_TIME} from '../actions/time'
+import {FETCH_TIME, FETCH_TIME_SUCCESS, FETCH_TIME_ERROR, CLEAR_TIME} from './time.actions'
 
 const initiatState = fromJS({
   result: null,
@@ -7,18 +7,18 @@ const initiatState = fromJS({
   isLoading: false
 })
 
-const time = (state = initiatState, action) => {
+export default (state = initiatState, action) => {
   switch (action.type) {
-    case `${FETCH_TIME}_START`:
+    case FETCH_TIME:
       return state.set('isLoading', true)
 
-    case `${FETCH_TIME}_SUCCESS`:
+    case FETCH_TIME_SUCCESS:
       state = state.set('isLoading', false)
       state = state.set('result', fromJS(action.payload))
       state = state.set('error', null)
       return state
 
-    case `${FETCH_TIME}_ERROR`:
+    case FETCH_TIME_ERROR:
       state = state.set('isLoading', false)
       state = state.set('result', null)
       state = state.set('error', action.payload.statusText)
@@ -33,5 +33,3 @@ const time = (state = initiatState, action) => {
       return state
   }
 }
-
-export default time

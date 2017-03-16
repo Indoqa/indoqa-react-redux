@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {addTodo} from '../actions'
+import {addTodo} from '../store/todos.actions'
 
 let AddTodo = ({dispatch}) => { // eslint-disable-line react/prop-types
   let input

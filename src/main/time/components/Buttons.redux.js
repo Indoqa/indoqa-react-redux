@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {fetchTime, clearTime} from '../actions/time'
+import {fetchTime, clearTime} from '../store/time.actions'
 import Buttons from './Buttons.react'
 
 const mapStateToProps = () => ({
