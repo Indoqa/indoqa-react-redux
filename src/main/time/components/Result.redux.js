@@ -1,10 +1,11 @@
 import {connect} from 'react-redux'
 import Result from './Result.react'
+import {selectResult, selectError, selectLoadingFlag} from '../store/time.selectors'
 
 const mapStateToProps = (state) => ({
-  result: state.time.get('result'),
-  error: state.time.get('error'),
-  isLoading: state.time.get('isLoading'),
+  result: selectResult(state),
+  error: selectError(state),
+  isLoading: selectLoadingFlag(state)
 })
 
 const mapDispatchToProps = () => ({

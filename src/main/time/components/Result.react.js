@@ -1,6 +1,14 @@
+// @flow
+import {Result} from '../types/Result'
 import React, {PropTypes} from 'react'
 
-const Result = ({result, error, isLoading}) => {
+type Props = {
+  result: Result,
+  error: string,
+  isLoading: boolean
+};
+
+export default ({result, error, isLoading}: Props) => {
   if (isLoading) {
     return <span> loading.. </span>
   }
@@ -15,17 +23,10 @@ const Result = ({result, error, isLoading}) => {
 
   return (
     <div>
-      <div> current time: {result.get('time')} </div>
-      <div> country: {result.get('countryName')} </div>
-      <div> timezone: {result.get('timezoneId')} </div>
+      <div> current time: {result.time} </div>
+      <div> country: {result.countryName} </div>
+      <div> timezone: {result.timezoneId} </div>
     </div>
   )
 }
 
-Result.propTypes = {
-  result: PropTypes.object,
-  error: PropTypes.string,
-  isLoading: PropTypes.bool
-}
-
-export default Result

@@ -1,6 +1,8 @@
-import React, {PropTypes} from 'react'
+// @flow
 
-const Buttons = ({loadVienna, loadNewYork, loadInvalidLocation, clear}) => (
+import React from 'react'
+
+const Buttons = ({loadVienna, loadNewYork, loadInvalidLocation, clear}: Props) => (
   <div>
     <div>
       <button onClick={loadVienna}> Vienna </button>
@@ -11,11 +13,11 @@ const Buttons = ({loadVienna, loadNewYork, loadInvalidLocation, clear}) => (
   </div>
 )
 
-Buttons.propTypes = {
-  loadVienna: PropTypes.func,
-  loadNewYork: PropTypes.func,
-  loadInvalidLocation: PropTypes.func,
-  clear: PropTypes.func
+interface Props {
+  loadVienna: () => void; 
+  loadNewYork: () => void; 
+  loadInvalidLocation: () => void; 
+  clear: () => void;
 }
 
 export default Buttons

@@ -1,32 +1,40 @@
-import {fromJS} from 'immutable'
-import {FETCH_TIME, FETCH_TIME_SUCCESS, FETCH_TIME_ERROR, CLEAR_TIME} from './time.actions'
+// @flow
 
-const initiatState = fromJS({
+import type {TimeState} from '../types/TimeState'
+import type {Action} from 'redux'
+import {FetchTimeAction, ClearTimeAction} from '../types/TimeActions'
+
+import * as actions from './time.actions'
+import * as R from 'ramda';
+
+const initiatState = {
   result: null,
   error: null,
   isLoading: false
-})
+}
 
-export default (state = initiatState, action) => {
+export default (state: TimeState = initiatState, action: Action) => {
   switch (action.type) {
-    case FETCH_TIME:
-      return state.set('isLoading', true)
+    case actions.FETCH_TIME:
+      return R.assoc('isLoading', true, state)
 
-    case FETCH_TIME_SUCCESS:
-      state = state.set('isLoading', false)
-      state = state.set('result', fromJS(action.payload))
-      state = state.set('error', null)
+    case actions.FETCH_TIME_SUCCESS:
+      const fetchTimeAction: FetchTimeAction = action
+      
+      state = R.assoc('isLoading', false, state)
+      state = R.assoc('result', action.payload, state)
+      state = R.assoc('error', null, state)
       return state
 
-    case FETCH_TIME_ERROR:
-      state = state.set('isLoading', false)
-      state = state.set('result', null)
-      state = state.set('error', action.payload.statusText)
+    case actions.FETCH_TIME_ERROR:
+      state = R.assoc('isLoading', false, state)
+      state = R.assoc('result',null, state)
+      state = R.assoc('error', action.payload.statusText, state)
       return state
 
-    case CLEAR_TIME:
-      state = state.set('result', null)
-      state = state.set('error', null)
+    case actions.CLEAR_TIME:
+      state = R.assoc('result', null, state)
+      state = R.assoc('error', null, state)
       return state
 
     default:
