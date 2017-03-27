@@ -14,9 +14,9 @@ const Buttons = ({loadVienna, loadNewYork, loadInvalidLocation, clear}: Props) =
 )
 
 interface Props {
-  loadVienna: () => void; 
-  loadNewYork: () => void; 
-  loadInvalidLocation: () => void; 
+  loadVienna: () => void;
+  loadNewYork: () => void;
+  loadInvalidLocation: () => void;
   clear: () => void;
 }
 

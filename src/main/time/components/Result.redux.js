@@ -5,14 +5,9 @@ import {selectResult, selectError, selectLoadingFlag} from '../store/time.select
 const mapStateToProps = (state) => ({
   result: selectResult(state),
   error: selectError(state),
-  isLoading: selectLoadingFlag(state)
-})
-
-const mapDispatchToProps = () => ({
-  //
+  isLoading: selectLoadingFlag(state),
 })
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(Result)

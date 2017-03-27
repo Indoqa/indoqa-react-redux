@@ -8,9 +8,9 @@ export const FETCH_TIME_ERROR = 'FETCH_TIME_ERROR'
 export const CLEAR_TIME = 'CLEAR_TIME'
 
 export const fetchTime = (lon: number, lat: number): FetchTimeAction => ({
-  type: FETCH_TIME, lon, lat
+  type: FETCH_TIME, lon, lat,
 })
 
 export const clearTime = (): ClearTimeAction => ({
-  type: CLEAR_TIME
+  type: CLEAR_TIME,
 })

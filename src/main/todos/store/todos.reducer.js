@@ -8,11 +8,13 @@ const todos = (state = initialState, action) => {
       return R.append({
         id: action.id,
         text: action.text,
-        completed: false
+        completed: false,
       }, state)
+
     case 'TOGGLE_TODO':
-      const index = R.findIndex(item => item.id === action.id)(state)
-      return R.adjust(item => R.assoc('completed', !item.completed, item), index, state)
+      const index = R.findIndex((item) => item.id === action.id)(state)
+      return R.adjust((item) => R.assoc('completed', !item.completed, item), index, state)
+
     default:
       return state
   }

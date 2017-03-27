@@ -1,8 +1,7 @@
-import Rx from 'rxjs/Rx'
 import React from 'react'
 import {render} from 'react-dom'
 import IndoqaApplication from 'indoqa-react-app'
-import routes from './routes'
+import routes from './routes.react'
 
 const reduxConfig = {
   reducers: require('./reducers').default,

@@ -10,7 +10,7 @@ import * as R from 'ramda'
 const initiatState = {
   result: null,
   error: null,
-  isLoading: false
+  isLoading: false,
 }
 
 export default (state: TimeState = initiatState, action: Action) => {
@@ -20,7 +20,7 @@ export default (state: TimeState = initiatState, action: Action) => {
 
     case actions.FETCH_TIME_SUCCESS:
       const fetchTimeAction: FetchTimeAction = action
-      
+
       state = R.assoc('isLoading', false, state)
       state = R.assoc('result', action.payload, state)
       state = R.assoc('error', null, state)
@@ -28,7 +28,7 @@ export default (state: TimeState = initiatState, action: Action) => {
 
     case actions.FETCH_TIME_ERROR:
       state = R.assoc('isLoading', false, state)
-      state = R.assoc('result',null, state)
+      state = R.assoc('result', null, state)
       state = R.assoc('error', action.payload.statusText, state)
       return state
 

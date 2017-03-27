@@ -2,10 +2,6 @@ import {connect} from 'react-redux'
 import {fetchTime, clearTime} from '../store/time.actions'
 import Buttons from './Buttons.react'
 
-const mapStateToProps = () => ({
-  //
-})
-
 const mapDispatchToProps = (dispatch) => ({
   loadVienna: () => {
     dispatch(fetchTime(10, 47))
@@ -18,10 +14,10 @@ const mapDispatchToProps = (dispatch) => ({
   },
   clear: () => {
     dispatch(clearTime())
-  }
+  },
 })
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Buttons)

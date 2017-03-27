@@ -1,6 +1,7 @@
 // @flow
+import React from 'react'
+
 import {Result} from '../types/Result'
-import React, {PropTypes} from 'react'
 
 type Props = {
   result: Result,
@@ -10,7 +11,7 @@ type Props = {
 
 export default ({result, error, isLoading}: Props) => {
   if (isLoading) {
-    return <span> loading.. </span>
+    return <span> loading... </span>
   }
 
   if (error) {
@@ -29,4 +30,3 @@ export default ({result, error, isLoading}: Props) => {
     </div>
   )
 }
-

@@ -5,5 +5,5 @@ import visibilityFilter from './todos/store/visibilityFilter.reducer'
 export default {
   time,
   todos,
-  visibilityFilter
+  visibilityFilter,
 }
