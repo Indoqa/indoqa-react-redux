@@ -5,9 +5,8 @@ import IndoqaApplication from 'indoqa-react-app'
 import routes from './routes'
 
 const reduxConfig = {
-  epicFilePath: './epics',
-  reducerFilePath: './reducers',
-  lazyLoad: (path) => require(path).default
+  reducers: require('./reducers').default,
+  epics: require('./epics').default,
 }
 
 render(
