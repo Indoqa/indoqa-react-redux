@@ -5,7 +5,7 @@ import type {Action} from 'redux'
 import {FetchTimeAction, ClearTimeAction} from '../types/TimeActions'
 
 import * as actions from './time.actions'
-import * as R from 'ramda';
+import * as R from 'ramda'
 
 const initiatState = {
   result: null,

@@ -1,20 +1,18 @@
-import {List, fromJS} from 'immutable'
+import * as R from 'ramda'
 
-const initialState = new List
+const initialState = []
 
 const todos = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return state.push(fromJS({
+      return R.append({
         id: action.id,
         text: action.text,
         completed: false
-      }))
+      }, state)
     case 'TOGGLE_TODO':
-      return state.update(
-        state.findIndex(item => item.get('id') === action.id),
-        item => item.set('completed', !item.get('completed'))
-      )
+      const index = R.findIndex(item => item.id === action.id)(state)
+      return R.adjust(item => R.assoc('completed', !item.completed, item), index, state)
     default:
       return state
   }

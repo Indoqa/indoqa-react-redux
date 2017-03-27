@@ -6,6 +6,7 @@ import routes from './routes'
 
 const reduxConfig = {
   epicFilePath: './epics',
+  reducerFilePath: './reducers',
   lazyLoad: (path) => require(path).default
 }
 

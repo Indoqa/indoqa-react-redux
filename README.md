@@ -9,17 +9,14 @@ consistant environment for client side web applications that are consuming busin
 We invent nothing new, this archetype is just a composition of useful tools and plugins. In addition to vanilla react and redux, we set up the following:
 
   * [indoqa-react-app](https://github.com/Indoqa/indoqa-react-app) for a basic redux and router setup:
-    * [react-promise-middleware](https://github.com/pburtchaell/redux-promise-middleware) to support 'fetch' and other async operations in actions
-    * [react-multi](https://github.com/ashaffer/redux-multi) to optionally dispatch multiple actions at once
-    * dependency injection to optionally access the current state in actions
+    * [react-observable](https://github.com/redux-observable/redux-observable) for side effects
     * [react-router](https://github.com/reactjs/react-router) to support multipe pages
     * dev tools for [hot reloading](https://github.com/gaearon/react-hot-loader) and [logging](https://github.com/fcomb/redux-logger)
   * [indoqa-webpack](https://github.com/Indoqa/indoqa-webpack) build system
     * [babel](https://babeljs.io/) to support es6 syntax ans language features
     * [stylus](http://stylus-lang.com/) as our css framework of choice
     * eslint using [eslint-config-indoqa](https://github.com/Indoqa/eslint-config-indoqa) based on the well documented [airbnb](https://github.com/airbnb/javascript) rules
-  * [indoqa-react-restclient](https://github.com/Indoqa/indoqa-react-restclient) for API access
-  * immutable.js to be used as state in reducers
+  * [Ramda](http://ramdajs.com/docs/) for immutable state transformation
   * mocha and expect to unit test actions and reducers
   * two demo pages, [one](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/time) with an example of fetching data from an external webservice ([geonames timezone](http://www.geonames.org/export/web-services.html#timezone)) and [another](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/todos) showing a local todo list
   * a simple and clean application layout
