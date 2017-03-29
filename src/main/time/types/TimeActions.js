@@ -1,5 +1,4 @@
 // @flow
-
 import type {Action} from 'redux'
 
 export interface TimeAction extends Action {}

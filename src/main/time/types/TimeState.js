@@ -1,5 +1,5 @@
 // @flow
-import type {Result} from './result'
+import {Result} from './Result'
 
 export type TimeState = {
   result: ?Result,
