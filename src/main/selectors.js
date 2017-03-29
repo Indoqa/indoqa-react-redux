@@ -1,7 +1,5 @@
 // @flow
 import type {TimeState} from './time/types/TimeState'
-import state from './reducers'
-import {createSelector} from 'reselect'
 
 type State = {
   time: TimeState,
@@ -11,4 +9,3 @@ type State = {
 
 export const selectTimeState = (state: State) => state.time
 export const selectTodoState = (state: State) => state.todos
-

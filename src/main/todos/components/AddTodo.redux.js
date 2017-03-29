@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addTodo} from '../store/todos.actions'
 
-let AddTodo = ({dispatch}) => { // eslint-disable-line react/prop-types
+const AddTodo = ({dispatch}) => { // eslint-disable-line react/prop-types
   let input
 
   return (
@@ -30,6 +30,4 @@ let AddTodo = ({dispatch}) => { // eslint-disable-line react/prop-types
   )
 }
 
-AddTodo = connect()(AddTodo)
-
-export default AddTodo
+export default connect()(AddTodo)

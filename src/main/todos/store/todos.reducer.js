@@ -11,9 +11,10 @@ const todos = (state = initialState, action) => {
         completed: false,
       }, state)
 
-    case 'TOGGLE_TODO':
+    case 'TOGGLE_TODO': {
       const index = R.findIndex((item) => item.id === action.id)(state)
       return R.adjust((item) => R.assoc('completed', !item.completed, item), index, state)
+    }
 
     default:
       return state

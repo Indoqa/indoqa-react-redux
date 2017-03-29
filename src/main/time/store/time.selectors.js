@@ -1,7 +1,7 @@
 // @flow
+import {createSelector} from 'reselect'
 
 import type {TimeState} from '../types/TimeState'
-import {createSelector} from 'reselect'
 import {selectTimeState} from '../../selectors'
 
 export const selectResult = createSelector(selectTimeState, (state: TimeState) => state.result)
