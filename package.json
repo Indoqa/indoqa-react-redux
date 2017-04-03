@@ -12,7 +12,7 @@
     "docs": "indoqa-webpack ./indoqa-webpack-docs.js",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "lint": "indoqa-eslint ./src/main",
-    "package": "yarn run lint && indoqa-webpack indoqa-webpack-options.js",
+    "package": "yarn run lint && yarn run test && indoqa-webpack indoqa-webpack-options.js",
     "test": "indoqa-jest",
     "test:watch": "yarn run test -- --watch",
     "postinstall": "yarn run package"
