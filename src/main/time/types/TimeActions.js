@@ -1,11 +1,24 @@
 // @flow
-import type {Action} from 'redux'
-
-export interface TimeAction extends Action {}
-
-export interface FetchTimeAction extends TimeAction {
+type FetchTimeAction = {
+  type: "FETCH_TIME",
   lon: number,
   lat: number
 }
 
-export interface ClearTimeAction extends TimeAction {}
+type FetchTimeSuccessAction = {
+  type: "FETCH_TIME_SUCCESS",
+}
+
+type FetchTimeErrorAction = {
+  type: "FETCH_TIME_ERROR",
+}
+
+type CLEAR_TIME = {
+  type: "CLEAR_TIME",
+}
+
+export type Action =
+  | FetchTimeAction
+  | FetchTimeSuccessAction
+  | FetchTimeErrorAction
+  | CLEAR_TIME
