@@ -3,7 +3,6 @@
   "version": "2.0.0",
   "description": "Indoqa React/Redux Archetype",
   "license": "Apache-2.0",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git@github.com:Indoqa/indoqa-react-redux.git"
@@ -14,9 +13,9 @@
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "lint": "indoqa-eslint ./src/main",
     "package": "indoqa-webpack indoqa-webpack-options.js",
-    "test": "cross-env NODE_ENV=test mocha ./src/test --recursive --compilers js:babel-register --require ./src/test/setup.js",
-    "test:watch": "npm test -- --watch",
-    "postinstall": "npm run package"
+    "test": "indoqa-jest",
+    "test:watch": "yarn run test -- --watch",
+    "postinstall": "yarn run package"
   },
   "dependencies": {
     "indoqa-react-app": "^2.0.0",
