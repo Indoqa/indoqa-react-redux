@@ -7,10 +7,12 @@ type FetchTimeAction = {
 
 type FetchTimeSuccessAction = {
   type: "FETCH_TIME_SUCCESS",
+  payload: any,
 }
 
 type FetchTimeErrorAction = {
   type: "FETCH_TIME_ERROR",
+  payload: any,
 }
 
 type CLEAR_TIME = {

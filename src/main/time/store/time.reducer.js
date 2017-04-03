@@ -1,8 +1,8 @@
 // @flow
-
-import type {Action} from 'redux'
 import * as R from 'ramda'
+
 import type {TimeState} from '../types/TimeState'
+import type {Action} from '../types/TimeActions'
 
 const initiatState = {
   result: null,
