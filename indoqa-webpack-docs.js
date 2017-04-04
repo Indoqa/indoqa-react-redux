@@ -3,5 +3,5 @@ module.exports = {
   publicPath: '/indoqa-react-redux',
   outputPath: './docs',
   outputPublicPath: '/indoqa-react-redux',
-  createIndexHtml: true
+  createIndexHtml: true,
 }
