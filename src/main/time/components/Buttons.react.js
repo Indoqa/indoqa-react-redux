@@ -2,6 +2,13 @@
 
 import React from 'react'
 
+interface Props {
+  loadVienna: () => void;
+  loadNewYork: () => void;
+  loadInvalidLocation: () => void;
+  clear: () => void;
+}
+
 const Buttons = ({loadVienna, loadNewYork, loadInvalidLocation, clear}: Props) => (
   <div>
     <div>
@@ -12,12 +19,4 @@ const Buttons = ({loadVienna, loadNewYork, loadInvalidLocation, clear}: Props) =
     </div>
   </div>
 )
-
-interface Props {
-  loadVienna: () => void;
-  loadNewYork: () => void;
-  loadInvalidLocation: () => void;
-  clear: () => void;
-}
-
 export default Buttons
