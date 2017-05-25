@@ -1,13 +1,13 @@
 import React from 'react'
 import {IndexRoute, Route} from 'react-router'
-import App from './app/components/App.react'
-import TimePage from './time/components/Page.react'
-import TodoPage from './todos/components/Page.react'
+
+import TimePage from './time/components/TimePage.react.js'
+import TodosPage from './todos/components/TodosPage.react'
 
 const routes = (
-  <Route component={App} path="/">
+  <Route path="/">
     <IndexRoute component={TimePage} />
-    <Route component={TodoPage} path="/todos" />
+    <Route component={TodosPage} path="/todos" />
   </Route>
 )
 

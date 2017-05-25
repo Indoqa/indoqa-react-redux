@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import {Text, Box} from 'indoqa-react-fela'
 
 import type {Result} from '../types/Result'
 
@@ -12,33 +13,33 @@ type Props = {
 export default ({result, error, isLoading}: Props) => {
   if (isLoading) {
     return (
-      <span>
+      <Text>
         loading...
-      </span>
+      </Text>
     )
   }
 
   if (error) {
     return (
-      <span>
+      <Text>
         ERROR fetching time: {error}
-      </span>
+      </Text>
     )
   }
 
   if (!result) {
     return (
-      <span>
+      <Text>
         Select a location!
-      </span>
+      </Text>
     )
   }
 
   return (
-    <div>
-      <div>current time: {result.time}</div>
-      <div>country: {result.countryName}</div>
-      <div>timezone: {result.timezoneId}</div>
-    </div>
+    <Box>
+      <Box>current time: {result.time}</Box>
+      <Box>country: {result.countryName}</Box>
+      <Box>timezone: {result.timezoneId}</Box>
+    </Box>
   )
 }

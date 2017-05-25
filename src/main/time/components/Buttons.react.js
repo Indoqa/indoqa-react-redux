@@ -1,6 +1,8 @@
 // @flow
-
 import React from 'react'
+import {Box} from 'indoqa-react-fela'
+
+import Button from '../../commons/components/atoms/Button.react.js'
 
 interface Props {
   loadVienna: () => void;
@@ -10,13 +12,12 @@ interface Props {
 }
 
 const Buttons = ({loadVienna, loadNewYork, loadInvalidLocation, clear}: Props) => (
-  <div>
-    <div>
-      <button onClick={loadVienna}> Vienna </button>
-      <button onClick={loadNewYork}> New York </button>
-      <button onClick={loadInvalidLocation}> Invalid Location </button>
-      <button onClick={clear}> Clear </button>
-    </div>
-  </div>
+  <Box mb={2}>
+    <Button onClick={loadVienna}>Vienna</Button>
+    <Button onClick={loadNewYork}>New York</Button>
+    <Button onClick={loadInvalidLocation}>Invalid Location</Button>
+    <Button onClick={clear}>Clear</Button>
+  </Box>
 )
+
 export default Buttons
