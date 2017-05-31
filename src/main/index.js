@@ -4,7 +4,6 @@ import {createReduxStore} from 'indoqa-react-app'
 
 import IndoqaApplication from './app/IndoqaApplication.react.js'
 import routes from './routes.react'
-import theme from './theme.js'
 
 const reduxConfig = {
   reducers: require('./reducers').default,
@@ -15,35 +14,25 @@ const appElement = document.getElementById('app')
 
 const store = createReduxStore(reduxConfig)
 
-// hot reload does not work, see
-// http://fela.js.org/docs/advanced/DeveloperExperience.html
-// https://github.com/este/este/blob/c7e1138e51be6a8c27ba534dc8ecd0c74a695a57/src/browser/app/Root.js#L13
 render(
-  <IndoqaApplication store={store} theme={theme} routerConfig={{routes}} />,
+  <IndoqaApplication store={store} routerConfig={{routes}} />,
   appElement
 )
 
 if (module.hot && typeof module.hot.accept === 'function') {
   module.hot.accept('./app/IndoqaApplication.react.js', () => {
-    console.log('reload! 1')
     const NextIndoqaApplication = require('./app/IndoqaApplication.react.js').default
 
     render(
-      <NextIndoqaApplication store={store} theme={theme} routerConfig={{routes}} />,
+      <NextIndoqaApplication store={store} routerConfig={{routes}} />,
       appElement
     )
   })
-/*
-  module.hot.accept('./theme.js', () => {
-    console.log('reload! 2')
-    const NextIndoqaApplication = require('./app/IndoqaApplication.react.js').default
-    const nextTheme = require('./theme.js').default
-    console.log('nextTheme', nextTheme)
-
-    render(
-      <NextIndoqaApplication store={store} theme={nextTheme} routerConfig={{routes}} />,
-      appElement
-    )
-  })
-*/
 }
+
+// todo
+// - ThemedApp as root component (--> routes)
+// - move createReduxStore into this codebase and find and make sure that the root epic and
+//   root reducer are both triggered by the hot reload process
+// - cleanup codebase and move the changes back to indoqa-react-fela and indoqa-react-app
+// - evaluate if merging indoqa-react-fela and indoqa-react-app makes sense
