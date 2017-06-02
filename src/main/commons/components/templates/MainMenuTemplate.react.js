@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import {Box, Flex} from 'indoqa-react-fela'
 
 import Bar from '../molecules/Bar.react'

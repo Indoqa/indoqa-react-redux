@@ -1,10 +1,11 @@
-import React, {PropTypes, Component} from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import {ThemeProvider} from 'react-fela'
 import {buildTheme} from 'indoqa-react-fela'
 
 import theme from './theme.js'
 
-class App extends Component {
+class App extends React.Component {
 
   render() {
     return (
