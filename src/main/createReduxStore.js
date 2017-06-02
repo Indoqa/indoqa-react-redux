@@ -2,11 +2,11 @@ import {createStore, compose, applyMiddleware} from 'redux'
 import {createEpicMiddleware} from 'redux-observable'
 import {createLogger} from 'redux-logger'
 
-import rootReducer from './app/reducers/index.js'
-import rootEpic from './app/epics/index.js'
-
 const createReduxStore = (reduxConfig) => {
   const isProduction = process.env.NODE_ENV === 'production'
+
+  const rootReducer = require('./app/reducers/').default
+  const rootEpic = require('./app/epics/').default
 
   const epicMiddleware = createEpicMiddleware(rootEpic)
   const middlewares = [epicMiddleware]
@@ -36,14 +36,14 @@ const createReduxStore = (reduxConfig) => {
   )
 
   if (module.hot) {
-    module.hot.accept('./app/reducers', () => {
-      const nextRootReducer = require('./app/reducers/index').default
+    module.hot.accept('./app/reducers/', () => {
+      const nextRootReducer = require('./app/reducers/').default
       store.replaceReducer(nextRootReducer)
     })
 
     if (epicMiddleware) {
-      module.hot.accept('./app/epics', () => {
-        const nextRootEpic = require('./app/epics/index').default
+      module.hot.accept('./app/epics/', () => {
+        const nextRootEpic = require('./app/epics/').default
         epicMiddleware.replaceEpic(nextRootEpic)
       })
     }
