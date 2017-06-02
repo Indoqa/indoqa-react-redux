@@ -1,20 +1,18 @@
-let nextTodoId = 0
+// @flow
 
-export const addTodo = (text) => {
-  nextTodoId += 1
-  return {
-    type: 'ADD_TODO',
-    id: nextTodoId,
-    text,
-  }
-}
+import type {Action} from '../types/TodoActions'
 
-export const setVisibilityFilter = (filter) => ({
-  type: 'SET_VISIBILITY_FILTER',
+export const addTodo = (text: string): Action => ({
+  type: 'ADD_TODO',
+  text,
+})
+
+export const setFilter = (filter: string): Action => ({
+  type: 'SET_FILTER',
   filter,
 })
 
-export const toggleTodo = (id) => ({
+export const toggleTodo = (id:number): Action => ({
   type: 'TOGGLE_TODO',
   id,
 })

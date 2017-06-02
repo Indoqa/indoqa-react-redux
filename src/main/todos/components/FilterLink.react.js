@@ -1,7 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+// @flow
 
-const Link = ({active, children, onClick}) => {
+import React from 'react'
+
+type Props = {
+  active: boolean,
+  children: Element,
+  onClick: Function,
+};
+
+const Link = ({active, children, onClick}: Props) => {
   if (active) {
     return <span>{children}</span>
   }
@@ -17,12 +24,6 @@ const Link = ({active, children, onClick}) => {
       {children}
     </a>
   )
-}
-
-Link.propTypes = {
-  active: PropTypes.bool.isRequired,
-  children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired,
 }
 
 export default Link

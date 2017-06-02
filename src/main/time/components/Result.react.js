@@ -8,7 +8,7 @@ type Props = {
   result: Result,
   error: string,
   isLoading: boolean
-}
+};
 
 export default ({result, error, isLoading}: Props) => {
   if (isLoading) {

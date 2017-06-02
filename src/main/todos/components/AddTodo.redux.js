@@ -1,33 +1,19 @@
-import React from 'react'
+// @flow
+
 import {connect} from 'react-redux'
 import {addTodo} from '../store/todos.actions'
+import AddTodo from './AddTodo.react'
 
-const AddTodo = ({dispatch}) => { // eslint-disable-line react/prop-types
-  let input
+const mapStateToProps = () => ({
+})
 
-  return (
-    <div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault()
-          if (!input.value.trim()) {
-            return
-          }
-          dispatch(addTodo(input.value))
-          input.value = ''
-        }}
-      >
-        <input
-          ref={(node) => {
-            input = node
-          }}
-        />
-        <button type="submit">
-          Add Todo
-        </button>
-      </form>
-    </div>
-  )
-}
+const mapDispatchToProps = (dispatch) => ({
+  onAddTodo: (text) => {
+    dispatch(addTodo(text))
+  },
+})
 
-export default connect()(AddTodo)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AddTodo)

@@ -1,21 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+// @flow
 
-const Todo = ({onClick, completed, text}) => (
+import React from 'react'
+import type {Todo as TodoType} from '../types/Todo'
+
+type Props = {
+  todo: TodoType,
+  onClick: Function,
+};
+
+const Todo = ({todo, onClick}: Props) => (
   <li
     onClick={onClick}
     style={{
-      textDecoration: completed ? 'line-through' : 'none',
+      textDecoration: todo.completed ? 'line-through' : 'none',
     }}
   >
-    {text}
+    {todo.text}
   </li>
 )
-
-Todo.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  completed: PropTypes.bool.isRequired,
-  text: PropTypes.string.isRequired,
-}
 
 export default Todo

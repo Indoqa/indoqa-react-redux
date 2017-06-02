@@ -6,14 +6,13 @@ describe('todo actions', () => {
   it('addTodo should create ADD_TODO action', () => {
     expect(actions.addTodo('Use Redux')).toEqual({
       type: 'ADD_TODO',
-      id: 1,
       text: 'Use Redux',
     })
   })
 
-  it('setVisibilityFilter should create SET_VISIBILITY_FILTER action', () => {
-    expect(actions.setVisibilityFilter('active')).toEqual({
-      type: 'SET_VISIBILITY_FILTER',
+  it('setFilter should create SET__FILTER action', () => {
+    expect(actions.setFilter('active')).toEqual({
+      type: 'SET_FILTER',
       filter: 'active',
     })
   })

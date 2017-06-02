@@ -1,24 +1,21 @@
+// @flow
+
 import {connect} from 'react-redux'
-import {setVisibilityFilter} from '../store/todos.actions'
-import Link from './Link.react'
+import {setFilter} from '../store/todos.actions'
+import FilterLink from './FilterLink.react'
+import {selectFilter} from '../store/todos.selectors'
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    active: ownProps.filter === state.visibilityFilter,
-  }
-}
+const mapStateToProps = (state, ownProps) => ({
+  active: ownProps.filter === selectFilter(state),
+})
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    onClick: () => {
-      dispatch(setVisibilityFilter(ownProps.filter))
-    },
-  }
-}
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onClick: () => {
+    dispatch(setFilter(ownProps.filter))
+  },
+})
 
-const FilterLink = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Link)
-
-export default FilterLink
+)(FilterLink)

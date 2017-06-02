@@ -4,13 +4,13 @@ import * as R from 'ramda'
 import type {TimeState} from '../types/TimeState'
 import type {Action} from '../types/TimeActions'
 
-const initiatState = {
+const initialState = {
   result: null,
   error: null,
   isLoading: false,
 }
 
-export default (state: TimeState = initiatState, action: Action) => {
+export default (state: TimeState = initialState, action: Action) => {
   switch (action.type) {
     case 'FETCH_TIME':
       return R.assoc('isLoading', true, state)

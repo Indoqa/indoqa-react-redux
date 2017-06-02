@@ -1,26 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Todo from './Todo.react'
+// @flow
 
-const TodoList = ({todos, onTodoClick}) => (
+import React from 'react'
+import Todo from './Todo.react'
+import type {Todo as TodoType} from '../types/Todo'
+
+type Props = {
+  todos: TodoType[],
+  onTodoClick: Function,
+};
+
+const TodoList = ({todos, onTodoClick}: Props) => (
   <ul>
     {todos.map((todo) =>
       <Todo
         key={todo.id}
-        {...todo}
+        todo={todo}
         onClick={() => onTodoClick(todo.id)}
       />
     )}
   </ul>
 )
-
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    completed: PropTypes.bool.isRequired,
-    text: PropTypes.string.isRequired,
-  }).isRequired).isRequired,
-  onTodoClick: PropTypes.func.isRequired,
-}
 
 export default TodoList

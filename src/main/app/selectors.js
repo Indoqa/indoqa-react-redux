@@ -1,10 +1,10 @@
 // @flow
 import type {TimeState} from '../time/types/TimeState'
+import type {TodoState} from '../todos/types/TodoState'
 
 type State = {
   time: TimeState,
-  todos: any,
-  visibilityFilter: any
+  todos: TodoState,
 }
 
 export const selectTimeState = (state: State) => state.time
