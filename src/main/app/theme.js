@@ -1,6 +1,6 @@
 export default {
   colors: {
-    text: 'red',
+    text: 'green',
     disabled: '#727272',
     bgLight: '#e5e5e5',
   },
