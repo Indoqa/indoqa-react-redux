@@ -2,19 +2,19 @@ import createIndoqaStore from '../lib/createIndoqaStore.js'
 
 const createStore = () => {
   const indoqaStore = createIndoqaStore({
-    rootReducer: require('./reducers/').default,
-    rootEpic: require('./epics/').default,
+    rootReducer: require('./rootReducer.js').default,
+    rootEpic: require('./rootEpic.js').default,
   })
 
   if (module.hot) {
-    module.hot.accept('./reducers/', () => {
-      const nextRootReducer = require('./reducers/').default
+    module.hot.accept('./rootReducer', () => {
+      const nextRootReducer = require('./rootReducer.js').default
       indoqaStore.reduxStore.replaceReducer(nextRootReducer)
     })
 
     if (indoqaStore.epicMiddleware) {
-      module.hot.accept('./epics/', () => {
-        const nextRootEpic = require('./epics/').default
+      module.hot.accept('./rootEpic', () => {
+        const nextRootEpic = require('./rootEpic.js').default
         indoqaStore.epicMiddleware.replaceEpic(nextRootEpic)
       })
     }
@@ -23,4 +23,4 @@ const createStore = () => {
   return indoqaStore.reduxStore
 }
 
-export default createStore
+export default createStore()
