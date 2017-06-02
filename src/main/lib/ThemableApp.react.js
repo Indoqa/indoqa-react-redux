@@ -2,8 +2,8 @@ import React, {PropTypes, Component} from 'react'
 import {ThemeProvider} from 'react-fela'
 import merge from 'deepmerge'
 
-import {theme as baseTheme} from './fela/theme'
-import theme from './theme.js'
+import {theme as baseTheme} from '../fela/theme'
+import theme from '../app/theme.js'
 
 const buildTheme = (customTheme) => {
   return merge(baseTheme, customTheme)

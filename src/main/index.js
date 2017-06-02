@@ -1,10 +1,10 @@
 import React from 'react'
 import {render} from 'react-dom'
 
-import IndoqaApplication from './app/IndoqaApplication.react.js'
+import IndoqaApplication from './lib/IndoqaApplication.react.js'
 
 import createStore from './app/createStore.js'
-import routes from './routes.react'
+import routes from './app/routes.react.js'
 
 render(
   <IndoqaApplication store={createStore()} routerConfig={{routes}} />,

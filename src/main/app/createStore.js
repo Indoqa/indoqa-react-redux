@@ -1,4 +1,4 @@
-import createIndoqaStore from '../createIndoqaStore.js'
+import createIndoqaStore from '../lib/createIndoqaStore.js'
 
 const createStore = () => {
   const indoqaStore = createIndoqaStore({

@@ -1,5 +1,5 @@
 // @flow
-import type {TimeState} from './time/types/TimeState'
+import type {TimeState} from '../time/types/TimeState'
 
 type State = {
   time: TimeState,
