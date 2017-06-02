@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node ./src/dev/server.js",
     "docs": "indoqa-webpack ./indoqa-webpack-docs.js",
-    "flow": "flow; test $? -eq 0 -o $? -eq 2",
+    "flow": "flow",
     "lint": "indoqa-eslint ./src/main",
     "package": "yarn run lint && yarn run flow && yarn run test && indoqa-webpack indoqa-webpack-options.js",
     "test": "indoqa-jest",
