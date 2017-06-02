@@ -16,17 +16,6 @@ render(
   appElement
 )
 
-if (module.hot && typeof module.hot.accept === 'function') {
-  module.hot.accept('./app/IndoqaApplication.react.js', () => {
-    const NextIndoqaApplication = require('./app/IndoqaApplication.react.js').default
-
-    render(
-      <NextIndoqaApplication store={store} routerConfig={{routes}} />,
-      appElement
-    )
-  })
-}
-
 // todo
 // - ThemedApp as root component (--> routes)
 // - cleanup codebase and move the changes back to indoqa-react-fela and indoqa-react-app
