@@ -16,7 +16,6 @@ export default (state: TimeState = initiatState, action: Action) => {
       return R.assoc('isLoading', true, state)
 
     case 'FETCH_TIME_SUCCESS': {
-      console.log('fetch_timex')
       state = R.assoc('isLoading', false, state)
       state = R.assoc('result', action.payload, state)
       state = R.assoc('error', null, state)
