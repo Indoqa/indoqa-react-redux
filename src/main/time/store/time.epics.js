@@ -1,9 +1,5 @@
 import {ajax} from 'rxjs/observable/dom/ajax'
 
-import 'rxjs/add/operator/filter'
-import 'rxjs/add/operator/switchMap'
-import 'rxjs/add/operator/map'
-
 import {fetchTimeSuccess} from './time.actions'
 
 const url = (lon, lat) =>

@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react'
 import {ThemeProvider} from 'react-fela'
-import buildTheme from '../lib/buildTheme.js'
+import {buildTheme} from 'indoqa-react-fela'
 
 import theme from './theme.js'
 
