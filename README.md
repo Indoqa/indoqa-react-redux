@@ -19,7 +19,7 @@ We invent nothing new, this archetype is just a composition of useful libraries,
   * [indoqa-webpack](https://github.com/Indoqa/indoqa-webpack) build system
     * [babel](https://babeljs.io/) to support es6 syntax ans language features
     * eslint using [eslint-config-indoqa](https://github.com/Indoqa/eslint-config-indoqa) based on the well documented [airbnb](https://github.com/airbnb/javascript) rules
-    * [hot reloading](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
+    * [hot reloading](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html) of React components, Fela themes, epics and reducers
   * two demo pages, [one](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/time) with an example of fetching data from an external webservice ([geonames timezone](http://www.geonames.org/export/web-services.html#timezone)) and [another](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/todos) showing a local todo list based on Dan Abramov excellent [introduction](https://egghead.io/lessons/javascript-redux-react-todo-list-example-adding-a-todo) into Redux
   * a simple and clean application layout separating application setup, features and common components and following the [atomic design](http://atomicdesign.bradfrost.com/) methodology by Brad Frost.
     ```
