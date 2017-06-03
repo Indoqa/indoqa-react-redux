@@ -4,7 +4,7 @@ import * as R from 'ramda'
 import type {TodoState} from '../types/TodoState'
 import type {Action} from '../types/TodoActions'
 
-const initialState = {
+const initialState: TodoState = {
   todos: [],
   filter: 'SHOW_ALL',
 }
