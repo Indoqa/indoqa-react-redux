@@ -25,30 +25,38 @@ We invent nothing new, this archetype is just a composition of useful tools and 
     ```
     src
     ├── main
-    │   ├── index.js
+    │   ├── index.js                        // entry point to the Javascript application
     │   ├── app
-    │   │   ├── App.react.js
-    │   │   ├── fela.js
-    │   │   ├── rootEpic.js
-    │   │   ├── rootReducer.js
-    │   │   ├── routes.react.js
-    │   │   ├── selectors.js
-    │   │   ├── store.js
-    │   │   └── theme.js
+    │   │   ├── App.react.js                // Theming, HTML header
+    │   │   ├── fela.js                     // Fela renderer configuration
+    │   │   ├── rootEpic.js                 // collect all epics
+    │   │   ├── rootReducer.js              // collect all reducers
+    │   │   ├── routes.react.js             // link components to routes (URL paths)
+    │   │   ├── selectors.js                // collect all selectors
+    │   │   ├── store.js                    // Redux store setup with hot reloading support
+    │   │   └── theme.js                    // application theme
     │   ├── commons
-    │   │   └── components
-    │   │       ├── atoms
-    │   │       │   └── Atom1.react.js
-    │   │       ├── molecules
-    │   │       │   └── Molecule1.react.js
-    │   │       ├── organisms
-    │   │       │   └── Organism1.react.js
-    │   │       └── templates
-    │   │           └── Template1.react.js
+    │   │   ├── components
+    │   │   │   ├── atoms                   // basic building blocks (e.g. boxes, links, etc.)
+    │   │   │   │   └── Atom1.react.js      
+    │   │   │   │   └── Molecule1.react.js  
+    │   │   │   ├── molecules               // composition of atoms
+    │   │   │   ├── organisms               // compositions of molecules and atoms
+    │   │   │   │   └── Organism1.react.js  
+    │   │   │   └── templates               // compositions of organisms, molecules and atoms
+    │   │   │       └── Template1.react.js
+    │   │   ├── store                       // reusable epics, reducers and actions
+    │   │   └── types                       // application types
     │   ├── feature1
     │   │   ├── components
+    │   │   │   ├── FeaturePage.react.js    // based on a template available via an URL
+    │   │   │   └── SomeComponent.react.js  // feature-specific molecule or organism
     │   │   ├── store
-    │   │   └── types
+    │   │   │   ├── feature1.actions.js
+    │   │   │   ├── feature1.epics.js
+    │   │   │   ├── feature1.reducer.js
+    │   │   │   └── feature1.selectors.js
+    │   │   └── types                       // Flow types
     │   ├── feature2
     │   └── ...
     └── test
