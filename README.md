@@ -8,13 +8,13 @@ Redux [todos example](https://github.com/reactjs/redux/tree/master/examples/todo
 We invent nothing new, this archetype is just a composition of useful libraries, frameworks, tools and plugins. In addition to vanilla React and Redux, we set up the following:
 
   * [indoqa-react-app](https://github.com/Indoqa/indoqa-react-app) for a basic redux and router setup:
-    * [react-observable](https://github.com/redux-observable/redux-observable) for side effects
+    * [redux-observable](https://github.com/redux-observable/redux-observable) for side-effects
     * [react-router](https://github.com/reactjs/react-router) to support multipe pages and history management
+    * [Fela](http://fela.js.org/docs/Introduction.html) as our css-in-js library and theming
     * dev tools for [logging](https://github.com/fcomb/redux-logger) and debugging
   * [Ramda](http://ramdajs.com/docs/) for immutable state transformation
-  * [Flow](https://flow.org/) for static typing of Javascript
-  * [Fela](http://fela.js.org/docs/Introduction.html) as our css-in-js library and theming
   * [Reselect](https://github.com/reactjs/reselect) to acccess Redux state
+  * [Flow](https://flow.org/) for static typing of Javascript
   * [Jest](https://facebook.github.io/jest/docs/en/getting-started.html) as test framework
   * [indoqa-webpack](https://github.com/Indoqa/indoqa-webpack) build system
     * [babel](https://babeljs.io/) to support es6 syntax ans language features
@@ -42,20 +42,20 @@ We invent nothing new, this archetype is just a composition of useful libraries,
     │   │   │   ├── organisms               // compositions of molecules and atoms
     │   │   │   └── templates               // compositions of organisms, molecules and atoms
     │   │   ├── store                       // reusable epics, reducers and actions
-    │   │   └── types                       // types available for all features
+    │   │   └── types                       // Flow types available for all features
     │   ├── feature1
     │   │   ├── components
     │   │   │   ├── FeaturePage.react.js    // based on a template available via an URL
     │   │   │   └── SomeComponent.react.js  // feature-specific molecule or organism
     │   │   ├── store
     │   │   │   ├── feature1.actions.js     // action types
-    │   │   │   ├── feature1.epics.js       // side effects based on rxjs observables
+    │   │   │   ├── feature1.epics.js       // side effects using rxjs observables
     │   │   │   ├── feature1.reducer.js     // Redux reducers
     │   │   │   └── feature1.selectors.js   // Reselect selectors to access state
     │   │   └── types                       // Flow types
     │   ├── feature2
     │   └── ...
-    └── test
+    └── test                                // Jest tests
         └── feature1
             ├── actions
             ├── components
