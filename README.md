@@ -1,12 +1,11 @@
 # Indoqa React/Redux Archetype
 
-This project is a ready-to-use setup for react/redux web applications we use at Indoqa. It is based on the
-redux [todos example](https://github.com/reactjs/redux/tree/master/examples/todos) and inspired by a lot of good ideas from the [este](https://github.com/este/este) dev stack. The main focus is to create a
-consistant environment for client side web applications that are consuming business logic using REST services over HTTP.
+This project is a ready-to-use setup for React/Redux web applications we use at [Indoqa](https://indoqa.com). It is based on the
+Redux [todos example](https://github.com/reactjs/redux/tree/master/examples/todos) and inspired by a lot of good ideas from the [este](https://github.com/este/este) dev stack. The main focus is to create a consistent environment for client side web applications that are consuming business logic using REST services over HTTP.
 
 ## Features
 
-We invent nothing new, this archetype is just a composition of useful tools and plugins. In addition to vanilla react and redux, we set up the following:
+We invent nothing new, this archetype is just a composition of useful libraries, frameworks, tools and plugins. In addition to vanilla React and Redux, we set up the following:
 
   * [indoqa-react-app](https://github.com/Indoqa/indoqa-react-app) for a basic redux and router setup:
     * [react-observable](https://github.com/redux-observable/redux-observable) for side effects
@@ -15,6 +14,7 @@ We invent nothing new, this archetype is just a composition of useful tools and 
   * [Ramda](http://ramdajs.com/docs/) for immutable state transformation
   * [Flow](https://flow.org/) for static typing of Javascript
   * [Fela](http://fela.js.org/docs/Introduction.html) as our css-in-js library and theming
+  * [Reselect](https://github.com/reactjs/reselect) to acccess Redux state
   * [Jest](https://facebook.github.io/jest/docs/en/getting-started.html) as test framework
   * [indoqa-webpack](https://github.com/Indoqa/indoqa-webpack) build system
     * [babel](https://babeljs.io/) to support es6 syntax ans language features
@@ -38,24 +38,20 @@ We invent nothing new, this archetype is just a composition of useful tools and 
     │   ├── commons
     │   │   ├── components
     │   │   │   ├── atoms                   // basic building blocks (e.g. boxes, links, etc.)
-    │   │   │   │   └── Atom1.react.js      
-    │   │   │   │   └── Molecule1.react.js  
     │   │   │   ├── molecules               // composition of atoms
     │   │   │   ├── organisms               // compositions of molecules and atoms
-    │   │   │   │   └── Organism1.react.js  
     │   │   │   └── templates               // compositions of organisms, molecules and atoms
-    │   │   │       └── Template1.react.js
     │   │   ├── store                       // reusable epics, reducers and actions
-    │   │   └── types                       // application types
+    │   │   └── types                       // types available for all features
     │   ├── feature1
     │   │   ├── components
     │   │   │   ├── FeaturePage.react.js    // based on a template available via an URL
     │   │   │   └── SomeComponent.react.js  // feature-specific molecule or organism
     │   │   ├── store
-    │   │   │   ├── feature1.actions.js
-    │   │   │   ├── feature1.epics.js
-    │   │   │   ├── feature1.reducer.js
-    │   │   │   └── feature1.selectors.js
+    │   │   │   ├── feature1.actions.js     // action types
+    │   │   │   ├── feature1.epics.js       // side effects based on rxjs observables
+    │   │   │   ├── feature1.reducer.js     // Redux reducers
+    │   │   │   └── feature1.selectors.js   // Reselect selectors to access state
     │   │   └── types                       // Flow types
     │   ├── feature2
     │   └── ...
