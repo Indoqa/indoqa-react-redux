@@ -29,8 +29,8 @@ We invent nothing new, this archetype is just a composition of useful libraries,
     │   ├── app
     │   │   ├── App.react.js                // Theming, HTML header
     │   │   ├── fela.js                     // Fela renderer configuration
-    │   │   ├── rootEpic.js                 // collect all epics
-    │   │   ├── rootReducer.js              // collect all reducers
+    │   │   ├── rootEpic.js                 // collect all epics and combine them into a root epic
+    │   │   ├── rootReducer.js              // collect all reducers and combine them into a root reducer
     │   │   ├── routes.react.js             // link components to routes (URL paths)
     │   │   ├── selectors.js                // collect all selectors
     │   │   ├── store.js                    // Redux store setup with hot reloading support
