@@ -14,14 +14,49 @@ We invent nothing new, this archetype is just a composition of useful tools and 
     * dev tools for [logging](https://github.com/fcomb/redux-logger) and debugging
   * [Ramda](http://ramdajs.com/docs/) for immutable state transformation
   * [Flow](https://flow.org/) for static typing of Javascript
-  * [Fela](http://fela.js.org/docs/Introduction.html) as our css-in-js library
+  * [Fela](http://fela.js.org/docs/Introduction.html) as our css-in-js library and theming
   * [Jest](https://facebook.github.io/jest/docs/en/getting-started.html) as test framework
   * [indoqa-webpack](https://github.com/Indoqa/indoqa-webpack) build system
     * [babel](https://babeljs.io/) to support es6 syntax ans language features
     * eslint using [eslint-config-indoqa](https://github.com/Indoqa/eslint-config-indoqa) based on the well documented [airbnb](https://github.com/airbnb/javascript) rules
     * [hot reloading](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
   * two demo pages, [one](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/time) with an example of fetching data from an external webservice ([geonames timezone](http://www.geonames.org/export/web-services.html#timezone)) and [another](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/todos) showing a local todo list based on Dan Abramov excellent [introduction](https://egghead.io/lessons/javascript-redux-react-todo-list-example-adding-a-todo) into Redux
-  * a simple and clean application layout separting application setup, features and common components
+  * a simple and clean application layout separating application setup, features and common components and following the [atomic design](http://atomicdesign.bradfrost.com/) methodology by Brad Frost.
+    ```
+    src
+    ├── main
+    │   ├── index.js
+    │   ├── app
+    │   │   ├── App.react.js
+    │   │   ├── fela.js
+    │   │   ├── rootEpic.js
+    │   │   ├── rootReducer.js
+    │   │   ├── routes.react.js
+    │   │   ├── selectors.js
+    │   │   ├── store.js
+    │   │   └── theme.js
+    │   ├── commons
+    │   │   └── components
+    │   │       ├── atoms
+    │   │       │   └── Atom1.react.js
+    │   │       ├── molecules
+    │   │       │   └── Molecule1.react.js
+    │   │       ├── organisms
+    │   │       │   └── Organism1.react.js
+    │   │       └── templates
+    │   │           └── Template1.react.js
+    │   ├── feature1
+    │   │   ├── components
+    │   │   ├── store
+    │   │   └── types
+    │   ├── feature2
+    │   └── ...
+    └── test
+        └── feature1
+            ├── actions
+            ├── components
+            └── reducers
+    ```
 
 ## Prerequisites
 
