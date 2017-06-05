@@ -88,3 +88,4 @@ yarn install
   * i18n
   * react-router v4
   * usage with [Indoqa Boot](https://github.com/Indoqa/indoqa-boot) in Java frontend-backend applications
+  * code-splitting by routes
