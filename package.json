@@ -18,8 +18,8 @@
     "postinstall": "yarn run package"
   },
   "dependencies": {
-    "indoqa-react-app": "^2.2.1",
-    "indoqa-react-fela": "^0.2.1",
+    "indoqa-react-app": "^2.3.0",
+    "indoqa-react-fela": "^0.3.0",
     "prop-types": "^15.5.10",
     "ramda": "^0.24.1",
     "react": "^15.0.0",
