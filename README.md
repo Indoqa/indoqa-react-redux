@@ -13,7 +13,7 @@ We invent nothing new, this archetype is just a composition of useful libraries,
     * [Fela](http://fela.js.org/docs/Introduction.html) as our css-in-js library and theming
     * dev tools for [logging](https://github.com/fcomb/redux-logger) and debugging
   * [Ramda](http://ramdajs.com/docs/) for immutable state transformation
-  * [Reselect](https://github.com/reactjs/reselect) to acccess Redux state
+  * [Reselect](https://github.com/reactjs/reselect) to access Redux state
   * [Flow](https://flow.org/) for static typing of Javascript
   * [Jest](https://facebook.github.io/jest/docs/en/getting-started.html) as test framework
   * [indoqa-webpack](https://github.com/Indoqa/indoqa-webpack) build system
