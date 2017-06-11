@@ -2808,9 +2808,9 @@ indoqa-react-fela@^0.3.0:
     react-router "^4.1.1"
     react-router-dom "^4.1.1"
 
-indoqa-webpack@0.9.0:
-  version "0.9.0"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/indoqa-webpack/-/indoqa-webpack-0.9.0.tgz#02a08960cd3b54ff0e94c5b431e6958752cf7a2d"
+indoqa-webpack@0.9.1:
+  version "0.9.1"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/indoqa-webpack/-/indoqa-webpack-0.9.1.tgz#9fda0cd0ed1654ab315f809c6786093b61e193ba"
   dependencies:
     autoprefixer "^6.7.0"
     babel-core "^6.22.1"
