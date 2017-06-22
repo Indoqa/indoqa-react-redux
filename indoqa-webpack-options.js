@@ -1,4 +1,4 @@
 module.exports = {
-  devPort: 3333,
-  hotReloadPort: 13333,
+  devPort: 5000,
+  hotReloadPort: 35000,
 }
