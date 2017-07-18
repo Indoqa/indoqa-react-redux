@@ -67,6 +67,7 @@ We invent nothing new, this archetype is just a composition of useful libraries,
   * Watch the [video](https://facebook.github.io/flux/) about flux and react, then switch to the evolved [redux](http://redux.js.org/index.html) and watch the [videos](https://egghead.io/series/getting-started-with-redux) as well.
   * Learn about the new [es6 features](https://github.com/lukehoban/es6features#readme) and take a deep look at [arrow functions](http://exploringjs.com/es6/ch_arrow-functions.html), [destructuring](https://gist.github.com/mikaelbr/9900818), [defaults/spread](https://medium.com/ecmascript-2015/default-rest-spread-f3ab0d2e0a5e#.xn5wo78hb) and [modules](http://exploringjs.com/es6/ch_modules.html).
   * [Flow Getting-Started](https://flow.org/en/docs/getting-started/) and its [usage](https://flow.org/en/docs/frameworks/) with React and Redux
+  * The [Fela Workshop](https://github.com/tajo/fela-workshop) projects helps you to get familiar with Fela
   * Install [nodejs](https://nodejs.org/en/download/package-manager/) including [yarn](https://yarnpkg.com/lang/en/docs/install/).
 
 ## Installation
