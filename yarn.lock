@@ -1504,9 +1504,17 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
 
-create-react-class@^15.5.1, create-react-class@^15.5.3:
+create-react-class@^15.5.1:
   version "15.5.3"
   resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/create-react-class/-/create-react-class-15.5.3.tgz#fb0f7cae79339e9a179e194ef466efa3923820fe"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
+create-react-class@^15.6.0:
+  version "15.6.0"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/create-react-class/-/create-react-class-15.6.0.tgz#ab448497c26566e1e29413e883207d57cfe7bed4"
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
@@ -1713,9 +1721,9 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
 
-deepmerge@^1.3.2:
-  version "1.3.2"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/deepmerge/-/deepmerge-1.3.2.tgz#1663691629d4dbfe364fa12a2a4f0aa86aa3a050"
+deepmerge@^1.5.1:
+  version "1.5.1"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/deepmerge/-/deepmerge-1.5.1.tgz#c053bf06fd7276f1994f70c09a0760cb61a56237"
 
 default-require-extensions@^1.0.0:
   version "1.0.0"
@@ -2301,18 +2309,92 @@ fbjs@^0.8.9:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
-fela-preset-web@^4.3.3:
-  version "4.3.5"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-preset-web/-/fela-preset-web-4.3.5.tgz#6b591d64299dabec18ec5020ac8df3c462995fed"
+fela-dom@^5.0.6:
+  version "5.0.6"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-dom/-/fela-dom-5.0.6.tgz#371fc395812cd64e21929e71bdc5d074780b91f4"
+  dependencies:
+    fela-tools "^5.0.5"
+    fela-utils "^5.0.5"
+
+fela-monolithic@^5.0.5:
+  version "5.0.5"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-monolithic/-/fela-monolithic-5.0.5.tgz#d1e8710e94a464418e3fac654ff82d9a3dbcfb68"
   dependencies:
     css-in-js-utils "^1.0.3"
+    fela-utils "^5.0.5"
+
+fela-plugin-extend@^5.0.5:
+  version "5.0.5"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-plugin-extend/-/fela-plugin-extend-5.0.5.tgz#6f91b92dee35a6e025c5dcb1e24b8c2cb06844c3"
+  dependencies:
+    css-in-js-utils "^1.0.3"
+    fela-utils "^5.0.5"
+
+fela-plugin-fallback-value@^5.0.6:
+  version "5.0.6"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-plugin-fallback-value/-/fela-plugin-fallback-value-5.0.6.tgz#245f53c85e1b2124d0fe14f5ef17ce656ba10ffe"
+  dependencies:
+    css-in-js-utils "^1.0.3"
+    fela-utils "^5.0.5"
+
+fela-plugin-lvha@^5.0.5:
+  version "5.0.5"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-plugin-lvha/-/fela-plugin-lvha-5.0.5.tgz#893d96a2852f091b2945a052f05634da3855ea28"
+  dependencies:
+    fela-utils "^5.0.5"
+
+fela-plugin-named-media-query@^5.0.5:
+  version "5.0.5"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-plugin-named-media-query/-/fela-plugin-named-media-query-5.0.5.tgz#1a60bc09aad41bbb80c095bc15e98030d4f352b4"
+  dependencies:
+    fela-utils "^5.0.5"
+
+fela-plugin-prefixer@^5.0.6:
+  version "5.0.6"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-plugin-prefixer/-/fela-plugin-prefixer-5.0.6.tgz#ed65356e18b72802e1b084a72624d26533a60856"
+  dependencies:
+    css-in-js-utils "^1.0.3"
+    fela-plugin-fallback-value "^5.0.6"
+    fela-utils "^5.0.5"
     inline-style-prefixer "^3.0.0"
 
-fela@^4.3.3:
-  version "4.3.5"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela/-/fela-4.3.5.tgz#dbafc23e24c330a81b4788c2fe1a9442435e2c3c"
+fela-plugin-unit@^5.0.5:
+  version "5.0.5"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-plugin-unit/-/fela-plugin-unit-5.0.5.tgz#5a4fd1ccbb71697177c747253501bc278ab3135f"
   dependencies:
     css-in-js-utils "^1.0.3"
+    fela-utils "^5.0.5"
+
+fela-preset-web@^5.0.6:
+  version "5.0.6"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-preset-web/-/fela-preset-web-5.0.6.tgz#edb1d175a925a77dd87bc04fa7391814ce49531c"
+  dependencies:
+    fela-plugin-extend "^5.0.5"
+    fela-plugin-fallback-value "^5.0.6"
+    fela-plugin-lvha "^5.0.5"
+    fela-plugin-prefixer "^5.0.6"
+    fela-plugin-unit "^5.0.5"
+
+fela-tools@^5.0.5:
+  version "5.0.5"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-tools/-/fela-tools-5.0.5.tgz#b6529967a77b9d70b79da0286cad5fc4baeab2f1"
+  dependencies:
+    css-in-js-utils "^1.0.3"
+    fela-utils "^5.0.5"
+
+fela-utils@^5.0.5:
+  version "5.0.5"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela-utils/-/fela-utils-5.0.5.tgz#6a89290c8aa6866d9a0b98f41408485edc454ada"
+  dependencies:
+    css-in-js-utils "^1.0.3"
+
+fela@^5.1.0:
+  version "5.1.0"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/fela/-/fela-5.1.0.tgz#fe80321ce5384a9c5a65cd4896481d879332dff3"
+  dependencies:
+    css-in-js-utils "^1.0.3"
+    fela-tools "^5.0.5"
+    fela-utils "^5.0.5"
 
 figures@^1.3.5:
   version "1.7.0"
@@ -2660,9 +2742,13 @@ hoek@2.x.x:
   version "2.16.3"
   resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
-hoist-non-react-statics@^1.0.3, hoist-non-react-statics@^1.2.0:
+hoist-non-react-statics@^1.2.0:
   version "1.2.0"
   resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
+
+hoist-non-react-statics@^2.2.1:
+  version "2.3.0"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/hoist-non-react-statics/-/hoist-non-react-statics-2.3.0.tgz#ede16318c2ff1f9fe3a025396ba06fd4c44608bb"
 
 home-or-tmp@^2.0.0:
   version "2.0.0"
@@ -2779,34 +2865,49 @@ indexof@0.0.1:
   version "0.0.1"
   resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
 
-indoqa-react-app@^2.3.0:
-  version "2.3.0"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/indoqa-react-app/-/indoqa-react-app-2.3.0.tgz#56f291ce95136d4075a69a1e5be554e7774c7c8a"
+indoqa-react-app@^2.4.4:
+  version "2.4.4"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/indoqa-react-app/-/indoqa-react-app-2.4.4.tgz#1467c95ab66fd8723df5f08080371a6e84fdb873"
   dependencies:
-    indoqa-react-fela "^0.3.0"
+    indoqa-react-fela "^0.4.0"
     prop-types "^15.5.10"
     react "^15.5.4"
-    react-dom "^15.5.4"
-    react-redux "^5.0.5"
+    react-dom "^15.5.10"
+    react-fela "^5.2.0"
+    react-redux "^5.0.6"
     react-router "^3.0.5"
     redux "^3.6.0"
     redux-logger "^3.0.6"
-    redux-observable "^0.14.1"
-    rxjs "^5.4.0"
+    redux-observable "^0.16.0"
+    rxjs "^5.4.3"
 
-indoqa-react-fela@^0.3.0:
-  version "0.3.0"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/indoqa-react-fela/-/indoqa-react-fela-0.3.0.tgz#f3e42032ee611cf3be0d18bc9b96fa25ec3d3be4"
+indoqa-react-fela@^0.4.0:
+  version "0.4.0"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/indoqa-react-fela/-/indoqa-react-fela-0.4.0.tgz#c5bad07c0f62a539b69f3b23d1582eeab9993076"
   dependencies:
-    deepmerge "^1.3.2"
-    fela "^4.3.3"
-    fela-preset-web "^4.3.3"
+    deepmerge "^1.5.1"
+    fela "^5.1.0"
+    fela-preset-web "^5.0.6"
     prop-types "^15.5.10"
     react "^15.0.0"
     react-dom "^15.0.0"
-    react-fela "^4.3.2"
-    react-router "^4.1.1"
-    react-router-dom "^4.1.1"
+    react-fela "^5.2.0"
+    react-router "^4.1.2"
+    react-router-dom "^4.1.2"
+
+indoqa-react-fela@^0.4.1:
+  version "0.4.1"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/indoqa-react-fela/-/indoqa-react-fela-0.4.1.tgz#f3e8836958efa20a02c24257967ca979cc960a17"
+  dependencies:
+    deepmerge "^1.5.1"
+    fela "^5.1.0"
+    fela-preset-web "^5.0.6"
+    prop-types "^15.5.10"
+    react "^15.0.0"
+    react-dom "^15.0.0"
+    react-fela "^5.2.0"
+    react-router "^4.1.2"
+    react-router-dom "^4.1.2"
 
 indoqa-webpack@0.9.1:
   version "0.9.1"
@@ -4537,7 +4638,7 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
-react-dom@^15.0.0, react-dom@^15.4.2, react-dom@^15.5.4:
+react-dom@^15.0.0, react-dom@^15.4.2:
   version "15.5.4"
   resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-dom/-/react-dom-15.5.4.tgz#ba0c28786fd52ed7e4f2135fe0288d462aef93da"
   dependencies:
@@ -4546,10 +4647,21 @@ react-dom@^15.0.0, react-dom@^15.4.2, react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "~15.5.7"
 
-react-fela@^4.3.2:
-  version "4.3.5"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-fela/-/react-fela-4.3.5.tgz#f7d3bed97bcc45915d269ff5238e2bfadd9c02f2"
+react-dom@^15.5.10, react-dom@^15.6.1:
+  version "15.6.1"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
   dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
+
+react-fela@^5.2.0:
+  version "5.2.0"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-fela/-/react-fela-5.2.0.tgz#d52d5006f7bae3981300ae7c946d9e9751adf4f8"
+  dependencies:
+    fela "^5.1.0"
+    fela-dom "^5.0.6"
     prop-types "^15.5.8"
 
 react-proxy@^1.1.7:
@@ -4559,21 +4671,20 @@ react-proxy@^1.1.7:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
 
-react-redux@^5.0.5:
-  version "5.0.5"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-redux/-/react-redux-5.0.5.tgz#f8e8c7b239422576e52d6b7db06439469be9846a"
+react-redux@^5.0.6:
+  version "5.0.6"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
   dependencies:
-    create-react-class "^15.5.3"
-    hoist-non-react-statics "^1.0.3"
+    hoist-non-react-statics "^2.2.1"
     invariant "^2.0.0"
     lodash "^4.2.0"
     lodash-es "^4.2.0"
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
 
-react-router-dom@^4.1.1:
-  version "4.1.1"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-router-dom/-/react-router-dom-4.1.1.tgz#3021ade1f2c160af97cf94e25594c5f294583025"
+react-router-dom@^4.1.2:
+  version "4.1.2"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-router-dom/-/react-router-dom-4.1.2.tgz#7f8a7ca868d32acadd19ca09543b40d26df8ec37"
   dependencies:
     history "^4.5.1"
     loose-envify "^1.3.1"
@@ -4604,6 +4715,18 @@ react-router@^4.1.1:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
+react-router@^4.1.2:
+  version "4.1.2"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-router/-/react-router-4.1.2.tgz#7ae027341abc42eb08ad9f7a8cac08d0563672ce"
+  dependencies:
+    history "^4.6.0"
+    hoist-non-react-statics "^1.2.0"
+    invariant "^2.2.2"
+    loose-envify "^1.3.1"
+    path-to-regexp "^1.5.3"
+    prop-types "^15.5.4"
+    warning "^3.0.0"
+
 react-transform-catch-errors@^1.0.2:
   version "1.0.2"
   resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react-transform-catch-errors/-/react-transform-catch-errors-1.0.2.tgz#1b4d4a76e97271896fc16fe3086c793ec88a9eeb"
@@ -4623,6 +4746,16 @@ react@^15.0.0, react@^15.4.2, react@^15.5.4:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.7"
+
+react@^15.6.1:
+  version "15.6.1"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
+  dependencies:
+    create-react-class "^15.6.0"
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -4711,9 +4844,9 @@ redux-logger@^3.0.6:
   dependencies:
     deep-diff "^0.3.5"
 
-redux-observable@^0.14.1:
-  version "0.14.1"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/redux-observable/-/redux-observable-0.14.1.tgz#9f3d870c69388fdc427ded6770a3e326f3b69693"
+redux-observable@^0.16.0:
+  version "0.16.0"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/redux-observable/-/redux-observable-0.16.0.tgz#dc431d0f47a9c3af232639d6bdd70d80c1b620d9"
 
 redux@^3.6.0:
   version "3.6.0"
@@ -4723,6 +4856,15 @@ redux@^3.6.0:
     lodash-es "^4.2.1"
     loose-envify "^1.1.0"
     symbol-observable "^1.0.2"
+
+redux@^3.7.2:
+  version "3.7.2"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+  dependencies:
+    lodash "^4.2.1"
+    lodash-es "^4.2.1"
+    loose-envify "^1.1.0"
+    symbol-observable "^1.0.3"
 
 regenerate@^1.2.1:
   version "1.3.2"
@@ -4914,9 +5056,9 @@ rx-lite@^3.1.2:
   version "3.1.2"
   resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/rx-lite/-/rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
 
-rxjs@^5.4.0:
-  version "5.4.0"
-  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/rxjs/-/rxjs-5.4.0.tgz#a7db14ab157f9d7aac6a56e655e7a3860d39bf26"
+rxjs@^5.4.3:
+  version "5.4.3"
+  resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/rxjs/-/rxjs-5.4.3.tgz#0758cddee6033d68e0fd53676f0f3596ce3d483f"
   dependencies:
     symbol-observable "^1.0.1"
 
@@ -5237,7 +5379,7 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-symbol-observable@^1.0.1, symbol-observable@^1.0.2:
+symbol-observable@^1.0.1, symbol-observable@^1.0.2, symbol-observable@^1.0.3:
   version "1.0.4"
   resolved "https://nexus.dev.indoqa.com/content/groups/npm-all/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
 

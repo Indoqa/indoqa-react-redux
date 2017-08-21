@@ -18,20 +18,23 @@
     "postinstall": "yarn run package"
   },
   "dependencies": {
-    "indoqa-react-app": "^2.3.0",
-    "indoqa-react-fela": "^0.3.0",
+    "fela-monolithic": "^5.0.5",
+    "fela-plugin-named-media-query": "^5.0.5",
+    "fela-preset-web": "^5.0.6",
+    "indoqa-react-app": "^2.4.4",
+    "indoqa-react-fela": "^0.4.1",
     "prop-types": "^15.5.10",
     "ramda": "^0.24.1",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
-    "react-fela": "^4.3.2",
-    "react-redux": "^5.0.5",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-fela": "^5.2.0",
+    "react-redux": "^5.0.6",
     "react-router": "^3.0.5",
-    "redux": "^3.6.0",
+    "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
-    "redux-observable": "^0.14.1",
+    "redux-observable": "^0.16.0",
     "reselect": "^3.0.1",
-    "rxjs": "^5.4.0"
+    "rxjs": "^5.4.3"
   },
   "devDependencies": {
     "flow-bin": "0.47.0",
