@@ -12,11 +12,11 @@ type Props = {
 const TodoList = ({todos, onTodoClick}: Props) => (
   <ul>
     {todos.map((todo) =>
-      <Todo
+      (<Todo
         key={todo.id}
         todo={todo}
         onClick={() => onTodoClick(todo.id)}
-      />
+      />)
     )}
   </ul>
 )
