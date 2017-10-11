@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node ./src/dev/server.js",
+    "build": "indoqa-webpack ./indoqa-webpack-options.js",
     "docs": "indoqa-webpack ./indoqa-webpack-docs.js",
     "flow": "flow",
     "lint": "indoqa-eslint ./src/main",
@@ -38,6 +39,6 @@
   },
   "devDependencies": {
     "flow-bin": "0.47.0",
-    "indoqa-webpack": "0.9.1"
+    "indoqa-webpack": "0.10.5"
   }
 }

@@ -1,3 +1,5 @@
 node_modules/
 target/
 npm-debug.log
+*.iml
+.idea
