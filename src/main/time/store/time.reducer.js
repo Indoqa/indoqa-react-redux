@@ -5,7 +5,7 @@ import type {TimeState} from '../types/TimeState'
 import type {Action} from '../types/TimeActions'
 
 const initialState = {
-  result: null,
+  results: null,
   error: null,
   isLoading: false,
 }
@@ -17,7 +17,14 @@ export default (state: TimeState = initialState, action: Action) => {
 
     case 'FETCH_TIME_SUCCESS': {
       state = R.assoc('isLoading', false, state)
-      state = R.assoc('result', action.payload, state)
+      state = R.assoc('results', action.payload, state)
+      state = R.assoc('error', null, state)
+      return state
+    }
+
+    case 'FETCH_TIMES_SUCCESS': {
+      state = R.assoc('isLoading', false, state)
+      state = R.assoc('results', action.payload, state)
       state = R.assoc('error', null, state)
       return state
     }

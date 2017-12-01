@@ -1,5 +1,4 @@
 // @flow
-
 import React from 'react'
 import {Box} from 'indoqa-react-fela'
 
@@ -8,7 +7,9 @@ import AddTodo from '../components/AddTodo.redux'
 import Footer from '../components/Footer.react'
 import TodoList from '../components/TodoList.redux'
 
-class TodosPage extends React.Component {
+type Props = {}
+
+class TodosPage extends React.Component<Props> {
 
   render() {
     return (

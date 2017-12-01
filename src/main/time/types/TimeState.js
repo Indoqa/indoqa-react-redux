@@ -2,7 +2,7 @@
 import type {Result} from './Result'
 
 export type TimeState = {
-  result: ?Result,
+  results: ?Array<Result>,
   error: ?string,
   isLoading: boolean
 }

@@ -39,7 +39,7 @@
     "rxjs": "5.5.2"
   },
   "devDependencies": {
-    "flow-bin": "0.47.0",
+    "flow-bin": "0.54.1",
     "indoqa-webpack": "1.0.5"
   },
   "proxy": {

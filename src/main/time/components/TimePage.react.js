@@ -6,7 +6,9 @@ import MainMenuTemplate from '../../commons/components/templates/MainMenuTemplat
 import Buttons from './Buttons.redux'
 import Result from './Result.redux'
 
-class TimePage extends React.Component {
+type Props = {}
+
+class TimePage extends React.Component<Props> {
 
   render() {
     return (

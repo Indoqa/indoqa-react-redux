@@ -1,16 +1,27 @@
 // @flow
 import React from 'react'
-import {Text, Box} from 'indoqa-react-fela'
+import {Box, Text} from 'indoqa-react-fela'
 
 import type {Result} from '../types/Result'
 
 type Props = {
-  result: Result,
+  results: Array<Result>,
   error: string,
   isLoading: boolean
 };
 
-export default ({result, error, isLoading}: Props) => {
+const renderResult = (result: Result) => {
+  return (
+    <Box key={result.timezoneId}>
+      <Box>current time: {result.time}</Box>
+      <Box>country: {result.countryName}</Box>
+      <Box>timezone: {result.timezoneId}</Box>
+      <hr />
+    </Box>
+  )
+}
+
+export default ({results, error, isLoading}: Props) => {
   if (isLoading) {
     return (
       <Text>
@@ -27,7 +38,7 @@ export default ({result, error, isLoading}: Props) => {
     )
   }
 
-  if (!result) {
+  if (!results || results.length === 0) {
     return (
       <Text>
         Select a location!
@@ -37,9 +48,7 @@ export default ({result, error, isLoading}: Props) => {
 
   return (
     <Box>
-      <Box>current time: {result.time}</Box>
-      <Box>country: {result.countryName}</Box>
-      <Box>timezone: {result.timezoneId}</Box>
+      {results.map(renderResult)}
     </Box>
   )
 }
