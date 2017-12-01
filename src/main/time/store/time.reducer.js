@@ -22,6 +22,13 @@ export default (state: TimeState = initialState, action: Action) => {
       return state
     }
 
+    case 'FETCH_TIME_ERROR': {
+      state = R.assoc('isLoading', false, state)
+      state = R.assoc('result', null, state)
+      state = R.assoc('error', action.payload, state)
+      return state
+    }
+
     case 'FETCH_TIMES_SUCCESS': {
       state = R.assoc('isLoading', false, state)
       state = R.assoc('results', action.payload, state)
@@ -29,15 +36,8 @@ export default (state: TimeState = initialState, action: Action) => {
       return state
     }
 
-    case 'FETCH_TIME_ERROR': {
-      state = R.assoc('isLoading', false, state)
-      state = R.assoc('result', null, state)
-      state = R.assoc('error', action.payload.statusText, state)
-      return state
-    }
-
     case 'CLEAR_TIME': {
-      state = R.assoc('result', null, state)
+      state = R.assoc('results', null, state)
       state = R.assoc('error', null, state)
       return state
     }

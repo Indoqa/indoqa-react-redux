@@ -19,6 +19,11 @@ export const fetchTimeSuccess = (payload: any): Action => ({
   payload: [payload],
 })
 
+export const fetchTimeError = (payload: any): Action => ({
+  type: 'FETCH_TIME_ERROR',
+  payload,
+})
+
 export const fetchTimesSuccess = (payload: any): Action => ({
   type: 'FETCH_TIMES_SUCCESS',
   payload,
