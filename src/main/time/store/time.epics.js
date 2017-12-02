@@ -1,5 +1,4 @@
 import {Observable} from 'rxjs'
-import {ajax} from 'rxjs/observable/dom/ajax'
 import {forkJoin} from 'rxjs/observable/forkJoin'
 
 import {fetchTimeError, fetchTimesSuccess, fetchTimeSuccess} from './time.actions'
@@ -11,22 +10,24 @@ const url = (lon, lat) => {
   return `/geonames/timezoneJSON?formatted=true&lng=${lon}&lat=${lat}&username=indoqa_react_redux&style=full`
 }
 
-const fetchTimeEpic$ = (action$) =>
+const fetchTimeEpic$ = (action$, store, deps) =>
   action$
     .ofType('FETCH_TIME')
     .switchMap((action) => {
-      return ajax
+      return deps
+        .ajax
         .getJSON(url(action.lon, action.lat))
         .map((timeZoneInfo) => fetchTimeSuccess(timeZoneInfo))
         .catch((err) => Observable.of(fetchTimeError(err.message)))
     })
 
-const fetchTimesEpic$ = (action$) =>
+const fetchTimesEpic$ = (action$, store, deps) =>
   action$
     .ofType('FETCH_TIMES')
     // produce multiple observables
     .map((action) => action.coordinates.map((c) => {
-      return ajax
+      return deps
+        .ajax
         .getJSON(url(c.lon, c.lat))
         // throw an error if one of the requests fails
         .catch((err) => Observable.throw(err))
@@ -39,4 +40,5 @@ const fetchTimesEpic$ = (action$) =>
         .catch((err) => Observable.of(fetchTimeError(err.message)))
     })
 
+export {fetchTimeEpic$}
 export default [fetchTimeEpic$, fetchTimesEpic$]

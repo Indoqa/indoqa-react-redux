@@ -3487,9 +3487,9 @@ indexof@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
 
-indoqa-react-app@2.4.6:
-  version "2.4.6"
-  resolved "https://registry.yarnpkg.com/indoqa-react-app/-/indoqa-react-app-2.4.6.tgz#1e94b1863777daeaaee68c49422833bc8f9fc478"
+indoqa-react-app@2.4.8:
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/indoqa-react-app/-/indoqa-react-app-2.4.8.tgz#8628242b41fcff0e4470d3ba7a6e804057baad26"
   dependencies:
     indoqa-react-fela "^0.4.4"
     prop-types "^15.6.0"
