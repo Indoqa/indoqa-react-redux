@@ -1,10 +1,9 @@
 // @flow
-
-import React from 'react'
+import * as React from 'react'
 
 type Props = {
   active: boolean,
-  children: Element,
+  children: React.Node,
   onClick: Function,
 };
 

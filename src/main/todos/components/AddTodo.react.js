@@ -14,7 +14,7 @@ const AddTodo = ({onAddTodo}: Props) => {
       <form
         onSubmit={(e) => {
           e.preventDefault()
-          if (!input.value.trim()) {
+          if (!input || !input.value.trim()) {
             return
           }
           onAddTodo(input.value)

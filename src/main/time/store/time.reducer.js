@@ -24,7 +24,7 @@ export default (state: TimeState = initialState, action: Action) => {
 
     case 'FETCH_TIME_ERROR': {
       state = R.assoc('isLoading', false, state)
-      state = R.assoc('result', null, state)
+      state = R.assoc('results', null, state)
       state = R.assoc('error', action.payload, state)
       return state
     }
