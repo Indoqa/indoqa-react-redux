@@ -3,7 +3,7 @@ import {createTestStore} from '../createTestStore'
 import {fetchTime} from '../../main/time/store/time.actions'
 
 describe('time reducer', () => {
-  it('should return correct actions', () => {
+  it('should return correct success state', () => {
     const deps = {
       ajax: {
         getJSON: () => Observable.of({
@@ -12,8 +12,7 @@ describe('time reducer', () => {
       }
     }
     const store = createTestStore(deps)
-    const action = fetchTime(47, 10)
-    store.dispatch(action)
+    store.dispatch(fetchTime(47, 10))
 
     expect(store.getState().time).toEqual({
       error: null,
@@ -23,6 +22,22 @@ describe('time reducer', () => {
           timezoneId: 'Europe/Vienna',
         }
       ]
+    })
+  })
+
+  it('should return correct error state', () => {
+    const deps = {
+      ajax: {
+        getJSON: () => Observable.throw(new Error('error: non existing path'))
+      }
+    }
+    const store = createTestStore(deps)
+    store.dispatch(fetchTime(47, 10))
+
+    expect(store.getState().time).toEqual({
+      error: 'error: non existing path',
+      isLoading: false,
+      results: null
     })
   })
 })
