@@ -1,4 +1,3 @@
-import 'rxjs'
 import {ajax} from 'rxjs/observable/dom/ajax'
 import {combineEpics} from 'redux-observable'
 import timeEpics from '../time/store/time.epics.js'

@@ -17,6 +17,20 @@ const fetchTimeEpic$ = (action$, store, deps) =>
       return deps
         .ajax
         .getJSON(url(action.lon, action.lat))
+
+        // the timezone API often returns error (probably some access rate limitation),
+        // retry mitigates the problem
+
+        // .retry(3)
+
+        // alternatively retryWhen gives even more control about the retry logic
+
+        // .retryWhen(attempts => attempts
+        //   .zip(Observable.range(1, 3), (_, i) => i)
+        //   .flatMap(i => {
+        //     return Observable.timer(i * 1000)
+        //   })
+        // )
         .map((timeZoneInfo) => fetchTimeSuccess(timeZoneInfo))
         .catch((err) => Observable.of(fetchTimeError(err.message)))
     })
