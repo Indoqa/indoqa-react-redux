@@ -8,8 +8,8 @@ describe('time reducer', () => {
       ajax: {
         getJSON: () => Observable.of({
           timezoneId: 'Europe/Vienna',
-        })
-      }
+        }),
+      },
     }
     const store = createTestStore(deps)
     store.dispatch(fetchTime(47, 10))
@@ -21,15 +21,15 @@ describe('time reducer', () => {
         {
           timezoneId: 'Europe/Vienna',
         }
-      ]
+      ],
     })
   })
 
   it('should return correct error state', () => {
     const deps = {
       ajax: {
-        getJSON: () => Observable.throw(new Error('error: non existing path'))
-      }
+        getJSON: () => Observable.throw(new Error('error: non existing path')),
+      },
     }
     const store = createTestStore(deps)
     store.dispatch(fetchTime(47, 10))
@@ -37,7 +37,7 @@ describe('time reducer', () => {
     expect(store.getState().time).toEqual({
       error: 'error: non existing path',
       isLoading: false,
-      results: null
+      results: null,
     })
   })
 })

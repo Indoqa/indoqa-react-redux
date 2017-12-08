@@ -10,20 +10,19 @@ const url = (lon, lat) => {
   return `/geonames/timezoneJSON?formatted=true&lng=${lon}&lat=${lat}&username=indoqa_react_redux&style=full`
 }
 
-const fetchTimeEpic$ = (action$, store, deps) =>
+const fetchTimeEpic$ = (action$, store, {ajax}) =>
   action$
     .ofType('FETCH_TIME')
     .switchMap((action) => {
-      return deps
-        .ajax
+      return ajax
         .getJSON(url(action.lon, action.lat))
 
         // the timezone API often returns error (probably some access rate limitation),
-        // retry mitigates the problem
+        // 'retry' mitigates the problem
 
         // .retry(3)
 
-        // alternatively retryWhen gives even more control about the retry logic
+        // alternatively 'retryWhen' gives even more control about the retry logic
 
         // .retryWhen(attempts => attempts
         //   .zip(Observable.range(1, 3), (_, i) => i)
@@ -35,13 +34,12 @@ const fetchTimeEpic$ = (action$, store, deps) =>
         .catch((err) => Observable.of(fetchTimeError(err.message)))
     })
 
-const fetchTimesEpic$ = (action$, store, deps) =>
+const fetchTimesEpic$ = (action$, store, {ajax}) =>
   action$
     .ofType('FETCH_TIMES')
     // produce multiple observables
     .map((action) => action.coordinates.map((c) => {
-      return deps
-        .ajax
+      return ajax
         .getJSON(url(c.lon, c.lat))
         // throw an error if one of the requests fails
         .catch((err) => Observable.throw(err))

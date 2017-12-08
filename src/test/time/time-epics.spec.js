@@ -9,16 +9,16 @@ describe('time epics', () => {
     const deps = {
       ajax: {
         getJSON: () => Observable.of({
-          'timezoneId': 'Europe/Vienna',
-        })
-      }
+          timezoneId: 'Europe/Vienna',
+        }),
+      },
     }
     const output$ = fetchTimeEpic$(action$, null, deps)
 
-    output$.subscribe(action => {
+    output$.subscribe((action) => {
       expect(action.type).toBe('FETCH_TIME_SUCCESS')
       expect(action.payload).toEqual([{
-        'timezoneId': 'Europe/Vienna',
+        timezoneId: 'Europe/Vienna',
       }])
     })
   })

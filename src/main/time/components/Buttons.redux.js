@@ -10,9 +10,9 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(fetchTime(-74.0059700, 40.7142700))
   },
   loadViennaAndNewYork: () => {
-    const coordinates = []
-    coordinates.push({lon: 10, lat: 47})
-    coordinates.push({lon: -74.0059700, lat: 40.7142700})
+    const coordinates = [
+      {lon: 10, lat: 47},
+      {lon: -74.0059700, lat: 40.7142700}]
     dispatch(fetchTimes(coordinates))
   },
   loadInvalidLocation: () => {
@@ -23,7 +23,4 @@ const mapDispatchToProps = (dispatch) => ({
   },
 })
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Buttons)
+export default connect(null, mapDispatchToProps)(Buttons)

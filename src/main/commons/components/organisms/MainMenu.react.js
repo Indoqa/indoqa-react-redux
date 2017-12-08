@@ -19,6 +19,9 @@ const MainMenu = () => (
     <MenuLink>
       <Link to="/todos">Todos</Link>
     </MenuLink>
+    <MenuLink>
+      <Link to="/words">Words</Link>
+    </MenuLink>
   </Menu>
 )
 
