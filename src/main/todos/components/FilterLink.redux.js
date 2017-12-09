@@ -1,5 +1,4 @@
 // @flow
-
 import {connect} from 'react-redux'
 import {setFilter} from '../store/todos.actions'
 import FilterLink from './FilterLink.react'
@@ -15,7 +14,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   },
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FilterLink)
+export default connect(mapStateToProps, mapDispatchToProps)(FilterLink)

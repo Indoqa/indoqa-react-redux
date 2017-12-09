@@ -1,3 +1,4 @@
+// @flow
 import {connect} from 'react-redux'
 import Result from './Result.react'
 import {selectError, selectLoadingFlag, selectResults} from '../store/time.selectors'

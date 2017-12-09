@@ -1,6 +1,7 @@
 import {Observable} from 'rxjs'
 import {createTestStore} from '../createTestStore'
 import {fetchTime} from '../../main/time/store/time.actions'
+import {selectTimeState} from '../../main/app/selectors'
 
 describe('time reducer', () => {
   it('should return correct success state', () => {
@@ -14,7 +15,7 @@ describe('time reducer', () => {
     const store = createTestStore(deps)
     store.dispatch(fetchTime(47, 10))
 
-    expect(store.getState().time).toEqual({
+    expect(selectTimeState(store.getState())).toEqual({
       error: null,
       isLoading: false,
       results: [
@@ -34,7 +35,7 @@ describe('time reducer', () => {
     const store = createTestStore(deps)
     store.dispatch(fetchTime(47, 10))
 
-    expect(store.getState().time).toEqual({
+    expect(selectTimeState(store.getState())).toEqual({
       error: 'error: non existing path',
       isLoading: false,
       results: null,

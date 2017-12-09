@@ -1,3 +1,4 @@
+// @flow
 import {createComponent} from 'react-fela'
 
 const Button = ({theme}) => ({

@@ -1,3 +1,4 @@
+// @flow
 import {connect} from 'react-redux'
 import {clearTime, fetchTime, fetchTimes} from '../store/time.actions'
 import Buttons from './Buttons.react'

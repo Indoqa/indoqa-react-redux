@@ -1,3 +1,4 @@
+// @flow
 import {Link as ReactRouterLink} from 'react-router'
 
 import {createComponent} from 'react-fela'

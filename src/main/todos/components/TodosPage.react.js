@@ -7,9 +7,7 @@ import AddTodo from '../components/AddTodo.redux'
 import Footer from '../components/Footer.react'
 import TodoList from '../components/TodoList.redux'
 
-type Props = {}
-
-class TodosPage extends React.Component<Props> {
+class TodosPage extends React.Component<{}> {
 
   render() {
     return (

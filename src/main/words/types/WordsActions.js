@@ -1,5 +1,4 @@
 // @flow
-
 type FetchWordsAction = {
   type: 'FETCH_WORDS',
   prefix: string,

@@ -1,8 +1,9 @@
+// @flow
 import presetWeb from 'fela-preset-web'
 import namedMediaQuery from 'fela-plugin-named-media-query'
 import monolithic from 'fela-monolithic'
 
-const init = (renderer) => {
+const init = (renderer: any) => {
   renderer.renderStatic('html, body, #app {height: 100%}')
 }
 
@@ -16,6 +17,7 @@ const config = {
     ...presetWeb,
     namedMediaQueryPlugin,
   ],
+  enhancers: [],
 }
 
 if (process.env.NODE_ENV !== 'production') {

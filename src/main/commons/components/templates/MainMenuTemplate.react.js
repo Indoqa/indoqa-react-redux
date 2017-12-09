@@ -1,12 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+// @flow
+import * as React from 'react'
 import {Box, Flex} from 'indoqa-react-fela'
 
 import Bar from '../molecules/Bar.react'
 import Content from '../molecules/Content.react'
 import MainMenu from '../organisms/MainMenu.react'
 
-const MainMenuTemplate = ({title, header, children}) => (
+type Props = {
+  children?: React.Node,
+  header?: string | null,
+  title?: string,
+}
+
+const MainMenuTemplate = ({title, header, children}: Props) => (
   <Flex stretch height={'100%'}>
     <MainMenu />
     <Box grow={1}>
@@ -21,12 +27,6 @@ const MainMenuTemplate = ({title, header, children}) => (
     </Box>
   </Flex>
 )
-
-MainMenuTemplate.propTypes = {
-  title: PropTypes.string,
-  header: PropTypes.element,
-  children: PropTypes.element,
-}
 
 MainMenuTemplate.defaultProps = {
   title: '',

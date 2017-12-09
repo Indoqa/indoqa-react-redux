@@ -1,12 +1,11 @@
 // @flow
-
 import React from 'react'
 
 type Props = {
-  onAddTodo: Function,
+  addTodo: Function,
 };
 
-const AddTodo = ({onAddTodo}: Props) => {
+const AddTodo = ({addTodo}: Props) => {
   let input
 
   return (
@@ -17,7 +16,7 @@ const AddTodo = ({onAddTodo}: Props) => {
           if (!input || !input.value.trim()) {
             return
           }
-          onAddTodo(input.value)
+          addTodo(input.value)
           input.value = ''
         }}
       >

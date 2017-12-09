@@ -39,7 +39,7 @@
     "rxjs": "5.5.3"
   },
   "devDependencies": {
-    "flow-bin": "0.60.1",
+    "flow-bin": "0.59.0",
     "indoqa-webpack": "1.0.5"
   },
   "proxy": {
@@ -50,6 +50,12 @@
       },
       "pathRewrite": {
         "/geonames": ""
+      }
+    },
+    "/words": {
+      "target": "http://api.wordnik.com",
+      "pathRewrite": {
+        "/words": ""
       }
     }
   }

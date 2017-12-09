@@ -1,5 +1,4 @@
 // @flow
-
 import React from 'react'
 import Todo from './Todo.react'
 import type {Todo as TodoType} from '../types/Todo'

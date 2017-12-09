@@ -1,3 +1,4 @@
+// @flow
 import {combineReducers} from 'redux'
 
 import time from '../time/store/time.reducer.js'

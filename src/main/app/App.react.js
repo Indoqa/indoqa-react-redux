@@ -1,11 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+// @flow
+import * as React from 'react'
 import {ThemeProvider} from 'react-fela'
 import {buildTheme} from 'indoqa-react-fela'
 
 import theme from './theme.js'
 
-class App extends React.Component {
+type Props = {
+  children?: React.Node,
+}
+
+class App extends React.Component<Props> {
+
+  static defaultProps = {
+    children: null,
+  }
 
   render() {
     return (
@@ -14,14 +22,6 @@ class App extends React.Component {
       </ThemeProvider>
     )
   }
-}
-
-App.propTypes = {
-  children: PropTypes.element,
-}
-
-App.defaultProps = {
-  children: null,
 }
 
 export default App

@@ -6,9 +6,7 @@ import MainMenuTemplate from '../../commons/components/templates/MainMenuTemplat
 import WordsSearch from './WordsSearch.redux'
 import WordsResults from './WordsResults.redux'
 
-type Props = {}
-
-class WordsPage extends Component<Props> {
+class WordsPage extends Component<{}> {
 
   render() {
     return (

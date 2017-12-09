@@ -1,3 +1,4 @@
+// @flow
 import {ajax} from 'rxjs/observable/dom/ajax'
 import {combineEpics} from 'redux-observable'
 import timeEpics from '../time/store/time.epics.js'
@@ -12,7 +13,7 @@ const browserDependencies = {
   ajax,
 }
 
-const rootEpic = (...args) => {
+const rootEpic = (...args: any) => {
   return combinedEpics(...args, browserDependencies)
 }
 

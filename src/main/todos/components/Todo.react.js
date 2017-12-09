@@ -8,15 +8,14 @@ type Props = {
   onClick: Function,
 };
 
-const Todo = ({todo, onClick}: Props) => (
-  <li
+function Todo({todo, onClick}: Props) {
+  return (<li
     onClick={onClick}
     style={{
       textDecoration: todo.completed ? 'line-through' : 'none',
     }}
   >
     {todo.text}
-  </li>
-)
-
+  </li>)
+}
 export default Todo

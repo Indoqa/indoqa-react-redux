@@ -1,5 +1,4 @@
 // @flow
-
 import type {Action} from '../types/TodoActions'
 
 export const addTodo = (text: string): Action => ({
@@ -12,7 +11,7 @@ export const setFilter = (filter: string): Action => ({
   filter,
 })
 
-export const toggleTodo = (id:number): Action => ({
+export const toggleTodo = (id: number): Action => ({
   type: 'TOGGLE_TODO',
   id,
 })

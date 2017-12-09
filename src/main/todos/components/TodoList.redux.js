@@ -1,9 +1,8 @@
 // @flow
-
 import {connect} from 'react-redux'
 import {toggleTodo} from '../store/todos.actions'
 import TodoList from './TodoList.react'
-import {selectTodos, selectFilter} from '../store/todos.selectors'
+import {selectFilter, selectTodos} from '../store/todos.selectors'
 
 const getVisibleTodos = (todos, filter) => {
   switch (filter) {

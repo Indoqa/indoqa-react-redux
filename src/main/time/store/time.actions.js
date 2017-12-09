@@ -1,5 +1,4 @@
 // @flow
-
 import type {Action} from '../types/TimeActions'
 import type {Coordinates} from '../types/Coordinates'
 
