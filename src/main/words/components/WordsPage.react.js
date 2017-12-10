@@ -11,7 +11,7 @@ class WordsPage extends Component<{}> {
   render() {
     return (
       <MainMenuTemplate title="Time">
-        <Box>
+        <Box m={1}>
           <WordsSearch />
           <WordsResults />
         </Box>

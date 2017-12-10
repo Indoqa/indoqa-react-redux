@@ -9,6 +9,17 @@ type FetchWordsSuccess = {
   results: Array<string>,
 }
 
+type FetchWordsError = {
+  type: 'FETCH_WORDS_ERROR',
+  error: string,
+}
+
+type CancelFetchWordsAction = {
+  type: 'FETCH_WORDS_CANCEL'
+}
+
 export type Action =
   | FetchWordsAction
   | FetchWordsSuccess
+  | FetchWordsError
+  | CancelFetchWordsAction

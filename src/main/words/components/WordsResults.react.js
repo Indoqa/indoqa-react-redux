@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import {Box} from 'indoqa-react-fela'
 
 type Props = {
   results: Array<string>,
@@ -13,9 +14,11 @@ const renderWords = (results: Array<string>) => {
 
 const WordsResults = ({results}: Props) => {
   return (
-    <ul>
-      {renderWords(results)}
-    </ul>
+    <Box mt={1}>
+      <ul>
+        {renderWords(results)}
+      </ul>
+    </Box>
   )
 }
 

@@ -1,9 +1,10 @@
 /* eslint-disable prefer-template */
 import {Observable} from 'rxjs'
-import {fetchWordsSuccess} from './words.actions'
+import {fetchWordsError, fetchWordsSuccess} from './words.actions'
 
 const url = (prefix) => {
-  return '/words/v4/words.json/search/' + prefix +
+  return '/words/v4/words.json/search/' +
+    prefix +
     '?caseSensitive=false' +
     '&minCorpusCount=5' +
     '&maxCorpusCount=-1' +
@@ -26,7 +27,12 @@ const fetchWordsEpic$ = (action$, store, {ajax}) =>
       }
       return ajax
         .getJSON(url(action.prefix))
+        // artificially delay the execution of the ajax request for demo purpose
+        .delay(1500)
+        // stop this observable stream until the FETCH_WORDS_CANCEL action is triggered
+        .takeUntil(action$.ofType('FETCH_WORDS_CANCEL'))
         .map((json) => fetchWordsSuccess(json.searchResults.map((entry) => entry.word)))
+        .catch((err) => Observable.of(fetchWordsError(err.message)))
     })
 
 export default [fetchWordsEpic$]
