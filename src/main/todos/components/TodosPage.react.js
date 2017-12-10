@@ -11,7 +11,7 @@ class TodosPage extends React.Component<{}> {
 
   render() {
     return (
-      <MainMenuTemplate title="Time">
+      <MainMenuTemplate title="Todos">
         <Box p={1}>
           <AddTodo />
           <TodoList />

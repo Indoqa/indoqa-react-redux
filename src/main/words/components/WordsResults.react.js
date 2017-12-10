@@ -1,4 +1,5 @@
 // @flow
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import {Box} from 'indoqa-react-fela'
 
@@ -15,7 +16,9 @@ const renderWords = (results: Array<string>) => {
 const WordsResults = ({results}: Props) => {
   const poweredBy = (
     <Box mt={3}>
-      <img alt="powered by Wordnik" src="http://www.wordnik.com/img/wordnik_badge_a2.png" />
+      <a href="http://wordnik.com/" target="_blank">
+        <img alt="powered by Wordnik" src="http://www.wordnik.com/img/wordnik_badge_a2.png" />
+      </a>
     </Box>
   )
 

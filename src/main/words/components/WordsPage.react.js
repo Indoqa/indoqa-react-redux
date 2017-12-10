@@ -10,7 +10,7 @@ class WordsPage extends Component<{}> {
 
   render() {
     return (
-      <MainMenuTemplate title="Time">
+      <MainMenuTemplate title="Words">
         <Box m={1}>
           <WordsSearch />
           <WordsResults />
