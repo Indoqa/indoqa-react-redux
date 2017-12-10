@@ -15,6 +15,7 @@ export default (state: WordsState = initialState, action: Action) => {
     case 'FETCH_WORDS':
       return {
         ...state,
+        prefix: action.prefix,
         isLoading: true,
       }
 

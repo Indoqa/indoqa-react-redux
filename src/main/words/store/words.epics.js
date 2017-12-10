@@ -17,10 +17,10 @@ const url = (prefix) => {
     '&api_key=966a26e2e28f6ce972d600ff0fa0293908a2661d3f407c2db'
 }
 
-const fetchWordsEpic$ = (action$, store, {ajax}) =>
+const fetchWordsEpic$ = (action$, store, {ajax, scheduler}) =>
   action$
     .ofType('FETCH_WORDS')
-    .debounceTime(150)
+    .debounceTime(150, scheduler)
     .switchMap((action) => {
       if (action.prefix === '') {
         return Observable.of(fetchWordsSuccess([]))
@@ -28,7 +28,7 @@ const fetchWordsEpic$ = (action$, store, {ajax}) =>
       return ajax
         .getJSON(url(action.prefix))
         // artificially delay the execution of the ajax request for demo purpose
-        .delay(1500)
+        .delay(1500, scheduler)
         // stop this observable stream until the FETCH_WORDS_CANCEL action is triggered
         .takeUntil(action$.ofType('FETCH_WORDS_CANCEL'))
         .map((json) => fetchWordsSuccess(json.searchResults.map((entry) => entry.word)))
