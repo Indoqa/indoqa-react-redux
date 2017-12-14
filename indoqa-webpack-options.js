@@ -1,3 +1,3 @@
 module.exports = {
-  devPort: 5000
+  devPort: 5000,
 }

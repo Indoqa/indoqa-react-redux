@@ -20,6 +20,8 @@ const url = (prefix) => {
 const fetchWordsEpic$ = (action$, store, {ajax, scheduler}) =>
   action$
     .ofType('FETCH_WORDS')
+    // the scheduler is only needed for the test environment,
+    // in the browser environment the scheduler is undefined and RxJS uses the default scheduler
     .debounceTime(150, scheduler)
     .switchMap((action) => {
       if (action.prefix === '') {

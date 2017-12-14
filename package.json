@@ -16,6 +16,7 @@
     "package": "yarn run lint && yarn run flow && yarn run test && indoqa-webpack ./indoqa-webpack-options.js",
     "test": "indoqa-jest",
     "test:watch": "yarn run test --watch",
+    "test:coverage": "yarn run test --coverage",
     "postinstall": "yarn run package"
   },
   "dependencies": {
