@@ -1,6 +1,6 @@
 {
   "name": "indoqa-react-redux",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Indoqa React/Redux Archetype",
   "license": "Apache-2.0",
   "repository": {
@@ -25,8 +25,7 @@
     "fela-plugin-named-media-query": "5.0.13",
     "fela-preset-web": "8.0.0",
     "indoqa-react-app": "2.4.8",
-    "indoqa-react-fela": "0.4.4",
-    "prop-types": "15.6.0",
+    "indoqa-react-fela": "0.5.0",
     "ramda": "0.25.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
@@ -37,7 +36,7 @@
     "redux-logger": "3.0.6",
     "redux-observable": "0.17.0",
     "reselect": "3.0.1",
-    "rxjs": "5.5.3"
+    "rxjs": "5.5.5"
   },
   "devDependencies": {
     "flow-bin": "0.59.0",
