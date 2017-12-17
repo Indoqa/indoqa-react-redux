@@ -24,7 +24,7 @@
     "fela-monolithic": "5.0.14",
     "fela-plugin-named-media-query": "5.0.13",
     "fela-preset-web": "8.0.0",
-    "indoqa-react-app": "2.5.0",
+    "indoqa-react-app": "2.5.1",
     "indoqa-react-fela": "0.5.1",
     "ramda": "0.25.0",
     "react": "16.2.0",
@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "flow-bin": "0.59.0",
-    "indoqa-webpack": "1.0.5"
+    "indoqa-webpack": "1.0.6"
   },
   "proxy": {
     "/geonames": {

@@ -3522,9 +3522,9 @@ indexof@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
 
-indoqa-react-app@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/indoqa-react-app/-/indoqa-react-app-2.5.0.tgz#505fe82cf8d52b617a20b089827f57bf17103b64"
+indoqa-react-app@2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/indoqa-react-app/-/indoqa-react-app-2.5.1.tgz#b9355d78ca55cb32a6a622e706db8d84e5753ccc"
   dependencies:
     fela "6.1.0"
     indoqa-react-fela "0.5.1"
@@ -3553,9 +3553,9 @@ indoqa-react-fela@0.5.1:
     react-router "4.2.0"
     react-router-dom "4.2.2"
 
-indoqa-webpack@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/indoqa-webpack/-/indoqa-webpack-1.0.5.tgz#cbf403062cfddbccfca3e3770692a850ed937fd6"
+indoqa-webpack@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/indoqa-webpack/-/indoqa-webpack-1.0.6.tgz#d681a45dcc21c047407a847f6d7ebf6efe062f7f"
   dependencies:
     autoprefixer "^7.1.6"
     babel-core "^6.26.0"
