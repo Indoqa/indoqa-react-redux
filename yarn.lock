@@ -1995,7 +1995,7 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
 
-deepmerge@^2.0.1:
+deepmerge@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.0.1.tgz#25c1c24f110fb914f80001b925264dd77f3f4312"
 
@@ -2727,12 +2727,19 @@ fbjs@^0.8.16, fbjs@^0.8.9:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
-fela-bindings@^1.2.0:
+fela-bindings@^1.1.0, fela-bindings@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/fela-bindings/-/fela-bindings-1.2.0.tgz#f81733dad7c300a37db61e3bdc4c965bb062d8b8"
   dependencies:
     fela-dom "^7.0.0"
     lodash "^4.17.4"
+
+fela-dom@^6.0.6:
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/fela-dom/-/fela-dom-6.0.6.tgz#8cf324b5fd685d7f91c79eced37a9fb6820f297f"
+  dependencies:
+    fela-tools "^5.0.13"
+    fela-utils "^7.0.5"
 
 fela-dom@^7.0.0:
   version "7.0.0"
@@ -2797,6 +2804,17 @@ fela-plugin-unit@^5.0.13, fela-plugin-unit@^5.0.14:
     css-in-js-utils "^2.0.0"
     lodash "^4.17.4"
 
+fela-preset-web@7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/fela-preset-web/-/fela-preset-web-7.0.2.tgz#06d047e28b3f4c2d02b28810e9197dee9fa856b4"
+  dependencies:
+    fela-plugin-embedded "^5.2.0"
+    fela-plugin-extend "^5.0.11"
+    fela-plugin-fallback-value "^5.0.14"
+    fela-plugin-lvha "^5.0.13"
+    fela-plugin-prefixer "^5.0.14"
+    fela-plugin-unit "^5.0.13"
+
 fela-preset-web@8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/fela-preset-web/-/fela-preset-web-8.0.0.tgz#2a113242dc353155d4813fd097d530e9e044de53"
@@ -2808,16 +2826,13 @@ fela-preset-web@8.0.0:
     fela-plugin-prefixer "^5.0.15"
     fela-plugin-unit "^5.0.14"
 
-fela-preset-web@^7.0.2:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/fela-preset-web/-/fela-preset-web-7.0.2.tgz#06d047e28b3f4c2d02b28810e9197dee9fa856b4"
+fela-tools@^5.0.13:
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/fela-tools/-/fela-tools-5.0.14.tgz#f668bc8103f6c76e9751459ac0b7df5d5ad98b57"
   dependencies:
-    fela-plugin-embedded "^5.2.0"
-    fela-plugin-extend "^5.0.11"
-    fela-plugin-fallback-value "^5.0.14"
-    fela-plugin-lvha "^5.0.13"
-    fela-plugin-prefixer "^5.0.14"
-    fela-plugin-unit "^5.0.13"
+    css-in-js-utils "2.0.0"
+    fela-utils "^8.0.0"
+    lodash "^4.17.4"
 
 fela-utils@^7.0.4, fela-utils@^7.0.5:
   version "7.0.5"
@@ -2832,7 +2847,7 @@ fela-utils@^8.0.0:
     css-in-js-utils "^2.0.0"
     lodash "^4.17.4"
 
-fela@6.1.0, fela@^6.0.5:
+fela@6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/fela/-/fela-6.1.0.tgz#c21f32bca8e68732072b5e50caabfda2fa3a119c"
   dependencies:
@@ -3507,49 +3522,36 @@ indexof@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
 
-indoqa-react-app@2.4.8:
-  version "2.4.8"
-  resolved "https://registry.yarnpkg.com/indoqa-react-app/-/indoqa-react-app-2.4.8.tgz#8628242b41fcff0e4470d3ba7a6e804057baad26"
+indoqa-react-app@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/indoqa-react-app/-/indoqa-react-app-2.5.0.tgz#505fe82cf8d52b617a20b089827f57bf17103b64"
   dependencies:
-    indoqa-react-fela "^0.4.4"
-    prop-types "^15.6.0"
-    react "^16.1.1"
-    react-dom "^16.1.1"
-    react-fela "^6.1.0"
-    react-redux "^5.0.6"
-    react-router "^3.2.0"
-    redux "^3.7.2"
-    redux-logger "^3.0.6"
-    redux-observable "^0.17.0"
-    rxjs "^5.5.2"
+    fela "6.1.0"
+    indoqa-react-fela "0.5.1"
+    prop-types "15.6.0"
+    react "16.2.0"
+    react-dom "16.2.0"
+    react-fela "6.1.1"
+    react-redux "5.0.6"
+    react-router "3.2.0"
+    redux "3.7.2"
+    redux-logger "3.0.6"
+    redux-observable "0.17.0"
+    rxjs "5.5.5"
 
-indoqa-react-fela@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/indoqa-react-fela/-/indoqa-react-fela-0.5.0.tgz#a028c6b2c8ce26b6c6e8831ade081afde252f511"
+indoqa-react-fela@0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/indoqa-react-fela/-/indoqa-react-fela-0.5.1.tgz#d7d885d59a55b51ff572663fa9b5db448107be1c"
   dependencies:
-    deepmerge "^2.0.1"
-    fela "^6.0.5"
-    fela-preset-web "^7.0.2"
-    prop-types "^15.6.0"
-    react "^15.6.2"
-    react-dom "^15.6.2"
-    react-fela "^6.1.0"
-    react-router "^4.2.0"
-    react-router-dom "^4.2.2"
-
-indoqa-react-fela@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/indoqa-react-fela/-/indoqa-react-fela-0.4.4.tgz#14533069486d5205d707b4dbc7f9cf0b5f6b1cf3"
-  dependencies:
-    deepmerge "^2.0.1"
-    fela "^6.0.5"
-    fela-preset-web "^7.0.2"
-    prop-types "^15.6.0"
-    react "^15.6.2"
-    react-dom "^15.6.2"
-    react-fela "^6.1.0"
-    react-router "^4.2.0"
-    react-router-dom "^4.2.2"
+    deepmerge "2.0.1"
+    fela "6.1.0"
+    fela-preset-web "7.0.2"
+    prop-types "15.6.0"
+    react "16.2.0"
+    react-dom "16.2.0"
+    react-fela "6.1.0"
+    react-router "4.2.0"
+    react-router-dom "4.2.2"
 
 indoqa-webpack@1.0.5:
   version "1.0.5"
@@ -5444,7 +5446,13 @@ promise@^8.0.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@15.5.8:
+  version "15.5.8"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.8.tgz#6b7b2e141083be38c8595aa51fc55775c7199394"
+  dependencies:
+    fbjs "^0.8.9"
+
+prop-types@15.6.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -5608,7 +5616,7 @@ react-dev-utils@^4.2.1:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@16.2.0, react-dom@^16.1.1:
+react-dom@16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.2.0.tgz#69003178601c0ca19b709b33a83369fe6124c044"
   dependencies:
@@ -5617,7 +5625,7 @@ react-dom@16.2.0, react-dom@^16.1.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-dom@^15.6.1, react-dom@^15.6.2:
+react-dom@^15.6.1:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
   dependencies:
@@ -5630,7 +5638,15 @@ react-error-overlay@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
 
-react-fela@6.1.1, react-fela@^6.1.0:
+react-fela@6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/react-fela/-/react-fela-6.1.0.tgz#7571e08b09359b342688f4f81125794e2bdf2b9c"
+  dependencies:
+    fela-bindings "^1.1.0"
+    fela-dom "^6.0.6"
+    prop-types "15.5.8"
+
+react-fela@6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/react-fela/-/react-fela-6.1.1.tgz#11ebfcb49a27a0bff8edd2c988bfbc8278b04f0f"
   dependencies:
@@ -5645,7 +5661,7 @@ react-proxy@^1.1.7:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
 
-react-redux@5.0.6, react-redux@^5.0.6:
+react-redux@5.0.6:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
   dependencies:
@@ -5656,7 +5672,7 @@ react-redux@5.0.6, react-redux@^5.0.6:
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
 
-react-router-dom@^4.2.2:
+react-router-dom@4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.2.2.tgz#c8a81df3adc58bba8a76782e946cbd4eae649b8d"
   dependencies:
@@ -5667,7 +5683,7 @@ react-router-dom@^4.2.2:
     react-router "^4.2.0"
     warning "^3.0.0"
 
-react-router@3.2.0, react-router@^3.2.0:
+react-router@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-3.2.0.tgz#62b6279d589b70b34e265113e4c0a9261a02ed36"
   dependencies:
@@ -5679,7 +5695,7 @@ react-router@3.2.0, react-router@^3.2.0:
     prop-types "^15.5.6"
     warning "^3.0.0"
 
-react-router@^4.2.0:
+react-router@4.2.0, react-router@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.2.0.tgz#61f7b3e3770daeb24062dae3eedef1b054155986"
   dependencies:
@@ -5702,7 +5718,7 @@ react-transform-hmr@^1.0.3:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
-react@16.2.0, react@^16.1.1:
+react@16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
   dependencies:
@@ -5711,7 +5727,7 @@ react@16.2.0, react@^16.1.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react@^15.6.1, react@^15.6.2:
+react@^15.6.1:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
@@ -5817,17 +5833,17 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "^0.4.2"
 
-redux-logger@3.0.6, redux-logger@^3.0.6:
+redux-logger@3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-3.0.6.tgz#f7555966f3098f3c88604c449cf0baf5778274bf"
   dependencies:
     deep-diff "^0.3.5"
 
-redux-observable@0.17.0, redux-observable@^0.17.0:
+redux-observable@0.17.0:
   version "0.17.0"
   resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.17.0.tgz#23e29e3f3c39204b7ed6a14b67a29e317c03106b"
 
-redux@3.7.2, redux@^3.7.2:
+redux@3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   dependencies:
@@ -6080,7 +6096,7 @@ rx-lite@*, rx-lite@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
 
-rxjs@5.5.5, rxjs@^5.5.2:
+rxjs@5.5.5:
   version "5.5.5"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.5.tgz#e164f11d38eaf29f56f08c3447f74ff02dd84e97"
   dependencies:

@@ -9,7 +9,7 @@ We invent nothing new, this archetype is just a composition of useful libraries,
 
   * [indoqa-react-app](https://github.com/Indoqa/indoqa-react-app) for a basic redux and router setup:
     * [redux-observable](https://github.com/redux-observable/redux-observable) for side-effects
-    * [react-router](https://github.com/reactjs/react-router) to support multipe pages and history management
+    * [react-router](https://github.com/reactjs/react-router) to support multiple pages and history management
     * [Fela](http://fela.js.org/docs/Introduction.html) as our css-in-js library and theming
     * dev tools for [logging](https://github.com/fcomb/redux-logger) and debugging
   * [Ramda](http://ramdajs.com/docs/) for immutable state transformation
@@ -20,7 +20,10 @@ We invent nothing new, this archetype is just a composition of useful libraries,
     * [babel](https://babeljs.io/) to support es6 syntax ans language features
     * eslint using [eslint-config-indoqa](https://github.com/Indoqa/eslint-config-indoqa) based on the well documented [airbnb](https://github.com/airbnb/javascript) rules
     * [hot reloading](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html) of React components, Fela themes, epics and reducers
-  * two demo pages, [one](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/time) with an example of fetching data from an external webservice ([geonames timezone](http://www.geonames.org/export/web-services.html#timezone)) and [another](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/todos) showing a local todo list based on Dan Abramov excellent [introduction](https://egghead.io/lessons/javascript-redux-react-todo-list-example-adding-a-todo) into Redux
+  * three demo pages:
+    * [one](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/time) with an example of fetching data from an external webservice ([geonames timezone](http://www.geonames.org/export/web-services.html#timezone)),
+    * [two](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/todos) showing a local todo list based on Dan Abramov excellent [introduction](https://egghead.io/lessons/javascript-redux-react-todo-list-example-adding-a-todo) into Redux and
+    * [three](https://github.com/Indoqa/indoqa-react-redux/tree/master/src/main/todos) demonstrating more advances usages of redux-observable (cancellation, debouncing).
   * a simple and clean application layout separating application setup, features and common components and following the [atomic design](http://atomicdesign.bradfrost.com/) methodology by Brad Frost.
     ```
     src
@@ -82,7 +85,7 @@ yarn install
 
   * ```yarn start``` Run the app inside the dev node server including hot reloading
   * ```yarn test``` Run the tests
-  * ```yarn run package``` Create a minified distribution
+  * ```yarn package``` Create a minified distribution
 
 ## Todos
 
