@@ -4,6 +4,7 @@ const createStore = () => {
   const indoqaStore = createIndoqaStore({
     rootReducer: require('./rootReducer.js').default,
     rootEpic: require('./rootEpic.js').default,
+    enableLogging: process.env.NODE_ENV !== 'production',
   })
 
   if (module.hot) {
