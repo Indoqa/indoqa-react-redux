@@ -1,5 +1,5 @@
 // @flow
-import {createComponent} from 'react-fela'
+import {createComponentWithProxy} from 'react-fela'
 
 const Logo = ({theme}) => {
   return ({
@@ -11,4 +11,4 @@ const Logo = ({theme}) => {
   })
 }
 
-export default createComponent(Logo, 'div', ['onClick'])
+export default createComponentWithProxy(Logo, 'div')

@@ -1,8 +1,8 @@
 // @flow
-import {createComponent} from 'react-fela'
+import {createComponentWithProxy} from 'react-fela'
 
 const Button = ({theme}) => ({
   color: theme.colors.text,
 })
 
-export default createComponent(Button, 'button', ['onClick'])
+export default createComponentWithProxy(Button, 'button')

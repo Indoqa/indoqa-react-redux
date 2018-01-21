@@ -1,5 +1,5 @@
 // @flow
-import {createComponent} from 'react-fela'
+import {createComponentWithProxy} from 'react-fela'
 
 const MenuLink = ({theme}) => ({
   textTransform: 'uppercase',
@@ -9,4 +9,4 @@ const MenuLink = ({theme}) => ({
   margin: theme.spacing.space1,
 })
 
-export default createComponent(MenuLink, 'div', ['onClick'])
+export default createComponentWithProxy(MenuLink, 'div')
