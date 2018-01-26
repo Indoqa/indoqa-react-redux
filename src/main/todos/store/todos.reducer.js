@@ -22,7 +22,7 @@ const todos = (state: TodoState = initialState, action: Action) => {
     }
 
     case 'TOGGLE_TODO': {
-      const id = action.id
+      const {id} = action
       const index = R.findIndex((item) => item.id === id)(state.todos)
       const updatedList = R.adjust((item) => R.assoc('completed', !item.completed, item), index, state.todos)
       return R.assoc('todos', updatedList, state)

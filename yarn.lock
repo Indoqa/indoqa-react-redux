@@ -2518,8 +2518,8 @@ eslint-config-airbnb@^16.1.0:
     eslint-config-airbnb-base "^12.1.0"
 
 eslint-config-indoqa@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-indoqa/-/eslint-config-indoqa-1.7.0.tgz#dcc84747907f0de7f3e6ed6c4c34898d8d118091"
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-indoqa/-/eslint-config-indoqa-1.7.1.tgz#40fb73d5230c9f379f23573f8e2f2bfbe47893e3"
   dependencies:
     eslint-config-airbnb "^16.1.0"
 

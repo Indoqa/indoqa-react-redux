@@ -9,13 +9,15 @@ type Props = {
 };
 
 function Todo({todo, onClick}: Props) {
-  return (<li
-    onClick={onClick}
-    style={{
-      textDecoration: todo.completed ? 'line-through' : 'none',
-    }}
-  >
-    {todo.text}
-  </li>)
+  return (
+    <li
+      onClick={onClick}
+      style={{
+        textDecoration: todo.completed ? 'line-through' : 'none',
+      }}
+    >
+      {todo.text}
+    </li>
+  )
 }
 export default Todo

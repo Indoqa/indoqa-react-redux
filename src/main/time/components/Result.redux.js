@@ -9,6 +9,4 @@ const mapStateToProps = (state) => ({
   isLoading: selectLoadingFlag(state),
 })
 
-export default connect(
-  mapStateToProps
-)(Result)
+export default connect(mapStateToProps)(Result)

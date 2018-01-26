@@ -13,7 +13,7 @@ type Props = {
 }
 
 const MainMenuTemplate = ({title, header, children}: Props) => (
-  <Flex stretch height={'100%'}>
+  <Flex stretch height="100%">
     <MainMenu />
     <Box grow={1}>
       <Bar pl={1} pr={1}>
