@@ -1,9 +1,9 @@
 // @flow
 export default {
   colors: {
-    text: '#030303',
+    text: '#000',
     disabled: '#727272',
-    bgLight: '#e5e5e5',
+    bgLight: '#d5d5d5',
   },
   fonts: {
     text: 'sans-serif',

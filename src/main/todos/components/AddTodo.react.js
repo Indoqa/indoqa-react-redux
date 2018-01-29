@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import {Box} from 'indoqa-react-fela'
 
 type Props = {
   addTodo: Function,
@@ -9,7 +10,7 @@ const AddTodo = ({addTodo}: Props) => {
   let input
 
   return (
-    <div>
+    <Box mb={2} mt={2}>
       <form
         onSubmit={(e) => {
           e.preventDefault()
@@ -29,7 +30,7 @@ const AddTodo = ({addTodo}: Props) => {
           Add Todo
         </button>
       </form>
-    </div>
+    </Box>
   )
 }
 

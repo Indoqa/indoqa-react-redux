@@ -96,3 +96,4 @@ yarn install
   * add e2e tests (https://codeburst.io/composable-end-to-end-tests-for-react-apps-2ec82170af62)
   * document debugging with Chrome and Firefox tools (maybe improve indoqa-webpack)
   * lighthouse check
+  * Typescript?

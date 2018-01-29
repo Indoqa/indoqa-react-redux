@@ -42,7 +42,7 @@ const MainMenuTemplate = ({title, header, children}: Props) => {
     <Flex stretch height="100%">
       <MainMenu />
       <Box grow={1}>
-        <Bar pl={1} pr={1}>
+        <Bar pl={3} pr={1}>
           {renderHeaderContent(title, header)}
           {renderLanguageSwitcher()}
         </Bar>
