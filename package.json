@@ -24,6 +24,7 @@
     "fela-monolithic": "5.0.17",
     "fela-plugin-named-media-query": "5.0.13",
     "fela-preset-web": "8.0.3",
+    "formik": "^0.10.5",
     "indoqa-react-app": "2.5.2",
     "indoqa-react-fela": "0.5.4",
     "ramda": "0.25.0",

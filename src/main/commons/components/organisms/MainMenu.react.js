@@ -22,6 +22,9 @@ const MainMenu = () => (
     <MenuLink>
       <Link to="/words">Words</Link>
     </MenuLink>
+    <MenuLink>
+      <Link to="/forms">Forms</Link>
+    </MenuLink>
   </Menu>
 )
 
