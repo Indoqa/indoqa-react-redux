@@ -1,25 +1,23 @@
 // @flow
 import React from 'react'
 import {Box} from 'indoqa-react-fela'
-import {Link} from 'react-router'
 
 import MainMenuTemplate from '../../commons/components/templates/MainMenuTemplate.react'
-import SimpleForm from './SimpleForm.react.js'
+import UserForm from './UserForm.react.js'
 
 type Props = {}
 
-class FormsPage extends React.Component<Props> {
+class UserPage extends React.Component<Props> {
 
   render() {
     return (
-      <MainMenuTemplate title="Forms">
+      <MainMenuTemplate title="Add a user">
         <Box m={1}>
-          <SimpleForm />
+          <UserForm />
         </Box>
-        <Link to="/forms/users/add">Add user</Link>
       </MainMenuTemplate>
     )
   }
 }
 
-export default FormsPage
+export default UserPage
