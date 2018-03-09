@@ -9,10 +9,10 @@ import MenuLink from '../molecules/MenuLink.react.js'
 
 const MainMenu = () => (
   <Menu>
-    <Logo>
-      INDOQA-REACT-REDUX
+    <Logo ml={2}>
+      INDOQA: React-Redux samples
     </Logo>
-    <Box />
+    <Box mb={3} />
     <MenuLink>
       <Link to="/">Time</Link>
     </MenuLink>

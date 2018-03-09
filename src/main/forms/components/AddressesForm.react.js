@@ -11,39 +11,24 @@ type Props = {
   touched: any,
 }
 
-const EMPTY_ADDRESS = {
+const createNewAddress = () => ({
   street: '',
   city: '',
   zipCode: '',
   country: '',
-}
+})
 
-const renderAddressFormActions = (arrayHelpers, count, index) => {
+const renderAddressHeader = (arrayHelpers, count, index) => {
   return (
     <Box>
-      <Text mr={1}>Address</Text>
-      <button
-        type="button"
-        onClick={() => arrayHelpers.remove(index)}
-      >
-        -
-      </button>
+      <Text mr={1}>Address {index + 1}</Text>
+      <button type="button" onClick={() => arrayHelpers.remove(index)}>-</button>
       {index < count - 1 ?
-        <button
-          type="button"
-          onClick={() => arrayHelpers.move(index, index + 1)}
-        >
-          down
-        </button>
+        <button type="button" onClick={() => arrayHelpers.move(index, index + 1)}>down</button>
         : null
       }
       {index > 0 ?
-        <button
-          type="button"
-          onClick={() => arrayHelpers.move(index, index - 1)}
-        >
-          up
-        </button>
+        <button type="button" onClick={() => arrayHelpers.move(index, index - 1)}>up</button>
         : null
       }
     </Box>
@@ -54,7 +39,7 @@ const renderAddressForm = (arrayHelpers, values, errors, touched, address, index
   return (
     <Flex key={index} mt={2}>
       <Box>
-        {renderAddressFormActions(arrayHelpers, values.length, index)}
+        {renderAddressHeader(arrayHelpers, values.length, index)}
 
         <FormRow name={`addresses.${index}.street`} label="Street" errors={errors} touched={touched} />
         <FormRow name={`addresses.${index}.city`} label="City" errors={errors} touched={touched} />
@@ -65,17 +50,12 @@ const renderAddressForm = (arrayHelpers, values, errors, touched, address, index
   )
 }
 
-const renderHeader = (arrayHelpers) => {
+const renderAddressesHeader = (arrayHelpers) => {
   return (
     <Box>
       <Box>
         <Text mr={1}>Addresses</Text>
-        <button
-          type="button"
-          onClick={() => arrayHelpers.push(EMPTY_ADDRESS)}
-        >
-          +
-        </button>
+        <button type="button" onClick={() => arrayHelpers.push(createNewAddress())}>+</button>
       </Box>
     </Box>
   )
@@ -88,7 +68,7 @@ const renderForms = (arrayHelpers, values, errors, touched) => {
     return null
   }
   return addresses.map((address, index) => (
-    renderAddressForm(arrayHelpers, addresses, errors, touched, address, index)
+    renderAddressForm(arrayHelpers, values, errors, touched, address, index)
   ))
 }
 
@@ -98,7 +78,7 @@ const AddressesForm = ({values, errors, touched}:Props) => {
       name="addresses"
       render={(arrayHelpers) => (
         <Box mt={2}>
-          {renderHeader(arrayHelpers)}
+          {renderAddressesHeader(arrayHelpers)}
           {renderForms(arrayHelpers, values, errors, touched)}
         </Box>
       )}

@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react'
 import {Box, Text} from 'indoqa-react-fela'
+import {createComponentWithProxy} from 'react-fela'
 
 type Props = {
   fetchWords: Function,
@@ -10,11 +11,18 @@ type Props = {
   isLoadingFlag: boolean,
 }
 
+const InputField = createComponentWithProxy(({theme}) => ({
+  width: 300,
+  padding: 4,
+  marginRight: theme.spacing.space2,
+}), 'input')
+
+
 const WordsSearch = ({fetchWords, cancelFetchWords, prefix, isLoadingFlag, error}: Props) => {
   return (
     <Box>
       <Box>
-        <input
+        <InputField
           type="text"
           placeholder="Search for an English word"
           onChange={(e) => fetchWords(e.currentTarget.value)}

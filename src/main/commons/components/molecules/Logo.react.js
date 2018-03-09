@@ -1,14 +1,15 @@
 // @flow
 import {createComponentWithProxy} from 'react-fela'
+import {Box} from 'indoqa-react-fela'
 
-const Logo = ({theme}) => {
+const Logo = () => {
   return ({
-    height: '50px',
     cursor: 'pointer',
     display: 'inline-flex',
     alignItems: 'center',
-    padding: theme.spacing.space1,
+    height: 50,
+    fontWeight: 'bold',
   })
 }
 
-export default createComponentWithProxy(Logo, 'div')
+export default createComponentWithProxy(Logo, Box)

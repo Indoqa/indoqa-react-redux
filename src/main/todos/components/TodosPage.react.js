@@ -4,7 +4,7 @@ import {Box} from 'indoqa-react-fela'
 
 import MainMenuTemplate from '../../commons/components/templates/MainMenuTemplate.react'
 import AddTodo from '../components/AddTodo.redux'
-import Footer from '../components/Footer.react'
+import Header from './Header.react'
 import TodoList from '../components/TodoList.redux'
 
 class TodosPage extends React.Component<{}> {
@@ -12,10 +12,10 @@ class TodosPage extends React.Component<{}> {
   render() {
     return (
       <MainMenuTemplate title="Todos">
-        <Box p={1}>
+        <Box p={3}>
+          <Header />
           <AddTodo />
           <TodoList />
-          <Footer />
         </Box>
       </MainMenuTemplate>
     )

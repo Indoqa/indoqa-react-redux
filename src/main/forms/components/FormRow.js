@@ -22,7 +22,12 @@ const UserLabel = createComponent(() => ({
 }), 'label')
 
 const InputField = createComponentWithProxy(({hasError}) => ({
-  borderColor: hasError ? 'red' : 'auto',
+  borderStyle: 'solid',
+  borderWidth: 1,
+  padding: 4,
+  borderColor: hasError ? 'red' : 'grey',
+  outline: 'none',
+  boxShadow: 'none',
 }), 'input')
 
 const ErrorMessage = createComponent(() => ({

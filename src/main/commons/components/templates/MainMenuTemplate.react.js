@@ -16,7 +16,7 @@ const MainMenuTemplate = ({title, header, children}: Props) => (
   <Flex stretch height="100%">
     <MainMenu />
     <Box grow={1}>
-      <Bar pl={1} pr={1}>
+      <Bar pl={3} pr={1}>
         <Box>{title}</Box>
         <Box grow={1} />
         <Box>{header}</Box>
