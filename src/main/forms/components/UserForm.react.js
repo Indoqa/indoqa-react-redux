@@ -3,12 +3,16 @@ import * as React from 'react'
 import {Form, Formik} from 'formik'
 import {Box} from 'indoqa-react-fela'
 import yup from 'yup'
+import {Link} from 'react-router'
 
 import FormRow from './FormRow'
 import AddressesForm from './AddressesForm.react'
+import ButtonLink from '../../commons/components/atoms/ButtonLink.react'
+
+import type {User} from '../types/User.js'
 
 type Props = {
-  user: any,
+  user: User,
 }
 
 const validationSchema = () => {
@@ -25,6 +29,7 @@ const validationSchema = () => {
 const UserForm = ({user}:Props) => {
   return (
     <Formik
+      key={user.id}
       displayName="UserForm"
       onSubmit={(values) => console.log(values)}
       initialValues={user}
@@ -37,7 +42,10 @@ const UserForm = ({user}:Props) => {
             <FormRow name="email" label="E-Mail" errors={errors} touched={touched} />
             <AddressesForm values={values} errors={errors} touched={touched} />
             <Box mt={2}>
-              <button type="submit">Submit</button>
+              <ButtonLink>
+                <Link to="/forms">Cancel</Link>
+              </ButtonLink>
+              <button type="submit">Save</button>
             </Box>
           </Form>
         )

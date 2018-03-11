@@ -1,39 +1,49 @@
 // @flow
 import React from 'react'
 import {Box} from 'indoqa-react-fela'
+import {Link} from 'react-router'
+import {createComponent} from 'react-fela'
 
 import MainMenuTemplate from '../../commons/components/templates/MainMenuTemplate.react'
-import UserForm from './UserForm.react.js'
+import ButtonLink from '../../commons/components/atoms/ButtonLink.react'
 
-type Props = {}
+import type {User} from '../types/User'
 
-const user = {
-  id: '',
-  name: 'Maier',
-  email: 'w.maier@example.com',
-  addresses: [
-    {
-      street: 'Schottenring 3',
-      city: 'Vienna',
-      zipCode: '1010',
-      country: 'Austria',
-    },
-    {
-      street: 'Heinrichstrasse 7',
-      city: 'Graz',
-      zipCode: '8010',
-      country: 'Austria',
-    }
-  ],
+type Props = {
+  users: Array<User>
+}
+
+const TableData = createComponent(({theme}) => ({
+  padding: theme.spacing.space1,
+}), 'td')
+
+
+const renderUserRow = (user:User) => {
+  return (
+    <tr key={user.id}>
+      <TableData>{user.name}</TableData>
+      <TableData>{user.email}</TableData>
+      <TableData>
+        <ButtonLink>
+          <Link to={`/forms/users/${user.id}`}>Edit</Link>
+        </ButtonLink>
+      </TableData>
+    </tr>
+  )
 }
 
 class FormsPage extends React.Component<Props> {
 
   render() {
+    const {users} = this.props
     return (
-      <MainMenuTemplate title="Forms: Edit a user">
-        <Box m={3}>
-          <UserForm user={user} />
+      <MainMenuTemplate title="Forms: List of editable users">
+        <Box p={3}>
+          <table>
+            <tbody>
+              {users.map(renderUserRow)}
+            </tbody>
+          </table>
         </Box>
       </MainMenuTemplate>
     )
