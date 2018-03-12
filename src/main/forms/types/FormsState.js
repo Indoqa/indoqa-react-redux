@@ -2,6 +2,6 @@
 import type {User} from './User'
 
 export type FormsState = {
-  +users: Array<User>,
+  +users: { [string]: User },
   +currentUser: ?User,
 }

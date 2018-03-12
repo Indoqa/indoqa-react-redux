@@ -10,7 +10,7 @@ import ButtonLink from '../../commons/components/atoms/ButtonLink.react'
 import type {User} from '../types/User'
 
 type Props = {
-  users: Array<User>
+  users: { [string]:User },
 }
 
 const TableData = createComponent(({theme}) => ({
@@ -18,7 +18,7 @@ const TableData = createComponent(({theme}) => ({
 }), 'td')
 
 
-const renderUserRow = (user:User) => {
+const renderUserRow = (user: User) => {
   return (
     <tr key={user.id}>
       <TableData>{user.name}</TableData>
@@ -32,6 +32,13 @@ const renderUserRow = (user:User) => {
   )
 }
 
+/*
+  TODO add user
+  TODO save user
+  TODO simulate server-side validation
+  TODO simulate server-side id generation
+  TODO deal with unknown user id
+ */
 class FormsPage extends React.Component<Props> {
 
   render() {
@@ -41,9 +48,12 @@ class FormsPage extends React.Component<Props> {
         <Box p={3}>
           <table>
             <tbody>
-              {users.map(renderUserRow)}
+              {Object.keys(users).map((k) => renderUserRow(users[k]))}
             </tbody>
           </table>
+          <Box p={1}>
+            <button>Add user</button>
+          </Box>
         </Box>
       </MainMenuTemplate>
     )

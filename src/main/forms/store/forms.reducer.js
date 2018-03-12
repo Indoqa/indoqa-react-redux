@@ -1,5 +1,4 @@
 // @flow
-
 import type {FormsState} from '../types/FormsState'
 import type {User} from '../types/User'
 import type {Action} from '../types/FormsActions'
@@ -32,7 +31,10 @@ const user2: User = {
 }
 
 const initialState: FormsState = {
-  users: [user1, user2],
+  users: {
+    [user1.id]: user1,
+    [user2.id]: user2,
+  },
   currentUser: null,
 }
 

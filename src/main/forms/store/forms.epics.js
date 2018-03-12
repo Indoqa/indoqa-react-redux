@@ -1,9 +1,8 @@
-/* eslint-disable prefer-template */
 import {selectUsers} from './forms.selectors'
 import {setCurrentUser} from './forms.actions'
 
 const selectUser = (id, state) => {
-  return selectUsers(state).filter((user) => user.id === id)[0]
+  return selectUsers(state)[id]
 }
 
 const loadCurrentUserEpic$ = (action$, store) =>
