@@ -12,6 +12,12 @@ type Props = {
   router: any,
   currentUser: User,
   loadUser: Function,
+  saveUser: Function,
+}
+
+const s = (user: User, saveUser: Function) => {
+  console.log('user', user)
+  saveUser(user)
 }
 
 class UserPage extends React.Component<Props> {
@@ -23,7 +29,7 @@ class UserPage extends React.Component<Props> {
   }
 
   render() {
-    const {currentUser} = this.props
+    const {currentUser, saveUser} = this.props
 
     if (currentUser === null) {
       return null
@@ -32,7 +38,7 @@ class UserPage extends React.Component<Props> {
     return (
       <MainMenuTemplate title="Forms: Edit user">
         <Box m={3}>
-          <UserForm user={currentUser} />
+          <UserForm user={currentUser} onSubmit={(user) => s(user, saveUser)} />
         </Box>
       </MainMenuTemplate>
     )

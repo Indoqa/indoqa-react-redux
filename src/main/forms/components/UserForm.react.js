@@ -13,6 +13,7 @@ import type {User} from '../types/User.js'
 
 type Props = {
   user: User,
+  onSubmit: Function,
 }
 
 const validationSchema = () => {
@@ -26,12 +27,12 @@ const validationSchema = () => {
   })
 }
 
-const UserForm = ({user}:Props) => {
+const UserForm = ({user, onSubmit}:Props) => {
   return (
     <Formik
-      key={user.id}
+      key={user.id + user.lastModified.toString()}
       displayName="UserForm"
-      onSubmit={(values) => console.log(values)}
+      onSubmit={(values) => onSubmit(values)}
       initialValues={user}
       validateOnChange={false}
       validationSchema={validationSchema}

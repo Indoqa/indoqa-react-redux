@@ -6,4 +6,5 @@ export type User = {
   name: string,
   email: string,
   addresses: Array<Address>,
+  lastModified: Date,
 }

@@ -21,6 +21,7 @@ const user1: User = {
       country: 'Austria',
     }
   ],
+  lastModified: new Date(),
 }
 
 const user2: User = {
@@ -28,6 +29,7 @@ const user2: User = {
   name: 'Gruber',
   email: 'f.gruber@example.com',
   addresses: [],
+  lastModified: new Date(),
 }
 
 const initialState: FormsState = {
@@ -41,7 +43,19 @@ const initialState: FormsState = {
 export default (state: FormsState = initialState, action: Action) => {
   switch (action.type) {
     case 'FORMS_SAVE_USER':
-      return state
+      return {
+        ...state,
+        users: {
+          ...state.users,
+          [action.user.id]: {
+            ...action.user,
+            addresses: [
+              ...action.user.addresses,
+            ],
+            lastModified: new Date(),
+          },
+        },
+      }
 
     case 'FORMS_LOAD_USER':
       return {
