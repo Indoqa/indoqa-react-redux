@@ -13,6 +13,12 @@ export const saveUser = (user: User): Action => ({
   user,
 })
 
+export const postUser = (user: User): Action => ({
+  type: 'FORMS_POST_USER',
+  user,
+})
+
+
 export const setCurrentUser = (currentUser: User): Action => ({
   type: 'FORMS_SET_CURRENT_USER',
   currentUser,

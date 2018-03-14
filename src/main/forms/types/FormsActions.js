@@ -6,6 +6,11 @@ type SaveUserAction = {
   user: User,
 }
 
+type PostUserAction = {
+  type: 'FORMS_POST_USER',
+  user: User,
+}
+
 type LoadUserAction = {
   type: 'FORMS_LOAD_USER',
   id: string,
@@ -18,5 +23,6 @@ type SetCurrentUserAction = {
 
 export type Action =
   | SaveUserAction
+  | PostUserAction
   | LoadUserAction
   | SetCurrentUserAction

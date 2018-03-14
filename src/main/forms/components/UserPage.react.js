@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import {Box} from 'indoqa-react-fela'
-import {withRouter} from 'react-router'
+import {withRouter, type Router} from 'react-router'
 
 import MainMenuTemplate from '../../commons/components/templates/MainMenuTemplate.react'
 import UserForm from './UserForm.react.js'
@@ -9,18 +9,18 @@ import UserForm from './UserForm.react.js'
 import type {User} from '../types/User'
 
 type Props = {
-  router: any,
+  router: Router,
   currentUser: User,
   loadUser: Function,
-  saveUser: Function,
-}
-
-const s = (user: User, saveUser: Function) => {
-  console.log('user', user)
-  saveUser(user)
+  postUser: Function,
 }
 
 class UserPage extends React.Component<Props> {
+
+  constructor(props: Props) {
+    super(props)
+    this.postUser = this.postUser.bind(this)
+  }
 
   componentWillMount() {
     const {router, loadUser} = this.props
@@ -28,8 +28,15 @@ class UserPage extends React.Component<Props> {
     loadUser(id)
   }
 
+  postUser: (User) => void
+
+  postUser(user: User) {
+    const {postUser} = this.props
+    postUser(user)
+  }
+
   render() {
-    const {currentUser, saveUser} = this.props
+    const {currentUser} = this.props
 
     if (currentUser === null) {
       return null
@@ -38,7 +45,7 @@ class UserPage extends React.Component<Props> {
     return (
       <MainMenuTemplate title="Forms: Edit user">
         <Box m={3}>
-          <UserForm user={currentUser} onSubmit={(user) => s(user, saveUser)} />
+          <UserForm user={currentUser} onSubmit={this.postUser} />
         </Box>
       </MainMenuTemplate>
     )
