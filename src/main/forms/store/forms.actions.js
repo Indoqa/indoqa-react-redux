@@ -13,9 +13,10 @@ export const saveUser = (user: User): Action => ({
   user,
 })
 
-export const postUser = (user: User): Action => ({
+export const postUser = (user: User, setErrors: Function): Action => ({
   type: 'FORMS_POST_USER',
   user,
+  setErrors,
 })
 
 

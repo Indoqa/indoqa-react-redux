@@ -2,21 +2,15 @@
 import * as React from 'react'
 import {FieldArray} from 'formik'
 import {Box, Flex, Text} from 'indoqa-react-fela'
+import {createNewAddress} from '../store/forms.factory'
 
-import FormRow from './FormRow'
+import FormRow from './FormRow.react'
 
 type Props = {
   values: any,
   errors: any,
   touched: any,
 }
-
-const createNewAddress = () => ({
-  street: '',
-  city: '',
-  zipCode: '',
-  country: '',
-})
 
 const renderAddressHeader = (arrayHelpers, count, index) => {
   return (

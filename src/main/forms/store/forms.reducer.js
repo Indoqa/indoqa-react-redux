@@ -4,7 +4,7 @@ import type {User} from '../types/User'
 import type {Action} from '../types/FormsActions'
 
 const user1: User = {
-  id: '34rrt5',
+  id: 'HyJifGwFG',
   name: 'Maier',
   email: 'w.maier@example.com',
   addresses: [
@@ -25,7 +25,7 @@ const user1: User = {
 }
 
 const user2: User = {
-  id: 'okhj7',
+  id: 'r1rozfvFf',
   name: 'Gruber',
   email: 'f.gruber@example.com',
   addresses: [],

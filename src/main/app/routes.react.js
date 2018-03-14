@@ -14,6 +14,7 @@ const routes = (
     <IndexRoute component={TimePage} />
     <Route component={FormsPage} path="/forms" />
     <Route component={UserPage} path="/forms/users/:id" />
+    <Route component={UserPage} path="/forms/users/" />
     <Route component={TodosPage} path="/todos" />
     <Route component={WordsPage} path="/words" />
   </Route>

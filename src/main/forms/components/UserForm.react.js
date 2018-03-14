@@ -5,11 +5,11 @@ import {Box} from 'indoqa-react-fela'
 import yup from 'yup'
 import {Link} from 'react-router'
 
-import FormRow from './FormRow'
+import FormRow from './FormRow.react'
 import AddressesForm from './AddressesForm.react'
 import ButtonLink from '../../commons/components/atoms/ButtonLink.react'
 
-import type {User} from '../types/User.js'
+import type {User} from '../types/User'
 
 type Props = {
   user: User,
@@ -32,7 +32,7 @@ const UserForm = ({user, onSubmit}:Props) => {
     <Formik
       key={user.id + user.lastModified.toString()}
       displayName="UserForm"
-      onSubmit={(values) => onSubmit(values)}
+      onSubmit={(values, {setErrors}) => onSubmit(values, setErrors)}
       initialValues={user}
       validateOnChange={false}
       validationSchema={validationSchema}

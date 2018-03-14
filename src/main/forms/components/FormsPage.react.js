@@ -17,7 +17,6 @@ const TableData = createComponent(({theme}) => ({
   padding: theme.spacing.space1,
 }), 'td')
 
-
 const renderUserRow = (user: User) => {
   return (
     <tr key={user.id}>
@@ -32,13 +31,6 @@ const renderUserRow = (user: User) => {
   )
 }
 
-/*
-  TODO add user
-  TODO save user
-  TODO simulate server-side validation
-  TODO simulate server-side id generation
-  TODO deal with unknown user id
- */
 class FormsPage extends React.Component<Props> {
 
   render() {
@@ -52,7 +44,9 @@ class FormsPage extends React.Component<Props> {
             </tbody>
           </table>
           <Box p={1}>
-            <button>Add user</button>
+            <ButtonLink>
+              <Link to="/forms/users/">Add user</Link>
+            </ButtonLink>
           </Box>
         </Box>
       </MainMenuTemplate>

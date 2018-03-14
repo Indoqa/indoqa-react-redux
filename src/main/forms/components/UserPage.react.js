@@ -4,7 +4,7 @@ import {Box} from 'indoqa-react-fela'
 import {withRouter, type Router} from 'react-router'
 
 import MainMenuTemplate from '../../commons/components/templates/MainMenuTemplate.react'
-import UserForm from './UserForm.react.js'
+import UserForm from './UserForm.react'
 
 import type {User} from '../types/User'
 
@@ -30,9 +30,9 @@ class UserPage extends React.Component<Props> {
 
   postUser: (User) => void
 
-  postUser(user: User) {
+  postUser(user: User, setErrors) {
     const {postUser} = this.props
-    postUser(user)
+    postUser(user, setErrors)
   }
 
   render() {
@@ -42,8 +42,9 @@ class UserPage extends React.Component<Props> {
       return null
     }
 
+    const operation = currentUser.id === '' ? 'Add' : 'Edit'
     return (
-      <MainMenuTemplate title="Forms: Edit user">
+      <MainMenuTemplate title={`Forms: ${operation} user`}>
         <Box m={3}>
           <UserForm user={currentUser} onSubmit={this.postUser} />
         </Box>
