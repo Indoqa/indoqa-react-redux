@@ -9,16 +9,16 @@
   },
   "scripts": {
     "analyze": "source-map-explorer ./target/assets/app-*",
-    "start": "indoqa-dev-server ./indoqa-webpack-options.js",
     "build": "indoqa-webpack ./indoqa-webpack-options.js",
     "docs": "indoqa-webpack ./indoqa-webpack-docs.js",
     "flow": "flow",
     "lint": "indoqa-eslint ./src/main",
     "package": "yarn run lint && yarn run flow && yarn run test && indoqa-webpack ./indoqa-webpack-options.js",
+    "postinstall": "yarn run package",
+    "start": "indoqa-dev-server ./indoqa-webpack-options.js",
     "test": "indoqa-jest",
     "test:watch": "yarn run test --watch",
-    "test:coverage": "yarn run test --coverage",
-    "postinstall": "yarn run package"
+    "test:coverage": "yarn run test --coverage"
   },
   "dependencies": {
     "fela": "6.1.4",
