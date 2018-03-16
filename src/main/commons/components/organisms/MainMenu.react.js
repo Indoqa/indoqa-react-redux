@@ -10,7 +10,7 @@ import MenuLink from '../molecules/MenuLink.react.js'
 const MainMenu = () => (
   <Menu>
     <Logo ml={2}>
-      INDOQA: React-Redux samples
+      <Link to="/">INDOQA: React-Redux samples</Link>
     </Logo>
     <Box mb={3} />
     <MenuLink>
