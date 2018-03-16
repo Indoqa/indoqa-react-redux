@@ -39,6 +39,7 @@ const postUserEpic$ = (action$) =>
       const {user, setErrors} = action
       if (user.name.startsWith('G')) {
         setErrors({name: 'Names starting with \'G\' are not allowed.'})
+        // do not emit an action observable in the case of an error
         return Observable.of().ignoreElements()
       }
 

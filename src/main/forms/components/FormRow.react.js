@@ -16,7 +16,7 @@ const RowContainer = createComponent(() => ({
   marginBottom: 3,
 }))
 
-const UserLabel = createComponent(() => ({
+const Label = createComponent(() => ({
   display: 'inline-block',
   width: '100',
 }), 'label')
@@ -28,6 +28,13 @@ const InputField = createComponentWithProxy(({hasError}) => ({
   borderColor: hasError ? 'red' : 'grey',
   outline: 'none',
   boxShadow: 'none',
+  transition: 'all 0.30s ease-in-out',
+  ':focus': {
+    boxShadow: '0 0 5px rgba(81, 203, 238, 1)',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'rgba(81, 203, 238, 1)',
+  },
 }), 'input')
 
 const ErrorMessage = createComponent(() => ({
@@ -35,9 +42,7 @@ const ErrorMessage = createComponent(() => ({
 }), Text)
 
 const renderLabel = (label) => {
-  return (
-    <UserLabel>{label}</UserLabel>
-  )
+  return <Label>{label}</Label>
 }
 
 const renderField = (name, hasError) => {
