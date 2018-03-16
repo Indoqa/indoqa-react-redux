@@ -45,7 +45,7 @@ const renderField = (name, hasError) => {
     <Field
       name={name}
       render={({field}) => (
-        <InputField {...field} hasError={hasError} />
+        <InputField {...field} hasError={hasError} autoComplete="off" />
       )}
     />
   )
