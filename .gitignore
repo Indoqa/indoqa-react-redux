@@ -3,3 +3,5 @@ target/
 npm-debug.log
 *.iml
 .idea
+.vscode
+yarn-error.log
