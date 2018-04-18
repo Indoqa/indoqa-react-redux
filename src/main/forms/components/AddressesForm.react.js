@@ -2,8 +2,8 @@
 import * as React from 'react'
 import {FieldArray} from 'formik'
 import {Box, Flex, Text} from 'indoqa-react-fela'
-import {createNewAddress} from '../store/forms.factory'
 
+import {createNewAddress} from '../store/forms.factory'
 import FormRow from './FormRow.react'
 
 type Props = {
