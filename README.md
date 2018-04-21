@@ -94,3 +94,4 @@ yarn install
   * usage with [Indoqa Boot](https://github.com/Indoqa/indoqa-boot) in Java frontend-backend applications
   * code-splitting by routes
   * lighthouse check
+  * Typescript?
