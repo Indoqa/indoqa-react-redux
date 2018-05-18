@@ -1,10 +1,11 @@
 import {createIndoqaStore} from 'indoqa-react-app'
 
-const createStore = () => {
+const createStore = (history) => {
   const indoqaStore = createIndoqaStore({
     rootReducer: require('./rootReducer.js').default,
     rootEpic: require('./rootEpic.js').default,
     enableLogging: process.env.NODE_ENV !== 'production',
+    history,
   })
 
   if (module.hot) {
@@ -24,4 +25,4 @@ const createStore = () => {
   return indoqaStore.reduxStore
 }
 
-export default createStore()
+export default createStore
