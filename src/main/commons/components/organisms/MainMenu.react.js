@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import {Box} from 'indoqa-react-fela'
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 
 import Logo from '../molecules/Logo.react.js'
 import Menu from '../molecules/Menu.react.js'
