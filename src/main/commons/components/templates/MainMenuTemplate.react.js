@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import {Box, Flex} from 'indoqa-react-fela'
+import {Box, Text, Flex} from 'indoqa-react-fela'
 
 import i18n from '../../../app/i18n'
 import Bar from '../molecules/Bar.react'
@@ -15,25 +15,44 @@ type Props = {
 
 const changeLanguage = (lng) => i18n.changeLanguage(lng)
 
-const MainMenuTemplate = ({title, header, children}: Props) => (
-  <Flex stretch height="100%">
-    <MainMenu />
-    <Box grow={1}>
-      <Bar pl={1} pr={1}>
-        <Box>{title}</Box>
-        <Box grow={1} />
-        <Box>{header}</Box>
-        <Box>
-          <a onClick={() => changeLanguage('en')}>en</a> |
-          <a onClick={() => changeLanguage('de')}> de </a>
-        </Box>
-      </Bar>
-      <Content grow={1}>
-        {children}
-      </Content>
-    </Box>
-  </Flex>
+const renderLanguage = (lang: string) => {
+  if (lang === i18n.language) {
+    return <Text>{lang}</Text>
+  }
+  return (
+    <a href="#" onClick={() => changeLanguage(lang)}>{lang}</a>
+  )
+}
+
+const renderLanguages = () => (
+  <Box>
+    {renderLanguage('en')} | {renderLanguage('de')}
+  </Box>
 )
+
+const renderHeaderContent = (title?:string, header?:string | null) => (
+  <React.Fragment>
+    <Box>{title}</Box>
+    <Box grow={1} />
+    <Box mr={3}>{header}</Box>
+  </React.Fragment>
+)
+const MainMenuTemplate = ({title, header, children}: Props) => {
+  return (
+    <Flex stretch height="100%">
+      <MainMenu />
+      <Box grow={1}>
+        <Bar pl={1} pr={1}>
+          {renderHeaderContent(title, header)}
+          {renderLanguages()}
+        </Bar>
+        <Content grow={1}>
+          {children}
+        </Content>
+      </Box>
+    </Flex>
+  )
+}
 
 MainMenuTemplate.defaultProps = {
   title: '',
