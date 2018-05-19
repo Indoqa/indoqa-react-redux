@@ -13,7 +13,7 @@ type Props = {
   title?: string,
 }
 
-const changeLanguage = (lng) => i18n.changeLanguage(lng)
+const changeLanguage = (lang:string) => i18n.changeLanguage(lang)
 
 const renderLanguage = (lang: string) => {
   if (lang === i18n.language) {
@@ -24,7 +24,7 @@ const renderLanguage = (lang: string) => {
   )
 }
 
-const renderLanguages = () => (
+const renderLanguageSwitcher = () => (
   <Box>
     {renderLanguage('en')} | {renderLanguage('de')}
   </Box>
@@ -44,7 +44,7 @@ const MainMenuTemplate = ({title, header, children}: Props) => {
       <Box grow={1}>
         <Bar pl={1} pr={1}>
           {renderHeaderContent(title, header)}
-          {renderLanguages()}
+          {renderLanguageSwitcher()}
         </Bar>
         <Content grow={1}>
           {children}
