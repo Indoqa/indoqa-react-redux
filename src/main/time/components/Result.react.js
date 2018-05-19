@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import {Box, Text} from 'indoqa-react-fela'
 
 import type {Result} from '../types/Result'
@@ -10,12 +10,20 @@ type Props = {
   isLoading: boolean
 };
 
-const renderResult = (result: Result) => {
+const createResult = (result: Result) => {
   return (
-    <Box key={result.timezoneId}>
+    <React.Fragment>
       <Box>current time: {result.time}</Box>
       <Box>country: {result.countryName}</Box>
       <Box>timezone: {result.timezoneId}</Box>
+    </React.Fragment>
+  )
+}
+
+const renderResult = (result: Result) => {
+  return (
+    <Box key={result.timezoneId}>
+      {createResult(result)}
       <hr />
     </Box>
   )
