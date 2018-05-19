@@ -93,6 +93,7 @@ yarn install
   * react-router v4
   * code-splitting by routes (https://reactjs.org/docs/code-splitting.html), (https://tylermcginnis.com/react-router-code-splitting/), (https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/code-splitting.md)
   * lighthouse check
+  * React 16 fragment support
   * add tests (https://reactjs.org/docs/test-utils.html)
   * add e2e tests (https://codeburst.io/composable-end-to-end-tests-for-react-apps-2ec82170af62)
   * document debugging with Chrome and Firefox tools (maybe improve indoqa-webpack)
