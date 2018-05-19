@@ -2,6 +2,7 @@
 import * as React from 'react'
 import {Box, Flex} from 'indoqa-react-fela'
 
+import i18n from '../../../app/i18n'
 import Bar from '../molecules/Bar.react'
 import Content from '../molecules/Content.react'
 import MainMenu from '../organisms/MainMenu.react'
@@ -12,6 +13,8 @@ type Props = {
   title?: string,
 }
 
+const changeLanguage = (lng) => i18n.changeLanguage(lng)
+
 const MainMenuTemplate = ({title, header, children}: Props) => (
   <Flex stretch height="100%">
     <MainMenu />
@@ -20,6 +23,10 @@ const MainMenuTemplate = ({title, header, children}: Props) => (
         <Box>{title}</Box>
         <Box grow={1} />
         <Box>{header}</Box>
+        <Box>
+          <a onClick={() => changeLanguage('en')}>en</a> |
+          <a onClick={() => changeLanguage('de')}> de </a>
+        </Box>
       </Bar>
       <Content grow={1}>
         {children}
