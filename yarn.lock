@@ -3758,9 +3758,23 @@ indoqa-react-app@^3.0.0:
     redux-observable "0.18.0"
     rxjs "5.5.10"
 
-indoqa-react-fela@0.6.0, indoqa-react-fela@^0.6.0:
+indoqa-react-fela@0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/indoqa-react-fela/-/indoqa-react-fela-0.6.0.tgz#54deded122c6d66b7059e808fda82599718e3b59"
+  dependencies:
+    deepmerge "2.1.0"
+    fela "6.1.7"
+    fela-preset-web "8.0.5"
+    prop-types "15.6.1"
+    react "16.3.2"
+    react-dom "16.3.2"
+    react-fela "7.2.0"
+    react-router "4.2.0"
+    react-router-dom "4.2.2"
+
+indoqa-react-fela@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/indoqa-react-fela/-/indoqa-react-fela-0.6.1.tgz#09172f57e7c65b8f56abe5562f683e0680feec33"
   dependencies:
     deepmerge "2.1.0"
     fela "6.1.7"

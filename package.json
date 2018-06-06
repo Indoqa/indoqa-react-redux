@@ -28,7 +28,7 @@
     "i18next": "^11.3.2",
     "i18next-browser-languagedetector": "^2.2.0",
     "indoqa-react-app": "^3.0.0",
-    "indoqa-react-fela": "^0.6.0",
+    "indoqa-react-fela": "^0.6.1",
     "ramda": "^0.25.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
