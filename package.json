@@ -20,29 +20,29 @@
     "postinstall": "yarn run package"
   },
   "dependencies": {
-    "fela": "6.1.7",
-    "fela-monolithic": "5.0.21",
-    "fela-plugin-named-media-query": "5.0.13",
-    "fela-preset-web": "8.0.5",
+    "fela": "^6.1.8",
+    "fela-monolithic": "^5.0.22",
+    "fela-plugin-named-media-query": "^5.0.13",
+    "fela-preset-web": "^8.0.7",
     "history": "^4.7.2",
-    "indoqa-react-app": "2.6.0",
-    "indoqa-react-fela": "0.6.0",
-    "ramda": "0.25.0",
-    "react": "16.3.2",
-    "react-dom": "16.3.2",
-    "react-fela": "7.2.0",
-    "react-redux": "5.0.7",
+    "indoqa-react-app": "^3.0.0",
+    "indoqa-react-fela": "^0.6.0",
+    "ramda": "^0.25.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-fela": "^7.3.0",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-router-redux": "4.0.8",
-    "redux": "3.7.2",
-    "redux-logger": "3.0.6",
-    "redux-observable": "0.18.0",
-    "reselect": "3.0.1",
-    "rxjs": "5.5.10"
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-observable": "^0.19.0",
+    "reselect": "^3.0.1",
+    "rxjs": "^5.5.11"
   },
   "devDependencies": {
-    "flow-bin": "0.70.0",
-    "indoqa-webpack": "1.2.0"
+    "flow-bin": "^0.73.0",
+    "indoqa-webpack": "^1.2.0"
   },
   "proxy": {
     "/geonames": {
