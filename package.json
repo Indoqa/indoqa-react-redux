@@ -25,7 +25,7 @@
     "fela-monolithic": "^5.0.22",
     "fela-plugin-named-media-query": "^5.0.13",
     "fela-preset-web": "^8.0.7",
-    "formik": "^0.11.11",
+    "formik": "^1.0.0-beta.1",
     "history": "^4.7.2",
     "i18next": "^11.3.2",
     "i18next-browser-languagedetector": "^2.2.0",
