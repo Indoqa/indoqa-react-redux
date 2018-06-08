@@ -33,6 +33,7 @@
     "indoqa-react-fela": "^0.6.1",
     "ramda": "^0.25.0",
     "react": "^16.4.0",
+    "react-document-title": "^2.0.3",
     "react-dom": "^16.4.0",
     "react-fela": "^7.3.0",
     "react-i18next": "7.7.0",

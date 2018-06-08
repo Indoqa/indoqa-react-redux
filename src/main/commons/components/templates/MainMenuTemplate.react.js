@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react'
 import {Box, Text, Flex} from 'indoqa-react-fela'
+import DocumentTitle from 'react-document-title'
 
 import i18n from '../../../app/i18n'
 import Bar from '../molecules/Bar.react'
@@ -13,6 +14,7 @@ type Props = {
   title?: string,
 }
 
+const BASE_TITLE = 'Indoqa React-Redux samples'
 const changeLanguage = (lang:string) => i18n.changeLanguage(lang)
 
 const renderLanguage = (lang: string) => {
@@ -37,9 +39,12 @@ const renderHeaderContent = (title?:string, header?:string | null) => (
     <Box mr={3}>{header}</Box>
   </React.Fragment>
 )
+
 const MainMenuTemplate = ({title, header, children}: Props) => {
+  const documentTitle = title === undefined ? BASE_TITLE : `${BASE_TITLE} | ${title}`
   return (
     <Flex stretch height="100%">
+      <DocumentTitle title={documentTitle} />
       <MainMenu />
       <Box grow={1}>
         <Bar pl={3} pr={1}>
