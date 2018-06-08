@@ -3,15 +3,11 @@ import React from 'react'
 import {Box} from 'indoqa-react-fela'
 import {Link} from 'react-router-dom'
 
-import Logo from '../molecules/Logo.react.js'
 import Menu from '../molecules/Menu.react.js'
 import MenuLink from '../molecules/MenuLink.react.js'
 
 const MainMenu = () => (
   <Menu>
-    <Logo ml={2}>
-      <Link to="/">INDOQA: React-Redux samples</Link>
-    </Logo>
     <Box mb={3} />
     <MenuLink>
       <Link to="/">Time</Link>

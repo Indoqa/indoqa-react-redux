@@ -12,7 +12,7 @@ class TodosPage extends React.Component<{}> {
   render() {
     return (
       <MainMenuTemplate title="Todos">
-        <Box p={3}>
+        <Box>
           <Header />
           <AddTodo />
           <TodoList />

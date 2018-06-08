@@ -37,7 +37,7 @@ class FormsPage extends React.Component<Props> {
     const {users} = this.props
     return (
       <MainMenuTemplate title="Forms: List of editable users">
-        <Box p={3}>
+        <Box>
           <table>
             <tbody>
               {Object.keys(users).map((k) => renderUserRow(users[k]))}

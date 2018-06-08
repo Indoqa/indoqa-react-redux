@@ -13,7 +13,7 @@ class TimePage extends React.Component<Props> {
   render() {
     return (
       <MainMenuTemplate title="Time">
-        <Box m={3}>
+        <Box>
           <Buttons />
           <Result />
         </Box>

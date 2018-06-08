@@ -45,7 +45,7 @@ class UserPage extends React.Component<Props> {
     const operation = currentUser.id === '' ? 'Add' : 'Edit'
     return (
       <MainMenuTemplate title={`Forms: ${operation} user`}>
-        <Box m={3}>
+        <Box>
           <UserForm user={currentUser} onSubmit={this.postUser} />
         </Box>
       </MainMenuTemplate>

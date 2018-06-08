@@ -21,6 +21,7 @@
     "test:coverage": "yarn run test --coverage"
   },
   "dependencies": {
+    "breakpoint-observer": "^0.7.10",
     "fela": "^6.1.8",
     "fela-monolithic": "^5.0.22",
     "fela-plugin-named-media-query": "^5.0.13",
