@@ -4,9 +4,7 @@ import {Box, Text, Flex} from 'indoqa-react-fela'
 import DocumentTitle from 'react-document-title'
 import {createComponentWithProxy} from 'react-fela'
 import {Link} from 'react-router-dom'
-import BreakpointObserver from 'breakpoint-observer'
 
-import {BREAKPOINTS} from '../../../app/breakpoints'
 import i18n from '../../../app/i18n'
 import Bar from '../molecules/Bar.react'
 import Logo from '../molecules/Logo.react.js'
@@ -22,8 +20,6 @@ type Props = {
 type State = {
   showMobileMenu: boolean,
 }
-
-type Breakpoint = "mobile" | "tablet" | "desktop"
 
 const BASE_TITLE = 'Indoqa React-Redux samples'
 
@@ -55,42 +51,49 @@ const renderLanguageSwitcher = () => (
   </Box>
 )
 
+const MOBILE_ONLY = {
+  desktop: {
+    display: 'none',
+  },
+  tablet: {
+    display: 'none',
+  },
+}
+
 const Main = createComponentWithProxy(({theme}) => ({
-  height: `calc(100% - ${theme.layout.actionBarHeight}px)`,
+  display: 'table',
+  paddingTop: theme.layout.actionBarHeight,
+  height: '100%',
 }), Flex)
 
 const MenuIcon = createComponentWithProxy(({theme}) => ({
   marginRight: theme.spacing.space2,
+  ...MOBILE_ONLY,
 }), Text)
+
+const FixedBar = createComponentWithProxy(() => ({
+  position: 'fixed',
+  width: '100%',
+}), Box)
 
 const MobileMenu = createComponentWithProxy(({theme}) => ({
   position: 'fixed',
   height: `calc(100% - ${theme.layout.actionBarHeight}px)`,
   top: theme.layout.actionBarHeight,
-  desktop: {
-    display: 'none',
-  },
-  tablet: {
-    display: 'none',
-  },
+  ...MOBILE_ONLY,
 }), Box)
 
-const TabletDesktopMenu = createComponentWithProxy(({theme}) => ({
+const TabletDesktopMenu = createComponentWithProxy(() => ({
   display: 'none',
   desktop: {
-    display: 'block',
+    display: 'table-cell',
     height: '100%',
   },
   tablet: {
-    display: 'block',
+    display: 'table-cell',
     height: '100%',
   },
 }), Box)
-
-const Container = createComponentWithProxy(({theme}) => ({
-  overflowX: 'hidden',
-}), Flex)
-
 
 class MainMenuTemplate extends React.Component<Props, State> {
 
@@ -104,44 +107,12 @@ class MainMenuTemplate extends React.Component<Props, State> {
     showMobileMenu: false,
   }
 
-  hideMenu() {
-    this.setState({showMobileMenu: false})
-  }
-
   toggleMenu() {
     this.setState({showMobileMenu: !this.state.showMobileMenu})
   }
 
   renderMenuIcon() {
-    return (
-      <BreakpointObserver breakpoints={BREAKPOINTS}>
-        {(breakpoint: Breakpoint) => {
-          if (breakpoint === 'mobile') {
-            return <MenuIcon onClick={() => this.toggleMenu()}>[Menu]</MenuIcon>
-          }
-          return null
-        }}
-      </BreakpointObserver>
-    )
-  }
-
-  renderMenu() {
-    const y = this.state.showMobileMenu
-    return (
-      <BreakpointObserver breakpoints={BREAKPOINTS}>
-        {(breakpoint: Breakpoint) => {
-          console.log(`renderMenu: breakpoint=${breakpoint}, showMobileMenu=${y}`)
-          if (breakpoint !== 'mobile' || (breakpoint === 'mobile' && y)) {
-            return (
-              <TabletDesktopMenu>
-                <MainMenu key={breakpoint + y} />
-              </TabletDesktopMenu>
-            )
-          }
-          return null
-        }}
-      </BreakpointObserver>
-    )
+    return <MenuIcon onClick={() => this.toggleMenu()}>[Menu]</MenuIcon>
   }
 
   renderMobileMenu() {
@@ -159,24 +130,27 @@ class MainMenuTemplate extends React.Component<Props, State> {
     const {title, header, children} = this.props
     const documentTitle = title === undefined ? BASE_TITLE : `${BASE_TITLE} | ${title}`
     return (
-      <Container stretch height="100%">
+      <Flex stretch height="100%">
         <DocumentTitle title={documentTitle} />
-        <BreakpointObserver breakpoints={BREAKPOINTS} callback={this.hideMenu} />
         {this.renderMobileMenu()}
         <Box grow={1}>
-          <Bar pl={2} pr={2}>
-            {this.renderMenuIcon()}
-            {renderHeaderContent(title, header)}
-            {renderLanguageSwitcher()}
-          </Bar>
+          <FixedBar>
+            <Bar pl={2} pr={2}>
+              {this.renderMenuIcon()}
+              {renderHeaderContent(title, header)}
+              {renderLanguageSwitcher()}
+            </Bar>
+          </FixedBar>
           <Main>
-            {this.renderMenu()}
+            <TabletDesktopMenu>
+              <MainMenu />
+            </TabletDesktopMenu>
             <Content>
               {children}
             </Content>
           </Main>
         </Box>
-      </Container>
+      </Flex>
     )
   }
 }
