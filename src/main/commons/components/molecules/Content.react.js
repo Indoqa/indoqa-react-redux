@@ -5,6 +5,7 @@ import {Box} from 'indoqa-react-fela'
 const Content = ({theme}) => ({
   display: 'table-cell',
   padding: theme.spacing.space2,
+  width: '100%',
   desktop: {
     marginLeft: theme.layout.menuWidth,
   },

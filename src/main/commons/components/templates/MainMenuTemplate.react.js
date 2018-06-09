@@ -60,9 +60,11 @@ const MOBILE_ONLY = {
   },
 }
 
-const Main = createComponentWithProxy(({theme}) => ({
+const Main = createComponentWithProxy(({theme, menuOpen}) => ({
   paddingTop: theme.layout.actionBarHeight,
   height: `calc(100% - ${theme.layout.actionBarHeight}px)`,
+  width: '100%',
+  overflow: menuOpen ? 'hidden' : 'auto',
 }), Flex)
 
 const MenuIcon = createComponentWithProxy(({theme}) => ({
@@ -79,6 +81,7 @@ const MobileMenu = createComponentWithProxy(({theme}) => ({
   position: 'fixed',
   height: `calc(100% - ${theme.layout.actionBarHeight}px)`,
   top: theme.layout.actionBarHeight,
+  zIndex: 10,
   ...MOBILE_ONLY,
 }), Box)
 
@@ -94,6 +97,17 @@ const TabletDesktopMenu = createComponentWithProxy(() => ({
     display: 'block',
     height: '100%',
   },
+}), Box)
+
+const ContentOverlay = createComponentWithProxy(({show}) => ({
+  visibility: show ? 'visible' : 'hidden',
+  position: 'absolute',
+  backgroundColor: 'black',
+  height: '100%',
+  width: '100%',
+  opacity: show ? 0.6 : 0,
+  transition: 'opacity .15s, visibility 0s',
+  ...MOBILE_ONLY,
 }), Box)
 
 class MainMenuTemplate extends React.Component<Props, State> {
@@ -134,6 +148,7 @@ class MainMenuTemplate extends React.Component<Props, State> {
       <Flex stretch height="100%">
         <DocumentTitle title={documentTitle} />
         {this.renderMobileMenu()}
+        <ContentOverlay show={this.state.showMobileMenu} onClick={() => this.toggleMenu()} />
         <Box grow={1}>
           <FixedBar>
             <Bar pl={2} pr={2}>
@@ -142,7 +157,7 @@ class MainMenuTemplate extends React.Component<Props, State> {
               {renderLanguageSwitcher()}
             </Bar>
           </FixedBar>
-          <Main>
+          <Main menuOpen={this.state.showMobileMenu}>
             <TabletDesktopMenu>
               <MainMenu />
             </TabletDesktopMenu>
