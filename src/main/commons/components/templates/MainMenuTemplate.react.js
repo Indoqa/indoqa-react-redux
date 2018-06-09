@@ -98,7 +98,7 @@ class MainMenuTemplate extends React.Component<Props, State> {
   }
 
   renderMenu() {
-    const y = String(this.state.showMobileMenu)
+    const y = this.state.showMobileMenu
     return (
       <BreakpointObserver breakpoints={BREAKPOINTS}>
         {(breakpoint: Breakpoint) => {
