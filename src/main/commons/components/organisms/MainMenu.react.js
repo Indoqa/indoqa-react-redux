@@ -8,7 +8,7 @@ import MenuLink from '../molecules/MenuLink.react.js'
 
 const MainMenu = () => (
   <Menu>
-    <Box mb={3} />
+    <Box pb={2} />
     <MenuLink>
       <Link to="/">Time</Link>
     </MenuLink>

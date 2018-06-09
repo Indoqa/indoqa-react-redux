@@ -63,6 +63,34 @@ const MenuIcon = createComponentWithProxy(({theme}) => ({
   marginRight: theme.spacing.space2,
 }), Text)
 
+const MobileMenu = createComponentWithProxy(({theme}) => ({
+  position: 'fixed',
+  height: `calc(100% - ${theme.layout.actionBarHeight}px)`,
+  top: theme.layout.actionBarHeight,
+  desktop: {
+    display: 'none',
+  },
+  tablet: {
+    display: 'none',
+  },
+}), Box)
+
+const TabletDesktopMenu = createComponentWithProxy(({theme}) => ({
+  display: 'none',
+  desktop: {
+    display: 'block',
+    height: '100%',
+  },
+  tablet: {
+    display: 'block',
+    height: '100%',
+  },
+}), Box)
+
+const Container = createComponentWithProxy(({theme}) => ({
+  overflowX: 'hidden',
+}), Flex)
+
 
 class MainMenuTemplate extends React.Component<Props, State> {
 
@@ -104,7 +132,11 @@ class MainMenuTemplate extends React.Component<Props, State> {
         {(breakpoint: Breakpoint) => {
           console.log(`renderMenu: breakpoint=${breakpoint}, showMobileMenu=${y}`)
           if (breakpoint !== 'mobile' || (breakpoint === 'mobile' && y)) {
-            return <MainMenu key={breakpoint + y} />
+            return (
+              <TabletDesktopMenu>
+                <MainMenu key={breakpoint + y} />
+              </TabletDesktopMenu>
+            )
           }
           return null
         }}
@@ -112,13 +144,25 @@ class MainMenuTemplate extends React.Component<Props, State> {
     )
   }
 
+  renderMobileMenu() {
+    if (this.state.showMobileMenu) {
+      return (
+        <MobileMenu>
+          <MainMenu />
+        </MobileMenu>
+      )
+    }
+    return null
+  }
+
   render() {
     const {title, header, children} = this.props
     const documentTitle = title === undefined ? BASE_TITLE : `${BASE_TITLE} | ${title}`
     return (
-      <Flex stretch height="100%">
+      <Container stretch height="100%">
         <DocumentTitle title={documentTitle} />
         <BreakpointObserver breakpoints={BREAKPOINTS} callback={this.hideMenu} />
+        {this.renderMobileMenu()}
         <Box grow={1}>
           <Bar pl={2} pr={2}>
             {this.renderMenuIcon()}
@@ -132,7 +176,7 @@ class MainMenuTemplate extends React.Component<Props, State> {
             </Content>
           </Main>
         </Box>
-      </Flex>
+      </Container>
     )
   }
 }
