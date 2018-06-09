@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import {Box} from 'indoqa-react-fela'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 import Menu from '../molecules/Menu.react.js'
 import MenuLink from '../molecules/MenuLink.react.js'
@@ -10,16 +10,16 @@ const MainMenu = () => (
   <Menu>
     <Box pb={2} />
     <MenuLink>
-      <Link to="/">Time</Link>
+      <NavLink to="/time">Time</NavLink>
     </MenuLink>
     <MenuLink>
-      <Link to="/todos">Todos</Link>
+      <NavLink to="/todos">Todos</NavLink>
     </MenuLink>
     <MenuLink>
-      <Link to="/words">Words</Link>
+      <NavLink to="/words">Words</NavLink>
     </MenuLink>
     <MenuLink>
-      <Link to="/forms">Forms</Link>
+      <NavLink to="/forms">Forms</NavLink>
     </MenuLink>
   </Menu>
 )

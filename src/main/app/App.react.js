@@ -6,6 +6,7 @@ import {Switch, Route} from 'react-router-dom'
 import {I18nextProvider} from 'react-i18next'
 
 import FormsPage from '../forms/components/FormsPage.redux.js'
+import OverviewPage from '../overview/components/OverviewPage.react.js'
 import TimePage from '../time/components/TimePage.react.js'
 import TodosPage from '../todos/components/TodosPage.react.js'
 import UserPage from '../forms/components/UserPage.redux.js'
@@ -21,7 +22,8 @@ class App extends React.Component<{}> {
       <ThemeProvider theme={buildTheme(theme)}>
         <I18nextProvider i18n={i18n}>
           <Switch>
-            <Route exact path="/" component={TimePage} />
+            <Route exact path="/" component={OverviewPage} />
+            <Route exact path="/time" component={TimePage} />
             <Route exact path="/forms" component={FormsPage} />
             <Route exact path="/forms/users/" component={UserPage} />
             <Route exact path="/forms/users/:id" component={UserPage} />
