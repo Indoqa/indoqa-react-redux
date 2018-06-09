@@ -2,7 +2,7 @@
 import {createComponent} from 'react-fela'
 
 const Menu = ({theme}) => ({
-  width: 300,
+  width: theme.layout.menuWidth,
   height: '100%',
   backgroundColor: theme.colors.bgLight,
 })

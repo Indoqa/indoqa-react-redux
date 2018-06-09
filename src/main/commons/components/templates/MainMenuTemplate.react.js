@@ -61,9 +61,8 @@ const MOBILE_ONLY = {
 }
 
 const Main = createComponentWithProxy(({theme}) => ({
-  display: 'table',
   paddingTop: theme.layout.actionBarHeight,
-  height: '100%',
+  height: `calc(100% - ${theme.layout.actionBarHeight}px)`,
 }), Flex)
 
 const MenuIcon = createComponentWithProxy(({theme}) => ({
@@ -86,11 +85,13 @@ const MobileMenu = createComponentWithProxy(({theme}) => ({
 const TabletDesktopMenu = createComponentWithProxy(() => ({
   display: 'none',
   desktop: {
-    display: 'table-cell',
+    position: 'fixed',
+    display: 'block',
     height: '100%',
   },
   tablet: {
-    display: 'table-cell',
+    position: 'fixed',
+    display: 'block',
     height: '100%',
   },
 }), Box)

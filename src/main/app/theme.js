@@ -11,5 +11,6 @@ export default {
   },
   layout: {
     actionBarHeight: 50,
+    menuWidth: 300,
   },
 }

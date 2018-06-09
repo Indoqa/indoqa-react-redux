@@ -4,8 +4,13 @@ import {Box} from 'indoqa-react-fela'
 
 const Content = ({theme}) => ({
   display: 'table-cell',
-  // height: `calc(100% - ${theme.layout.actionBarHeight}px)`,
   padding: theme.spacing.space2,
+  desktop: {
+    marginLeft: theme.layout.menuWidth,
+  },
+  tablet: {
+    marginLeft: theme.layout.menuWidth,
+  },
 })
 
 export default createComponent(Content, Box)
