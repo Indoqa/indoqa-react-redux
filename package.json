@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "flow-bin": "^0.73.0",
-    "indoqa-webpack": "^1.2.0",
+    "indoqa-webpack": "next",
     "source-map-explorer": "1.5.0"
   },
   "proxy": {
