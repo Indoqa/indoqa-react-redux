@@ -1,5 +1,6 @@
 // @flow
-import {combineReducersWithRouter} from 'indoqa-react-app'
+import {combineReducers} from 'redux'
+import {routerReducer} from 'react-router-redux'
 
 import forms from '../forms/store/forms.reducer'
 import time from '../time/store/time.reducer'
@@ -11,6 +12,7 @@ const reducers = {
   time,
   todos,
   words,
+  routing: routerReducer,
 }
 
-export default combineReducersWithRouter(reducers)
+export default combineReducers(reducers)
