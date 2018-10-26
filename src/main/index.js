@@ -9,10 +9,11 @@ import fela from './app/fela.js'
 
 const history = createHistory()
 const store = createStore(history)
+const rootEl = document.getElementById('app')
 
 render(
   <IndoqaApplication store={store} fela={fela} history={history}>
     <App />
   </IndoqaApplication>,
-  document.getElementById('app')
+  rootEl
 )

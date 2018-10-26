@@ -4,6 +4,7 @@ import {ThemeProvider} from 'react-fela'
 import {buildTheme} from 'indoqa-react-fela'
 import {Switch, Route} from 'react-router-dom'
 import {I18nextProvider} from 'react-i18next'
+import {hot} from 'react-hot-loader'
 
 import FormsPage from '../forms/components/FormsPage.redux.js'
 import TimePage from '../time/components/TimePage.react.js'
@@ -34,4 +35,4 @@ class App extends React.Component<{}> {
   }
 }
 
-export default App
+export default hot(module)(App)
